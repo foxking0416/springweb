@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>華春營造有限公司</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="spring/js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="spring/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="spring/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="spring/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="spring/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="spring/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="spring/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="spring/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>
+	$( document ).ready(function() {
+		/*$("#testlightbox").each(function() {
+		var parent = $(this).parent();
+		if (parent[0].tagName == "A") {
+			parent.attr({
+				"class": "fancybox",
+				"rel": "gallery"
+			});
+		} else {
+			parent.wrap("<a class='fancybox' rel='gallery' href='" + $(this).attr("src") + "'></a>")
+		}
+		});*/
+		$(".fancybox").fancybox({prevEffect:"fade",nextEffect:"fade",helpers:{overlay:{locked:true},thumbs:{width:50,height:50,source:function(b){return b.href}}}})
+	});
+</script>
+</head>
+
+
+<body>
+
+<div id="wrapper">
+  <div id="logo">
+	<img src="spring/images/logo_name.svg" alt="Logo" width="50%">
+  </div>
+
+  <div id="objective">
+  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="20%" valign="bottom" bgcolor="#000000">
+          <div id="bird_left">
+
+          </div>           
+      </td>
+      <td bgcolor="#00FF00">
+      	<div> b</div>
+        <div id="testlightbox">
+        	<a class="fancybox" rel="gallery" href="spring/images/project/img1_1.jpg">
+        	<img src="spring/images/project/img1_1.jpg" width="80" height="80">
+            <a class="fancybox" rel="gallery" href="spring/images/project/img1_2.jpg">
+            <img src="spring/images/project/img1_2.jpg" width="80" height="80">
+            <a class="fancybox" rel="gallery" href="spring/images/project/img1_3.jpg">
+            <img src="spring/images/project/img1_3.jpg" width="80" height="80">
+            <a class="fancybox" rel="gallery" href="spring/images/project/img1_4.jpg">
+            <img src="spring/images/project/img1_4.jpg" width="80" height="80">
+            <a class="fancybox" rel="gallery" href="spring/images/project/img1_5.jpg">
+            <img src="spring/images/project/img1_5.jpg" width="80" height="80">
+        </div>
+      </td>
+      <td width="20%">
+      	<table  border="0">
+          <tr height="100px" bgcolor="#FF0000">
+            <td  ><div>555南投縣魚池鄉水社村中山路599號 </div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3649.070232120344!2d120.90178530000001!3d23.8516397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468d5fbe306083d%3A0x9c38406254aab6e5!2zNTU15Y2X5oqV57ij6a2a5rGg6YSJ5Lit5bGx6LevNTk56Jmf!5e0!3m2!1szh-TW!2stw!4v1423617007345" width="600" height="450" frameborder="0" style="border:0"></iframe></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+  <div id="btn"><table width="50%"  align="center">
+  <tr>
+    <td >&nbsp;<a href="index.html">首頁</a></td>
+    <td>&nbsp;<a href="objective.html">經營理念</a></td>
+    <td>&nbsp;公司團隊</td>
+    <td>&nbsp;作品集</td>
+    <td>&nbsp;<a href="reward.html">得獎紀錄</a></td>
+    <td>&nbsp;人員證照</td>
+    <td>&nbsp;<a href="contact.html">聯絡我們</a></td>
+  </tr>
+</table>
+ </div>
+<div id="footer"> 版權所有©2015 華春營造有限公司 所有權利保留</div>
+  
+  
+  
+</div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>

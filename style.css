@@ -23,10 +23,10 @@ html, body{
 	border-left-style: none;
 }
 #logo {
-	
 	width: 100%;
 	text-align: center;
 	position: relative;
+	background-color: #0CC;
 }
 #btn {
 	background-color: #090;
