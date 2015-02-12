@@ -11,7 +11,67 @@
 <script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="spring/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript">
+	var preloadingImage = new Array();
+	var preloadingLink = new Array();
+	var preloadingName = new Array();
+	/*preloadingImage[0] = new Image();
+	preloadingImage[0].src = "spring/images/bird1.jpg";
+	preloadingImage[1] = new Image();
+	preloadingImage[1].src = "spring/images/bird2.jpg";
+	preloadingImage[2] = new Image(); 
+	preloadingImage[2].src = "spring/images/bird3.jpg";*/
+	preloadingImage[0] = "spring/images/bird1.jpg";
+	preloadingImage[1] = "spring/images/bird2.jpg";
+	preloadingImage[2] = "spring/images/bird3.jpg";
+	
+	
+	preloadingLink[0] = "project1";
+	preloadingLink[1] = "project2";
+	preloadingLink[2] = "project3";
+	preloadingName[0] = "向山";
+	preloadingName[1] = "日月潭";
+	preloadingName[2] = "成大";
 
+	$(document).ready(function(){
+
+	  /*for(i = 0; i < preloadingImage.length; i++){
+		  var linkaddress = preloadingLink[i];
+		  $("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
+  
+	  }*/
+	  
+	  //$("#inserted").append('<div id="div' + 2 + '">test2'+ preloadingImage[0]+' </div>');
+//	  $("#inserted").append('<div id="div' + 2 + '">test2<img src="spring/images/bird2.jpg" width="100px" height="100px" > </div>');	  
+	});
+
+	function citychange(){
+		$("#inserted").empty();
+		var selectValue = $( "#selectRegion" ).val();
+		var i;
+		var linkaddress = preloadingLink[i];
+		if($( "#selectRegion" ).val() == "north"){
+			i=0;
+			linkaddress = preloadingLink[0];
+		}
+		else if($( "#selectRegion" ).val() == "middle"){
+			i=1;
+			linkaddress = preloadingLink[1];
+		}
+		else if($( "#selectRegion" ).val() == "south"){
+			i=2;
+			linkaddress = preloadingLink[2];
+		}
+		else
+			return;
+		
+	    $("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
+		$("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
+		$("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
+		
+	}
+
+</script>
 </head>
 
 
@@ -29,26 +89,19 @@
       <img src="spring/images/bird3.jpg" width="100%" ></div>           
       </td>
       <td >
-	  <script type="text/javascript">
-
-	  </script>
+	  
 
       <div id="project"> id "project" 的內容放在這裡
-        <select name="region" onchange="citychange()">
+        <select name="region" onchange="citychange()" id="selectRegion">
         	<option value="%">請選擇縣市</option>
-            <option value="北部地區">北部地區</option>
-            <option value="中部地區">中部地區</option>
-            <option value="南部地區">南部地區</option>
+            <option value="north">北部地區</option>
+            <option value="middle">中部地區</option>
+            <option value="south">南部地區</option>
         </select>
-        <select name="region" >
-        	<option value="%">請選擇縣市</option>
-            <option value="北部地區">北部地區</option>
-            <option value="中部地區">中部地區</option>
-            <option value="南部地區">南部地區</option>
-        </select>
+
+        
       </div>
-		
-      </td>
+      <div id="inserted">新增 Div 標籤的內容放在這裡</div></td>
       <td width="20%" valign="top"><img src="spring/images/bird1.jpg" width="100%" alt="bird"></td>
     </tr>
   </table>

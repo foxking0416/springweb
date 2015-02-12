@@ -134,3 +134,11 @@ wards_item {
 	font-size: 16pt;
 	font-family: "微軟正黑體", "Arial Unicode MS";
 }
+#makeMeScrollable{
+	width:300px;
+	position: relative;
+	display: block
+	float: left;
+	margin: 0;
+	padding: 0;
+}

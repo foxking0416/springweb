@@ -7,17 +7,6 @@ $(document).ready(function() {
 	});
 });
 
-$(document).ready(function() {
-    $( "#myImg" ).mouseover(function(){
-        $(this).attr("src", "http://www.jqueryui.com/images/logo.gif");
-    });
-
-    $( "#myImg" ).mouseout(function(){
-        $(this).attr("src", "http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif");
-    });
-});
-
-
 $(function() {
     // run the currently selected effect
     function runEffect() {
