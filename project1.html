@@ -25,15 +25,26 @@
 
 <!-- Add Smooth Div Scroll -->
 <link rel="stylesheet" href="spring/css/smoothDivScroll.css" type="text/css"  />
+<style type="text/css">
+body {
+	margin-bottom: 5px;
+}
+</style>
 <script src="spring/js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 	$( document ).ready(function() {
 		//Setup the fancybox attributes
-		$(".fancybox").fancybox({prevEffect:"fade",nextEffect:"fade",helpers:{overlay:{locked:true},thumbs:{width:50,height:50,source:function(b){return b.href}}}})
+		$(".fancybox").fancybox({
+			prevEffect:"fade",
+			nextEffect:"fade",
+			cyclic:false,
+			helpers:{overlay:{locked:true},
+			thumbs:{width:50,height:50,source:function(b){return b.href}}}
+		});
 	
 		//Setup for the smooth div scrolling
-		$("#makeMeScrollable").smoothDivScroll({
+		$("#projectImgScrollRegion").smoothDivScroll({
 			//hiddenOnStart: false,
 			//hotSpotScrolling: true,
 			hotSpotScrollingStep: 1,
@@ -41,6 +52,8 @@
 			manualContinuousScrolling: false,
 			autoScrollingMode: ""
 		});
+		
+
 	});
 </script>
 </head>
@@ -50,62 +63,130 @@
 
 <div id="wrapper">
   <div id="logo">
-	<img src="spring/images/logo_name.svg" alt="Logo" width="50%">
-  </div>
-
-  <div id="objective">
-  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+    <div id="logo_logo"><img src="spring/images/logo green.svg" alt="Logo" height="100px"></div>
+    <div id="logo_text"><img src="spring/images/text.svg" alt="LogoName" height="100px"></div>
+    
+		
+  	</div>
+    <div id="mainbg">
+  	<div id="main">
+	<table width="100%" height="500px"  border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td width="20%" valign="bottom" bgcolor="#000000">
-          <div id="bird_left">
+      	<td width="20%" valign="top">
+          	<div id="selectRegion">
+				<table width="80%" height="60%" border="0" cellspacing="20" cellpadding="0" align="right">
+                  <tr>
+                    <td class="btn"><div id="btnDiv"><a href="index.html">首頁</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="btn"><div id="btnDiv"><a href="objective.html">經營理念</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="btn"><div id="btnDiv"><a href="index.html">公司團隊</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="btn"><div id="btnDiv"><a href="project.html">作品集</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="btn"><div id="btnDiv"><a href="certificate.html">人員證照</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="btn"><div id="btnDiv"><a href="contact.html">聯絡我們</a></div>
+                    </td>
+                  </tr>
+                </table>
 
-          </div>           
+          	</div>           
+        </td>
+        <td width="50%" bgcolor="#00FF00">
+			<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr width="100%" height= "20" bgcolor="#0000FF">
+                <td width="20px">&nbsp;</td>
+                <td >&nbsp;</td>
+                <td width="20px">&nbsp;</td>
+              </tr>
+              <tr bgcolor="#00FFFF">
+                <td bgcolor="#0000FF">&nbsp;</td>
+                <td >
+                <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr width="100%" bgcolor="#FFFFFF" >
+                        <td>
+                            <ul>
+                                <li>工程名稱
+                                </li>
+                                <li>工程日期</li>
+                                <li>施工工法</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr height=150>
+                      <td bgcolor="#00FFFF">
+                         <div id="projectImgScrollRegion">
+								
+
+                            <a class="fancybox" rel="gallery" href="spring/images/project/img1_1.jpg">
+                            <img src="spring/images/project/img1_1.jpg">
+                            <a class="fancybox" rel="gallery" href="spring/images/project/img1_2.jpg">
+                            <img src="spring/images/project/img1_2.jpg">
+                            <a class="fancybox" rel="gallery" href="spring/images/project/img1_3.jpg">
+                            <img src="spring/images/project/img1_3.jpg">
+                            <a class="fancybox" rel="gallery" href="spring/images/project/img1_4.jpg">
+                            <img src="spring/images/project/img1_4.jpg">
+
+
+                        </div>
+                      </td>
+                    </tr>
+                </table>
+
+
+        		</td>
+                <td  height="100%" bgcolor="#0000FF">&nbsp;</td>
+              </tr>
+              <tr height="20px" bgcolor="#0000FF">
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+
+
       </td>
-      <td bgcolor="#00FF00">
-      	<div> b</div>
-        <div id="makeMeScrollable">
-        
-        
-        
-        
-        
-         	<a class="fancybox" rel="gallery" href="spring/images/project/img1_1.jpg">
-            <img src="spring/images/project/img1_1.jpg" width="80" height="80">
-          	<a class="fancybox" rel="gallery" href="spring/images/project/img1_2.jpg">
-            <img src="spring/images/project/img1_2.jpg" width="80" height="80">
-            <a class="fancybox" rel="gallery" href="spring/images/project/img1_3.jpg">
-            <img src="spring/images/project/img1_3.jpg" width="80" height="80">
-            <a class="fancybox" rel="gallery" href="spring/images/project/img1_4.jpg">
-            <img src="spring/images/project/img1_4.jpg" width="80" height="80">
-            <a class="fancybox" rel="gallery" href="spring/images/project/img1_5.jpg">
-            <img src="spring/images/project/img1_5.jpg" width="80" height="80">
-        </div>
-      </td>
-      <td width="20%">
-      	<table  border="0">
-          <tr height="100px" bgcolor="#FF0000">
-            <td  ><div>555南投縣魚池鄉水社村中山路599號 </div></td>
+      <td width="30%" ><div id="addressAndMap">
+      
+      	<table width="100%" height = "100%"  border="0" cellpadding="0" cellspacing="0">
+          <tr width="100%" height=20%>
+               <td width="100%">
+               <div id="addresswrapper">
+               		<div id="address">555南投縣魚池鄉水社村中山路599號</div>
+               </div>
+            	
+               </td>
           </tr>
           <tr>
-            <td>&nbsp;<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3649.070232120344!2d120.90178530000001!3d23.8516397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468d5fbe306083d%3A0x9c38406254aab6e5!2zNTU15Y2X5oqV57ij6a2a5rGg6YSJ5Lit5bGx6LevNTk56Jmf!5e0!3m2!1szh-TW!2stw!4v1423617007345" width="600" height="450" frameborder="0" style="border:0"></iframe></td>
+            <td><div id="mapWrapperWrapper">
+            		<div id="mapwrapper"> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3649.070232120344!2d120.90178530000001!3d23.8516397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468d5fbe306083d%3A0x9c38406254aab6e5!2zNTU15Y2X5oqV57ij6a2a5rGg6YSJ5Lit5bGx6LevNTk56Jmf!5e0!3m2!1szh-TW!2stw!4v1423776906025" width="100%" height="100%"  frameborder="0" style="border:0"></iframe>
+                	</div>
+            		<div id="slogan"> id "slogan" 的內容放在這裡</div>
+                	
+                </div>
+            </td>
+	
           </tr>
         </table>
       </td>
+      </div>
     </tr>
   </table>
+
+
 </div>
-  <div id="btn"><table width="50%"  align="center">
-  <tr>
-    <td >&nbsp;<a href="index.html">首頁</a></td>
-    <td>&nbsp;<a href="objective.html">經營理念</a></td>
-    <td>&nbsp;公司團隊</td>
-    <td>&nbsp;作品集</td>
-    <td>&nbsp;<a href="reward.html">得獎紀錄</a></td>
-    <td>&nbsp;人員證照</td>
-    <td>&nbsp;<a href="contact.html">聯絡我們</a></td>
-  </tr>
-</table>
- </div>
+</div>
 <div id="footer"> 版權所有©2015 華春營造有限公司 所有權利保留</div>
   
   

@@ -1,14 +1,44 @@
 @charset "utf-8";
-html, body{
+
+
+a{
+
+}
+
+a:hover{
+
+}
+
+*
+{
+border: 0;
+margin: 0;
+}
+
+html{
 	padding:0;
 	margin:0;
-	height:100%;
-	}
+
+}
+
+body
+{
+	padding:0;
+	margin:0;
+
+	font: 12px Arial, Helvetica, sans-serif;
+	background-color:#DEDE9A;
+	background-image: url(spring/images/bg.jpg);
+	background-repeat:repeat-x;
+	background-position: top;
+
+}
+
 
 #wrapper {
 	font-family: "微軟正黑體", "Arial Unicode MS";
 	width: 100%;
-	height:100%;
+
 	margin: 0;
 	border: 0px none #363;
 }
@@ -23,17 +53,27 @@ html, body{
 	border-left-style: none;
 }
 #logo {
+	height:100px;
 	width: 100%;
 	text-align: center;
 	position: relative;
-	background-color: #0CC;
 }
-#btn {
-	background-color: #090;
+#logo_logo {
+	display:inline
+}
+#logo_text {
+	display:inline
+}
+
+#selectRegion {
+	margin: 0;
+	padding: 0;
+	background-image: url(spring/images/selection.jpg);
+	height: 100%;
 	width: 100%;
-	height: 100px;
-	text-align: center;
+	text-align: right;
 	font-size: 26px;
+	font-family: "微軟正黑體", "Arial Unicode MS";
 }
 #content {
 	font-size: 14px;
@@ -46,22 +86,17 @@ html, body{
 	line-height: 1.5em;
 	padding: 20px;
 	vertical-align: 50%;
+	text-align: center;
 }
 #title_bar {
 	font-size: 16px;
 	line-height: 3em;
 	font-weight: bolder;
 }
-#mailto {
-}
 
-#contact_table_head {
-}
-#footer {
-	text-align: center;
-}
+
 #objective {
-	height: 40vw;
+
 	background-color: #0C9;
 }
 #objective_background {
@@ -81,7 +116,7 @@ html, body{
 	text-align: center;
 
 	overflow:hidden;
-display:table;  
+	display:table;  
 }
 
 
@@ -134,11 +169,130 @@ wards_item {
 	font-size: 16pt;
 	font-family: "微軟正黑體", "Arial Unicode MS";
 }
-#makeMeScrollable{
-	width:300px;
+#projectImgScrollRegion{
 	position: relative;
 	display: block
 	float: left;
+	width: 95%;
+	height: 100px;
+	
+	padding: 1%;
+	background-color: #FF0;
+	border: 5px double #000;
+
+
+}
+
+#projectImgScrollRegion img{
+
+	width: 100px;
+	height: 100px;
+}
+
+#main {
+	width: 1014px;
+	height: 500px;
+	margin:0px auto;
+}
+#mainbg{
+	background: url(spring/images/main_bg.png);
+	background-repeat:repeat-y;
+	background-position: center;
+}
+#address{
+	height: 100%;
+	margin: 5px
+	width: 260px;
+	padding-top:30px;
+	padding-left:20px;
+	padding-right:20px;
+	border:0;
+
+	margin: 0;
+	
+
+	font-family: "標楷體";
+	font-size: 16px;
+	word-break: break-all;
+	font-weight: bold;
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+table {
+	table-layout: fixed;
+}
+#addresswrapper {
+	width: 290px;
+	height: 90px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0;
+
+	top: 5px;
+
+	
+}
+#mapWrapperWrapper {
+	width: 290px;
+	height: 390px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:10px;
+}
+#mapwrapper {
+	width: 280px;
+	height: 280px;
+	border: 5px double #000;
+	
+}
+
+#slogan {
+	margin-top:10px;
+
+	width: 250px;
+	padding:20px;
+}
+#btnDiv {
+
+	width: 140px;
+	height:20px;
+	font-family: "微軟正黑體", "Arial Unicode MS";
+	font-size: 18px;
+	text-align: right;
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #000;
+}
+
+#btnDiv:hover  {
+
+	width: 140px;
+	height:20px;
+	font-family: "微軟正黑體", "Arial Unicode MS";
+	font-size: 18px;
+	text-align: right;
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-bottom-color: #000;
+	color: #900;
+	font-weight: bold;
+
+}
+#addressAndMap {
 	margin: 0;
 	padding: 0;
+	background-image: url(spring/images/selection.jpg);
+	height: 100%;
+	width: 100%;
 }
