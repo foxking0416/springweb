@@ -4,127 +4,289 @@
 <meta charset="utf-8">
 <title>華春營造有限公司</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
-<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 
 <!-- Add jQuery library -->
-<script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="spring/js/jquery-1.11.2.js"></script>
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="spring/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<!-- Add ui plugin -->
+<script type="text/javascript" src="spring/js/jquery-ui.js" ></script>
+<link rel="stylesheet" href="spring/css/jquery-ui.min.css">
+
 <script type="text/javascript">
-	var preloadingImage = new Array();
-	var preloadingLink = new Array();
-	var preloadingName = new Array();
-	/*preloadingImage[0] = new Image();
-	preloadingImage[0].src = "spring/images/bird1.jpg";
-	preloadingImage[1] = new Image();
-	preloadingImage[1].src = "spring/images/bird2.jpg";
-	preloadingImage[2] = new Image(); 
-	preloadingImage[2].src = "spring/images/bird3.jpg";*/
-	preloadingImage[0] = "spring/images/bird1.jpg";
-	preloadingImage[1] = "spring/images/bird2.jpg";
-	preloadingImage[2] = "spring/images/bird3.jpg";
+	/*var buildImageNorth = new Array();
+	var buildLinkNorth = new Array();
+	var buildNameNorth = new Array();
+	
+	var buildImageSouth = new Array();
+	var buildLinkSouth = new Array();
+	var buildNameSouth = new Array();
+	
+	var buildImageMid = new Array();
+	var buildLinkMid = new Array();
+	var buildNameMid = new Array();
+	
+	var buildImageEast = new Array();
+	var buildLinkEast = new Array();
+	var buildNameEast = new Array();
+
+	buildImageNorth[0] = "spring/images/bird1.jpg";
+
+	
+	buildImageSouth[0] = "spring/images/bird3.jpg";
+	buildImageSouth[1] = "spring/images/bird1.jpg";
+	buildImageSouth[2] = "spring/images/bird2.jpg";
+	buildImageSouth[3] = "spring/images/bird3.jpg";
+	buildImageSouth[4] = "spring/images/bird1.jpg";
+	
+	buildImageMid[0] = "spring/images/bird2.jpg";
+	buildImageMid[1] = "spring/images/bird3.jpg";
+	buildImageMid[2] = "spring/images/bird2.jpg";
+	buildImageMid[3] = "spring/images/bird3.jpg";
+	buildImageMid[4] = "spring/images/bird2.jpg";
+	
+	buildImageEast[0] = "spring/images/bird3.jpg";
+	buildImageEast[1] = "spring/images/bird3.jpg";
+	buildImageEast[2] = "spring/images/bird3.jpg";
+
 	
 	
-	preloadingLink[0] = "project1";
-	preloadingLink[1] = "project2";
-	preloadingLink[2] = "project3";
-	preloadingName[0] = "向山";
-	preloadingName[1] = "日月潭";
-	preloadingName[2] = "成大";
+	buildLinkNorth[0] = "project1";
 
-	$(document).ready(function(){
+	
+	buildLinkMid[0] = "project1";
+	buildLinkMid[1] = "project2";
+	buildLinkMid[2] = "project3";
+	buildLinkMid[3] = "project4";
+	buildLinkMid[4] = "project5";
+	
+	buildLinkSouth[0] = "project1";
+	buildLinkSouth[1] = "project2";
+	buildLinkSouth[2] = "project3";
+	buildLinkSouth[3] = "project4";
+	buildLinkSouth[4] = "project5";
 
-	  /*for(i = 0; i < preloadingImage.length; i++){
-		  var linkaddress = preloadingLink[i];
-		  $("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
-  
-	  }*/
-	  
-	  //$("#inserted").append('<div id="div' + 2 + '">test2'+ preloadingImage[0]+' </div>');
-//	  $("#inserted").append('<div id="div' + 2 + '">test2<img src="spring/images/bird2.jpg" width="100px" height="100px" > </div>');	  
-	});
+	buildLinkEast[0] = "project1";
+	buildLinkEast[1] = "project2";
+	buildLinkEast[2] = "project3";
 
-	function citychange(){
-		$("#inserted").empty();
-		var selectValue = $( "#selectRegion" ).val();
-		var i;
-		var linkaddress = preloadingLink[i];
-		if($( "#selectRegion" ).val() == "north"){
-			i=0;
-			linkaddress = preloadingLink[0];
-		}
-		else if($( "#selectRegion" ).val() == "middle"){
-			i=1;
-			linkaddress = preloadingLink[1];
-		}
-		else if($( "#selectRegion" ).val() == "south"){
-			i=2;
-			linkaddress = preloadingLink[2];
-		}
-		else
-			return;
+	
+	//北部
+	buildNameNorth[0] = "實踐大學";
+	
+	buildNameMid[0] = "向山行政中心";
+	buildNameMid[1] = "日月潭教師會館";
+	buildNameMid[2] = "嘉義縣政府布袋港";
+	buildNameMid[3] = "嘉南療養院";
+	buildNameMid[4] = "烏山頭親水公園";
+	
+	buildNameSouth[0] = "成功大學醫學院";
+	buildNameSouth[1] = "法鼓山永久屋";
+	buildNameSouth[2] = "高雄師範大學";
+	buildNameSouth[3] = "三聯科技本洲工業區";
+	buildNameSouth[4] = "奇美實業";
+	
+	buildNameEast[0] = "台東新興國小";
+	buildNameEast[1] = "彰化銀行台東分行";
+	buildNameEast[2] = "台東金崙溫泉";*/
+	var buildNorth = new Array();
+	var buildSouth = new Array();
+	var buildMid = new Array();
+	var buildEast = new Array();
+	buildNorth[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"實踐大學"};
+	
+	buildSouth[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"成功大學醫學院"};		    
+	buildSouth[1] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"法鼓山永久屋"};
+	buildSouth[2] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"高雄師範大學"};
+	buildSouth[3] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"三聯科技本洲工業區"};
+	buildSouth[4] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"奇美實業"};
+	
+	buildMid[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"向山行政中心"};		    
+	buildMid[1] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"日月潭教師會館"};
+	buildMid[2] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"嘉義縣政府布袋港"};
+	buildMid[3] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"嘉南療養院"};
+	buildMid[4] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"烏山頭親水公園"};
+	
+	buildEast[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"台東新興國小"};		    
+	buildEast[1] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"彰化銀行台東分行"};
+	buildEast[2] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"台東金崙溫泉"};
+	
+	
+	function regionChange(eleId){
+		$("#project_list").empty();
+
+
 		
-	    $("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
-		$("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
-		$("#inserted").append('<div id="div' + i + '"><a href="'+ preloadingLink[i]+'.html"> '+preloadingLink[i]+' </a><img src = '+preloadingImage[i]+' width="100px" height="100px" > </div>');
+		if(eleId ==='selectN'){
+			$("#selectN").css("background-color", "#F60");
+			$("#selectM").css("background-color", "#FFFFFF");
+			$("#selectS").css("background-color", "#FFFFFF");
+			$("#selectE").css("background-color", "#FFFFFF");
+
+			$(".taiwan_map").removeClass('north');
+			$(".taiwan_map").removeClass('south');
+			$(".taiwan_map").removeClass('middle');
+			$(".taiwan_map").removeClass('east');
+			$(".taiwan_map").addClass('north');
+			for(i = 0; i < buildNorth.length; i++){
+				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildNorth[i].linkPath+'.html"> '+buildNorth[i].name+' </a><img src = '+buildNorth[i].image+' width="300px" height="100px" > </div>');
+			}
+		}
+		else if(eleId === 'selectM'){
+			$("#selectN").css("background-color", "#FFFFFF");
+			$("#selectM").css("background-color", "#6CC");
+			$("#selectS").css("background-color", "#FFFFFF");
+			$("#selectE").css("background-color", "#FFFFFF");
+			
+			$(".taiwan_map").removeClass('north');
+			$(".taiwan_map").removeClass('south');
+			$(".taiwan_map").removeClass('middle');
+			$(".taiwan_map").removeClass('east');
+			$(".taiwan_map").addClass('middle');
+			for(i = 0; i < buildSouth.length; i++){
+				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildMid[i].linkPath+'.html"> '+buildMid[i].name+' </a><img src = '+buildMid[i].image+' width="300px" height="100px" > </div>');
+			}
+
+		}
+		else if(eleId === 'selectS'){
+			$("#selectN").css("background-color", "#FFFFFF");
+			$("#selectM").css("background-color", "#FFFFFF");
+			$("#selectS").css("background-color", "#060");
+			$("#selectE").css("background-color", "#FFFFFF");
+						
+			$(".taiwan_map").removeClass('north');
+			$(".taiwan_map").removeClass('south');
+			$(".taiwan_map").removeClass('middle');
+			$(".taiwan_map").removeClass('east');
+			$(".taiwan_map").addClass('south');
+			for(i = 0; i < buildSouth.length; i++){
+				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildSouth[i].linkPath+'.html"> '+buildSouth[i].name+' </a><img src = '+buildSouth[i].image+' width="300px" height="100px" > </div>');
+			}
+
+		}
+		else if(eleId === 'selectE'){
+			$("#selectN").css("background-color", "#FFFFFF");
+			$("#selectM").css("background-color", "#FFFFFF");
+			$("#selectS").css("background-color", "#FFFFFF");
+			$("#selectE").css("background-color", "#903");
+						
+			$(".taiwan_map").removeClass('north');
+			$(".taiwan_map").removeClass('south');
+			$(".taiwan_map").removeClass('middle');
+			$(".taiwan_map").removeClass('east');
+			$(".taiwan_map").addClass('east');
+			for(i = 0; i < buildSouth.length; i++){
+				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildEast[i].linkPath+'.html"> '+buildEast[i].name+' </a><img src = '+buildEast[i].image+' width="300px" height="100px" > </div>');
+			}
+		}
+
 		
 	}
+	
+	function callback() {
+      /*setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );*/
+    };
 
 </script>
+
+
+
+
+
 </head>
 
 
 <body>
+
 <div id="wrapper">
   <div id="logo">
-	<img src="spring/images/logo_name.svg" alt="Logo" width="50%">
-  </div>
-
-  <div id="objective">
-  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td width="20%" valign="bottom" bgcolor="#000000"><div id="bird_left">
-
-      <img src="spring/images/bird3.jpg" width="100%" ></div>           
-      </td>
-      <td >
-	  
-
-      <div id="project"> id "project" 的內容放在這裡
-        <select name="region" onchange="citychange()" id="selectRegion">
-        	<option value="%">請選擇縣市</option>
-            <option value="north">北部地區</option>
-            <option value="middle">中部地區</option>
-            <option value="south">南部地區</option>
-        </select>
-
+    <div id="logo_logo"><img src="spring/images/logo green.svg" alt="Logo" height="100px"></div>
+    <div id="logo_text"><img src="spring/images/text.svg" alt="LogoName" height="100px"></div>
+    
+		
+  	</div>
+    <div id="mainbg">
+  	<div id="main">
+	  <table width="100%" height="500px"  border="0" cellpadding="0" cellspacing="0">
+	    <tr>
+	      <td width="20%" valign="top">
+	        <div id="selectRegion">
+	          <table width="80%" height="60%" border="0" cellspacing="20" cellpadding="0" align="right">
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="index.html">首頁</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="objective.html">經營理念</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="group.html">公司團隊</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="reward.html">得獎紀錄</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="project.html">作品集</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="certificate.html">人員證照</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="responsibility.html">社會責任</a></div>
+                  </td>
+                </tr>
+	            <tr>
+	              <td class="btn"><div id="btnDiv"><a href="contact.html">聯絡我們</a></div>
+                  </td>
+                </tr>
+              </table>
+	          
+            </div>           
+          </td>
+	      <td width="40%" bgcolor="#00FF00">
+          <div id="taiwan">
+			<div id="city_selection">
+            	<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr >
+                    <td id="selectN" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectN')" onmouseover="" style="cursor: pointer;">北部地區</td>
+                    <td id="selectM" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectM')" onmouseover="" style="cursor: pointer;">中部地區</td>
+                    <td id="selectS" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectS')" onmouseover="" style="cursor: pointer;">南部地區</td>
+                    <td id="selectE" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectE')" onmouseover="" style="cursor: pointer;">東部地區</td>
+                  </tr>
+                </table>
+	        </div>
+			<div  class="taiwan_map">
+              
+			</div>
+            
+	        </div>
+          </td>
+	      <td width="40%" bgcolor="#FFFF00">
+	        <div id="project_list">
+            
+	        </div>
+	        
+          </td>
         
-      </div>
-      <div id="inserted">新增 Div 標籤的內容放在這裡</div></td>
-      <td width="20%" valign="top"><img src="spring/images/bird1.jpg" width="100%" alt="bird"></td>
-    </tr>
-  </table>
+	    </tr>
+      </table>
+	  </div>
+
+
+  
 </div>
-  <div id="btn"><table width="50%"  align="center">
-  <tr>
-    <td >&nbsp;<a href="index.html">首頁</a></td>
-    <td>&nbsp;<a href="objective.html">經營理念</a></td>
-    <td>&nbsp;公司團隊</td>
-    <td>&nbsp;作品集</td>
-    <td>&nbsp;<a href="reward.html">得獎紀錄</a></td>
-    <td>&nbsp;人員證照</td>
-    <td>&nbsp;<a href="contact.html">聯絡我們</a></td>
-  </tr>
-</table>
- </div>
 <div id="footer"> 版權所有©2015 華春營造有限公司 所有權利保留</div>
   
   
   
 </div>
-<script type="text/javascript">
-var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
-</script>
+
 </body>
 </html>
