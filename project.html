@@ -131,6 +131,14 @@
 			for(i = 0; i < buildNorth.length; i++){
 				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildNorth[i].linkPath+'.html"> '+buildNorth[i].name+' </a><img src = '+buildNorth[i].image+' width="300px" height="100px" > </div>');
 			}
+			
+			    /*$(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="100%">a</div>');*/
+                /*$(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:10%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="0px">a</div>');
+                $(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:50%; top:30%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="0px">a</div>');
+                $(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:20%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="0px">a</div>');*/
+				/*<div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="100%">a</div>*/
+			/*$(".smallIcon").addClass('appear');*/
+				
 		}
 		else if(eleId === 'selectM'){
 			$("#selectN").css("background-color", "#FFFFFF");
@@ -263,10 +271,12 @@
                 </table>
 	        </div>
 			<div  class="taiwan_map">
-              
-			</div>
+          		<!--<div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; z-index:1; ><img src="spring/images/logo green.svg" width="100%">a</div>
+                <div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; z-index:2; ><img src="spring/images/logo green.svg" width="100%">a</div>-->
+
+            </div>
             
-	        </div>
+	      </div>
           </td>
 	      <td width="40%" bgcolor="#FFFF00">
 	        <div id="project_list">
