@@ -1,67 +1,46 @@
 
-var bannerAD=new Array();  
-var bannerADlink=new Array();  
-var adNum=0;  
-var opacity = 1.0;
-var fadeOut = false;
+var bannerAD=new Array();    
+var adNum=1;  
+var init = true;
 
+$.getJSON('project.json', function(data) {
+	bannerAD = data.Banner;
+});
+/*
+bannerAD[0]="spring/images/background/header1b.jpg";
+bannerAD[1]="spring/images/background/header2b.jpg";
+bannerAD[2]="spring/images/background/header3b.jpg";
+bannerAD[3]="spring/images/background/header4b.jpg";
+bannerAD[4]="spring/images/background/header5b.jpg";
+bannerAD[5]="spring/images/background/header7b.jpg";
+bannerAD[6]="spring/images/background/header8b.jpg";
+bannerAD[7]="spring/images/background/header9b.jpg";
+bannerAD[8]="spring/images/background/header11b.jpg";
+bannerAD[9]="spring/images/background/header12b.jpg";
+bannerAD[10]="spring/images/background/header13b.jpg";
+bannerAD[11]="spring/images/background/header14b.jpg";*/
 
-bannerAD[0]="spring/images/title.jpg";
-bannerAD[1]="spring/images/facemountain.jpg";
-
-preloadedimages=new Array();
-for (i=0;i<bannerAD.length;i++){
-	preloadedimages[i]=new Image();
-	preloadedimages[i].src=bannerAD[i];
-}
-
-function setTransition(){
-	if (document.all){
-		bannerADrotator.filters.revealTrans.Transition=Math.floor(Math.random()*23);
-		bannerADrotator.filters.revealTrans.apply();
-	}
-}
-
-function playTransition(){
-	if (document.all)
-		bannerADrotator.filters.revealTrans.play()
-}
 
 function nextAd(){
-	bannerADrotator.style.opacity = opacity;
-	if(fadeOut == true){
-		opacity -= 0.005;		
-		if(opacity<0){
-			if(adNum<bannerAD.length-1)
-				adNum++ ;
-			else 
-				adNum=0;
+	if(init === true){
+			setTimeout("nextAd()", 10000);
+			init = false;
+		}
+		else
+		{
+		$(".header img").fadeTo(3000,0.01,"swing", function(){
 			
-			opacity = 0;
-			fadeOut = false;
-		}
-		theTimer=setTimeout("nextAd()", 10);
-	}
-	else{
-		opacity += 0.005;
+				$('.header img').load(function() {
+    			$(".header img").fadeTo(3000,1,"swing");
+				}).attr("src", bannerAD[adNum]);
+			
+				//$(".header img").attr("src", bannerAD[adNum]);
+			});
 		
-		if(opacity > 1){
-			theTimer=setTimeout("nextAd()", 5000);
-			opacity = 1;
-			fadeOut = true;	
+				if(adNum<bannerAD.length-1)
+					adNum++ ;
+				else 
+					adNum=0;
+				setTimeout("nextAd()", 16000);
 		}
-		else{
-			theTimer=setTimeout("nextAd()", 10);
-		}
-		
-	}
-	
-	//setTransition();
-	document.images.bannerADrotator.src=bannerAD[adNum];
-	//playTransition();
 }
-
-function displayStatusMsg() {
-	status=bannerADlink[adNum];
-	document.returnValue = true;
-}  

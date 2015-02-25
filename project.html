@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>華春營造有限公司</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-
+<script type="text/javascript" src="spring/js/imagechange.js"></script>
 <!-- Add jQuery library -->
 <script type="text/javascript" src="spring/js/jquery-1.11.2.js"></script>
 <!-- Add mousewheel plugin (this is optional) -->
@@ -13,191 +13,8 @@
 <script type="text/javascript" src="spring/js/jquery-ui.js" ></script>
 <link rel="stylesheet" href="spring/css/jquery-ui.min.css">
 
-<script type="text/javascript">
-	/*var buildImageNorth = new Array();
-	var buildLinkNorth = new Array();
-	var buildNameNorth = new Array();
-	
-	var buildImageSouth = new Array();
-	var buildLinkSouth = new Array();
-	var buildNameSouth = new Array();
-	
-	var buildImageMid = new Array();
-	var buildLinkMid = new Array();
-	var buildNameMid = new Array();
-	
-	var buildImageEast = new Array();
-	var buildLinkEast = new Array();
-	var buildNameEast = new Array();
+<script type="text/javascript" src="spring/js/autoAddDiv.js"></script>
 
-	buildImageNorth[0] = "spring/images/bird1.jpg";
-
-	
-	buildImageSouth[0] = "spring/images/bird3.jpg";
-	buildImageSouth[1] = "spring/images/bird1.jpg";
-	buildImageSouth[2] = "spring/images/bird2.jpg";
-	buildImageSouth[3] = "spring/images/bird3.jpg";
-	buildImageSouth[4] = "spring/images/bird1.jpg";
-	
-	buildImageMid[0] = "spring/images/bird2.jpg";
-	buildImageMid[1] = "spring/images/bird3.jpg";
-	buildImageMid[2] = "spring/images/bird2.jpg";
-	buildImageMid[3] = "spring/images/bird3.jpg";
-	buildImageMid[4] = "spring/images/bird2.jpg";
-	
-	buildImageEast[0] = "spring/images/bird3.jpg";
-	buildImageEast[1] = "spring/images/bird3.jpg";
-	buildImageEast[2] = "spring/images/bird3.jpg";
-
-	
-	
-	buildLinkNorth[0] = "project1";
-
-	
-	buildLinkMid[0] = "project1";
-	buildLinkMid[1] = "project2";
-	buildLinkMid[2] = "project3";
-	buildLinkMid[3] = "project4";
-	buildLinkMid[4] = "project5";
-	
-	buildLinkSouth[0] = "project1";
-	buildLinkSouth[1] = "project2";
-	buildLinkSouth[2] = "project3";
-	buildLinkSouth[3] = "project4";
-	buildLinkSouth[4] = "project5";
-
-	buildLinkEast[0] = "project1";
-	buildLinkEast[1] = "project2";
-	buildLinkEast[2] = "project3";
-
-	
-	//北部
-	buildNameNorth[0] = "實踐大學";
-	
-	buildNameMid[0] = "向山行政中心";
-	buildNameMid[1] = "日月潭教師會館";
-	buildNameMid[2] = "嘉義縣政府布袋港";
-	buildNameMid[3] = "嘉南療養院";
-	buildNameMid[4] = "烏山頭親水公園";
-	
-	buildNameSouth[0] = "成功大學醫學院";
-	buildNameSouth[1] = "法鼓山永久屋";
-	buildNameSouth[2] = "高雄師範大學";
-	buildNameSouth[3] = "三聯科技本洲工業區";
-	buildNameSouth[4] = "奇美實業";
-	
-	buildNameEast[0] = "台東新興國小";
-	buildNameEast[1] = "彰化銀行台東分行";
-	buildNameEast[2] = "台東金崙溫泉";*/
-	var buildNorth = new Array();
-	var buildSouth = new Array();
-	var buildMid = new Array();
-	var buildEast = new Array();
-	buildNorth[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"實踐大學"};
-	
-	buildSouth[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"成功大學醫學院"};		    
-	buildSouth[1] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"法鼓山永久屋"};
-	buildSouth[2] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"高雄師範大學"};
-	buildSouth[3] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"三聯科技本洲工業區"};
-	buildSouth[4] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"奇美實業"};
-	
-	buildMid[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"向山行政中心"};		    
-	buildMid[1] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"日月潭教師會館"};
-	buildMid[2] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"嘉義縣政府布袋港"};
-	buildMid[3] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"嘉南療養院"};
-	buildMid[4] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"烏山頭親水公園"};
-	
-	buildEast[0] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"台東新興國小"};		    
-	buildEast[1] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"彰化銀行台東分行"};
-	buildEast[2] = {image: "spring/images/bird1.jpg", linkPath:"project1", name:"台東金崙溫泉"};
-	
-	
-	function regionChange(eleId){
-		$("#project_list").empty();
-
-
-		
-		if(eleId ==='selectN'){
-			$("#selectN").css("background-color", "#F60");
-			$("#selectM").css("background-color", "#FFFFFF");
-			$("#selectS").css("background-color", "#FFFFFF");
-			$("#selectE").css("background-color", "#FFFFFF");
-
-			$(".taiwan_map").removeClass('north');
-			$(".taiwan_map").removeClass('south');
-			$(".taiwan_map").removeClass('middle');
-			$(".taiwan_map").removeClass('east');
-			$(".taiwan_map").addClass('north');
-			for(i = 0; i < buildNorth.length; i++){
-				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildNorth[i].linkPath+'.html"> '+buildNorth[i].name+' </a><img src = '+buildNorth[i].image+' width="300px" height="100px" > </div>');
-			}
-			
-			    /*$(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="100%">a</div>');*/
-                /*$(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:10%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="0px">a</div>');
-                $(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:50%; top:30%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="0px">a</div>');
-                $(".taiwan_map").append('<div class="smallIcon" height="20px" style="position:relative; left:20%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="0px">a</div>');*/
-				/*<div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; cursor: pointer;" onmouseover=""><img src="spring/images/logo green.svg" width="100%">a</div>*/
-			/*$(".smallIcon").addClass('appear');*/
-				
-		}
-		else if(eleId === 'selectM'){
-			$("#selectN").css("background-color", "#FFFFFF");
-			$("#selectM").css("background-color", "#6CC");
-			$("#selectS").css("background-color", "#FFFFFF");
-			$("#selectE").css("background-color", "#FFFFFF");
-			
-			$(".taiwan_map").removeClass('north');
-			$(".taiwan_map").removeClass('south');
-			$(".taiwan_map").removeClass('middle');
-			$(".taiwan_map").removeClass('east');
-			$(".taiwan_map").addClass('middle');
-			for(i = 0; i < buildSouth.length; i++){
-				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildMid[i].linkPath+'.html"> '+buildMid[i].name+' </a><img src = '+buildMid[i].image+' width="300px" height="100px" > </div>');
-			}
-
-		}
-		else if(eleId === 'selectS'){
-			$("#selectN").css("background-color", "#FFFFFF");
-			$("#selectM").css("background-color", "#FFFFFF");
-			$("#selectS").css("background-color", "#060");
-			$("#selectE").css("background-color", "#FFFFFF");
-						
-			$(".taiwan_map").removeClass('north');
-			$(".taiwan_map").removeClass('south');
-			$(".taiwan_map").removeClass('middle');
-			$(".taiwan_map").removeClass('east');
-			$(".taiwan_map").addClass('south');
-			for(i = 0; i < buildSouth.length; i++){
-				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildSouth[i].linkPath+'.html"> '+buildSouth[i].name+' </a><img src = '+buildSouth[i].image+' width="300px" height="100px" > </div>');
-			}
-
-		}
-		else if(eleId === 'selectE'){
-			$("#selectN").css("background-color", "#FFFFFF");
-			$("#selectM").css("background-color", "#FFFFFF");
-			$("#selectS").css("background-color", "#FFFFFF");
-			$("#selectE").css("background-color", "#903");
-						
-			$(".taiwan_map").removeClass('north');
-			$(".taiwan_map").removeClass('south');
-			$(".taiwan_map").removeClass('middle');
-			$(".taiwan_map").removeClass('east');
-			$(".taiwan_map").addClass('east');
-			for(i = 0; i < buildSouth.length; i++){
-				$("#project_list").append('<div class="divAutoAdd"><a href="'+ buildEast[i].linkPath+'.html"> '+buildEast[i].name+' </a><img src = '+buildEast[i].image+' width="300px" height="100px" > </div>');
-			}
-		}
-
-		
-	}
-	
-	function callback() {
-      /*setTimeout(function() {
-        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
-      }, 1000 );*/
-    };
-
-</script>
 
 
 
@@ -209,70 +26,41 @@
 <body>
 
 <div id="wrapper">
-  <div id="logo">
-    <div id="logo_logo"><img src="spring/images/logo green.svg" alt="Logo" height="100px"></div>
-    <div id="logo_text"><img src="spring/images/text.svg" alt="LogoName" height="100px"></div>
-    
-		
-  	</div>
-    <div id="mainbg">
-  	<div id="main">
-	  <table width="100%" height="500px"  border="0" cellpadding="0" cellspacing="0">
-	    <tr>
-	      <td width="20%" valign="top">
-	        <div id="selectRegion">
-	          <table width="80%" height="60%" border="0" cellspacing="20" cellpadding="0" align="right">
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="index.html">首頁</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="objective.html">經營理念</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="group.html">公司團隊</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="reward.html">得獎紀錄</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="project.html">作品集</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="certificate.html">人員證照</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="responsibility.html">社會責任</a></div>
-                  </td>
-                </tr>
-	            <tr>
-	              <td class="btn"><div id="btnDiv"><a href="contact.html">聯絡我們</a></div>
-                  </td>
-                </tr>
-              </table>
-	          
-            </div>           
-          </td>
-	      <td width="40%" bgcolor="#00FF00">
-          <div id="taiwan">
-			<div id="city_selection">
-            	<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr >
-                    <td id="selectN" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectN')" onmouseover="" style="cursor: pointer;">北部地區</td>
-                    <td id="selectM" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectM')" onmouseover="" style="cursor: pointer;">中部地區</td>
-                    <td id="selectS" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectS')" onmouseover="" style="cursor: pointer;">南部地區</td>
-                    <td id="selectE" align="center" bgcolor="#FFFFFF" onClick="regionChange('selectE')" onmouseover="" style="cursor: pointer;">東部地區</td>
-                  </tr>
-                </table>
-	        </div>
+  <div class="header"> 
+    <img class="header" src="spring/images/title.jpg" name = "bannerADrotator">
+		<SCRIPT language=JavaScript>nextAd()</SCRIPT>
+  </div>
+  <div class="project_content">
+    <div class="left">
+      <div class="title">
+  	    <img src="spring/images/logo green.svg">
+	    <h1>作品集 </h1>
+
+      </div>
+      <div class="region_select">
+      <table>
+  	  <tr>
+        <td class="selectN" onClick="regionChange('selectN')">北部地區</td>
+        <td class="selectM" onClick="regionChange('selectM')">中部地區</td>
+        <td class="selectS" onClick="regionChange('selectS')">南部地區</td>
+        <td class="selectE" onClick="regionChange('selectE')">東部地區</td>
+
+  	  </tr>
+	  </table>
+      </div>
+      <div class="taiwan_map">
+      </div>
+    </div>
+    <div class="right">
+      <div class="project_list">
+            
+	  </div>
+    </div>
+
+  </div>
+<!--    
 			<div  class="taiwan_map">
-          		<!--<div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; z-index:1; ><img src="spring/images/logo green.svg" width="100%">a</div>
-                <div class="smallIcon" height="20px" style="position:relative; left:50%; top:50%; z-index:2; ><img src="spring/images/logo green.svg" width="100%">a</div>-->
+
 
             </div>
             
@@ -286,13 +74,22 @@
           </td>
         
 	    </tr>
-      </table>
-	  </div>
+      </table>-->
 
-
-  
-</div>
-<div id="footer"> 版權所有©2015 華春營造有限公司 所有權利保留</div>
+  <div class="index_btn">
+  	<table>
+  	  <tr>
+        <td onClick="window.location.href='index.html'">首頁</td>
+        <td onClick="window.location.href='objective.html'">經營理念</td>
+        <td onClick="window.location.href='staff.html'">公司團隊</td>
+        <td class="current">作品集</td>
+        <td onClick="window.location.href='reward.html'">得獎紀錄</td>
+        <td onClick="window.location.href='certificate.html'">人員證照</td>
+        <td class="last" onClick="window.location.href='contact.html'">聯絡我們</td>
+  	  </tr>
+	</table>
+  </div>
+  <div id="footer"> 版權所有©2015 華春營造有限公司 所有權利保留</div>
   
   
   

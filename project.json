@@ -1,0 +1,37 @@
+{
+	"Banner":["spring/images/background/header1b.jpg",
+			  "spring/images/background/header2b.jpg",
+			  "spring/images/background/header3b.jpg",
+			  "spring/images/background/header4b.jpg",
+			  "spring/images/background/header5b.jpg",
+			  "spring/images/background/header7b.jpg",
+			  "spring/images/background/header8b.jpg",
+			  "spring/images/background/header9b.jpg",
+			  "spring/images/background/header11b.jpg",
+			  "spring/images/background/header12b.jpg",
+			  "spring/images/background/header13b.jpg",
+			  "spring/images/background/header14b.jpg"
+			 ],
+	"North":[
+				{"linkPath":"projectN1", "name":"實踐大學",       "image":"spring/images/bird1.jpg"}
+			],
+	"Mid":[
+				{"linkPath":"projectM1", "name":"向山行政中心",     "image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectM2", "name":"日月潭教師會館",   "image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectM3", "name":"嘉義縣政府布袋港", "image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectM4", "name":"嘉南療養院", 		"image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectM5", "name":"烏山頭親水公園", 	"image":"spring/images/bird1.jpg"}
+			],
+	"South":[
+				{"linkPath":"projectS1", "name":"成功大學醫學院", 	"image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectS2", "name":"法鼓山永久屋", 	"image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectS3", "name":"高雄師範大學", 	"image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectS4", "name":"三聯科技本洲工業區", "image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectS5", "name":"奇美實業", 		"image":"spring/images/bird1.jpg"}
+			],
+	"East":[
+				{"linkPath":"projectE1", "name":"台東新興國小", 	"image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectE2", "name":"彰化銀行台東分行", "image":"spring/images/bird1.jpg"},
+				{"linkPath":"projectE3", "name":"台東金崙溫泉", 	"image":"spring/images/bird1.jpg"}
+			]
+}
