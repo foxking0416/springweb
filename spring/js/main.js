@@ -4,10 +4,7 @@
 	var opacity = 1.0;
 	var fadeOut = false;
 	
-	
 
-
-	
 	var projectList = new Array();
 	var projectListPic = new Array();
 	
@@ -58,15 +55,13 @@
 	
 	
 	function jumpToProjectPage(pg) {
-		//$( ".content" ).css("display", "");
-		//window.location.href= pg+ '.html';
-		//window.location.href= 'projectM1.html';
 		sessionStorage.setItem('projectIndex', pg);
-		window.open('projectTest.html', '_blank');
+		window.open('projectInfo.html', '_blank');
 		sessionStorage.setItem('session', 'project');
-		//window.sessionStorage.clear();
-		//window.sessionStorage["projectIndex"] = pg;
-
-		
- };
+  };
+ 
+ 	function jumpFromProjectToOther(destination){
+		sessionStorage.setItem('session', destination);
+		window.location.href='index.html';
+	};
 	

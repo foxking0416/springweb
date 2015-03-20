@@ -24,7 +24,7 @@ body
 	padding:0;
 	margin:0;
 	background-color:#DEDE9A;/*DEDE9A*/
-	background-image: url(spring/images/bg.jpg);
+	background-image: url(../images/bg.jpg);
 	background-image: -moz-linear-gradient(#FFF, #DEDE9A);
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, form(#FFF), to(#DEDE9A));
 	background-image: -webkit-linear-gradient(#FFF, #DEDE9A);
@@ -431,7 +431,7 @@ li:hover > .sub-menu {
 .right .address{
 	width:370px;
 	height:60px;
-	background-image:url(spring/images/plate.png);
+  background-image:url(../images/plate.png);
 	background-repeat:no-repeat;
 	background-position:center;
 	margin:0px 0px 0px 20px;
@@ -543,7 +543,7 @@ cursor:pointer;
 
 
 .taiwan_map {
-	background-image: url(spring/images/VectorTaiwanMap.svg);
+	background-image: url(../images/VectorTaiwanMap.svg);
 	background-size: 400px 400px;
 	background-repeat: no-repeat;
 	/*background-position: 0px 0px;*/

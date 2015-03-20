@@ -3,13 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>華春營造有限公司</title>
-<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="spring/css/style.css"  type="text/css">
 <script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="spring/js/jquery-ui.js"></script>
-<link rel="stylesheet" href="spring/css/jquery-ui.min.css">
-<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="spring/css/jquery-ui.min.css" type="text/css">
 <script type="text/javascript" src="spring/js/main.js"></script>
-<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
 
 <!-- Add fancyBox -->
 <link rel="stylesheet" href="spring/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
@@ -28,73 +26,66 @@
 	});
 
 </script>
-<!--<script type="text/javascript" src="spring/js/imagechange.js"></script>-->
+
 <script>
 	var currentPage = "home";
-		function selectPage(nextPage) {
+	function selectPage(nextPage) {
 
-			if(nextPage === currentPage)
-				return;
+		if(nextPage === currentPage)
+			return;
 
-    	var options = {};
+		var options = {};
 
-			$('#' + currentPage + 'Btn').removeClass('current');
-			if(currentPage === 'about' || currentPage === 'staff' || currentPage === 'objective')
-				$('#aboutBtnCollection').removeClass('current');
-			else if(currentPage === 'project' || currentPage === 'reward')
-				$('#projectBtnCollection').removeClass('current');
-			
-	  	if(currentPage === "home"){
-			
-				$( '#objectiveWrapper').css("display", "none");
-				$( '#aboutWrapper').css("display", "none");
-				$( '#staffWrapper').css("display", "none");
-				$( '#rewardWrapper').css("display", "none");
-				$( '#staffWrapper').css("display", "none");
-				$( '#projectWrapper').css("display", "none");
-				$( '#certificateWrapper').css("display", "none");
-				$( '#contactWrapper').css("display", "none");
-				$( '#' +nextPage + 'Wrapper').css("display", "");
-			
-			
-      	$(".logo").toggle("blind", options, 500, 
-			  function() { $( ".content" ).toggle(  "blind", options, 500);});
-			  /*$( ".content" ).toggle(  "blind", options, 500);*/
-	    }
-	    else{
-				if(nextPage === "home") {
-					$(".content").toggle("blind", options, 500, 
-					function() { $( ".logo" ).toggle(  "blind", options, 500);});
-				/*  $(".content").toggle("blind", options, 500);*/
-				}
-				else{
-				 $('#' + currentPage + 'Wrapper').toggle("drop", options, 500, 
-					function() {$('#' + nextPage + 'Wrapper').toggle("drop", options, 500);});
-				}
-	    }
+		$('#' + currentPage + 'Btn').removeClass('current');
+		if(currentPage === 'about' || currentPage === 'staff' || currentPage === 'objective')
+			$('#aboutBtnCollection').removeClass('current');
+		else if(currentPage === 'project' || currentPage === 'reward')
+			$('#projectBtnCollection').removeClass('current');
+		
+		if(currentPage === "home"){
+			$( '#aboutWrapper').css("display", "none");
+			$( '#staffWrapper').css("display", "none");			
+			$( '#objectiveWrapper').css("display", "none");
+			$( '#projectWrapper').css("display", "none");
+			$( '#rewardWrapper').css("display", "none");
+			$( '#certificateWrapper').css("display", "none");
+			$( '#contactWrapper').css("display", "none");
+			$( '#' +nextPage + 'Wrapper').css("display", "");
+		
+			$(".logo").toggle("blind", options, 500, 
+			function() { $( ".content" ).toggle(  "blind", options, 500);});
+		}
+		else{
+			if(nextPage === "home") {
+				$(".content").toggle("blind", options, 500, 
+				function() { $( ".logo" ).toggle(  "blind", options, 500);});
+			}
+			else{
+			 $('#' + currentPage + 'Wrapper').toggle("drop", options, 500, 
+				function() {$('#' + nextPage + 'Wrapper').toggle("drop", options, 500);});
+			}
+		}
 
-	    currentPage = nextPage;
-	    $('#' + nextPage + 'Btn').addClass('current');
-			if(nextPage === 'about' || nextPage === 'staff' || nextPage === 'objective')
-				$('#aboutBtnCollection').addClass('current');
-			else if(nextPage === 'project' || nextPage === 'reward')
-				$('#projectBtnCollection').addClass('current');
-			//$(this).addClass('current');
-
-    };
+		currentPage = nextPage;
+		$('#' + nextPage + 'Btn').addClass('current');
+		if(nextPage === 'about' || nextPage === 'staff' || nextPage === 'objective')
+			$('#aboutBtnCollection').addClass('current');
+		else if(nextPage === 'project' || nextPage === 'reward')
+			$('#projectBtnCollection').addClass('current');
+	};
 	
  	function execute() {
 		
 		var savedSession = window.sessionStorage["session"];
-		var stope=true;
-		
+
 		if(savedSession === 'home' || 
-		   savedSession === 'project' || 
+			 savedSession === 'about' || 
 		   savedSession === 'staff' ||
+			 savedSession === 'objective' ||
+			 savedSession === 'project' || 
 		   savedSession === 'reward' ||
-		   savedSession === 'certificate' ||
-		   savedSession === 'contact' ||
-		   savedSession === 'objective'){
+		   savedSession === 'contact'
+		   ){
 			
 			if(savedSession === 'home'){
 				$( '.logo').css("display", "none");
@@ -102,11 +93,9 @@
 			}
 			else{
 				$( '.logo').css("display", "none");
-			
-				$( '#objectiveWrapper').css("display", "none");
 				$( '#aboutWrapper').css("display", "none");
-				
 				$( '#staffWrapper').css("display", "none");
+				$( '#objectiveWrapper').css("display", "none");
 				$( '#projectWrapper').css("display", "none");
 				$( '#rewardWrapper').css("display", "none");
 				$( '#certificateWrapper').css("display", "none");
@@ -117,9 +106,12 @@
 				$( ".content" ).toggle(  "blind", {}, 500);
 			
 				$('#homeBtn').removeClass('current');
-		    	$('#'+savedSession+'Btn').addClass('current');
+		    $('#'+savedSession+'Btn').addClass('current');
+				if(savedSession === 'about' || savedSession === 'staff' || savedSession === 'objective')
+					$('#aboutBtnCollection').addClass('current');
+				else if(savedSession === 'project' || savedSession === 'reward')
+					$('#projectBtnCollection').addClass('current');
 			}
-			
 			currentPage = savedSession;
 		}
 
@@ -132,10 +124,6 @@
 
 <body>
 <div id="wrapper">
-
-
-
-
   <div class="header"> 
     <img src="spring/images/background/header1b.jpg" name="bannerADrotator">
 		<SCRIPT language=JavaScript>nextBanner()</SCRIPT>
@@ -148,6 +136,32 @@
   
   
   <div class="content">
+    <!--about-->
+    <div id="aboutWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo green.svg">
+	    	<h1>緣起</h1>
+      </div>
+      <div class="about">  
+        <p>1987年，杜連印總經理以『華春營造』命名成立這家公司。除感念家人支持及前公司給予成長、成就，亦深感當時為人詬病之官商勾結、偷工減料、搓湯圓…等惡習籠罩業界，期待著自己與華春能成為改變並創造營造業春天的一員</p>
+        <br>
+        <p>『如果你知道去哪  全世界都會為你讓路』─</p>
+        <br>
+        <p>感謝
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;台灣 讓我們可以活著 讓我們逐夢 </p>
+      </div>
+    </div>
+  
+    <!--staff-->
+    <div id="staffWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo green.svg">
+	    <h1>公司團隊</h1>
+
+      </div>
+      <p>待補充</p>
+    </div>
+  
   	<!--objective-->
     <div id="objectiveWrapper">
     
@@ -155,7 +169,7 @@
   	    <img src="spring/images/logo green.svg">
 	    <h1>經營理念</h1>
       </div>
-      <!--<img class="bg_bird" src="spring/images/bird1.png">-->
+
       <div class="objective">
       
       <h3>企業文化</h3>     <p>慈悲待人  智慧處事  精進成物</p>
@@ -170,19 +184,29 @@
       </div>
     </div>
     
-    <!--about-->
-    <div id="aboutWrapper">
-      <div class="title">
-  	    <img src="spring/images/logo green.svg">
-	    	<h1>緣起</h1>
+    <!--project-->
+    <div id="projectWrapper">
+      <div class="left">
+        <div class="title">
+          <img src="spring/images/logo green.svg">
+          <h1>工程實績 </h1>
+  
+        </div>
+        <div class="region_select">
+<!--        <table>
+        <tr>
+          <td class="selectN" onClick="regionChange('selectN')">北部地區</td>
+          <td class="selectM" onClick="regionChange('selectM')">中部地區</td>
+          <td class="selectS" onClick="regionChange('selectS')">南部地區</td>
+          <td class="selectE" onClick="regionChange('selectE')">東部地區</td>
+  
+        </tr>
+        </table>-->
+        </div>
       </div>
-      <div class="about">  
-        <p>1987年，杜連印總經理以『華春營造』命名成立這家公司。除感念家人支持及前公司給予成長、成就，亦深感當時為人詬病之官商勾結、偷工減料、搓湯圓…等惡習籠罩業界，期待著自己與華春能成為改變並創造營造業春天的一員</p>
-        <br>
-        <p>『如果你知道去哪  全世界都會為你讓路』─</p>
-        <br>
-        <p>感謝
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;台灣 讓我們可以活著 讓我們逐夢 </p>
+      <div class="right">
+        <div class="project_list">
+        </div>
       </div>
     </div>
     
@@ -298,44 +322,9 @@
       </div>
     </div>
     
-    <!--staff-->
-    <div id="staffWrapper">
-      <div class="title">
-  	    <img src="spring/images/logo green.svg">
-	    <h1>公司團隊</h1>
 
-      </div>
-      <p>待補充</p>
-    </div>
     
-    <!--project-->
-    <div id="projectWrapper">
-      <div class="left">
-        <div class="title">
-          <img src="spring/images/logo green.svg">
-          <h1>作品集 </h1>
-  
-        </div>
-        <div class="region_select">
-<!--        <table>
-        <tr>
-          <td class="selectN" onClick="regionChange('selectN')">北部地區</td>
-          <td class="selectM" onClick="regionChange('selectM')">中部地區</td>
-          <td class="selectS" onClick="regionChange('selectS')">南部地區</td>
-          <td class="selectE" onClick="regionChange('selectE')">東部地區</td>
-  
-        </tr>
-        </table>-->
-        </div>
-      </div>
-      <div class="right">
-        <div class="project_list">
-          
-        
 
-        </div>
-      </div>
-    </div>
     
     <!--certificate-->
     <div id="certificateWrapper">
