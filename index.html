@@ -7,48 +7,79 @@
 <script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="spring/js/jquery-ui.js"></script>
 <link rel="stylesheet" href="spring/css/jquery-ui.min.css">
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="spring/js/main.js"></script>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="spring/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="spring/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		//Setup the fancybox attributes
+		$(".fancybox").fancybox({
+			prevEffect:"fade",
+			nextEffect:"fade",
+			cyclic:false,
+			helpers:{overlay:{locked:true},
+			thumbs:{width:50,height:50,source:function(b){return b.href}}}
+		});
+	});
+
+</script>
 <!--<script type="text/javascript" src="spring/js/imagechange.js"></script>-->
 <script>
 	var currentPage = "home";
-    function selectPage(nextPage) {
+		function selectPage(nextPage) {
 
- 		if(nextPage === currentPage)
-			return;
+			if(nextPage === currentPage)
+				return;
 
-        var options = {};
+    	var options = {};
 
-		$('#' + currentPage + 'Btn').removeClass('current');
-	    if(currentPage === "home"){
+			$('#' + currentPage + 'Btn').removeClass('current');
+			if(currentPage === 'about' || currentPage === 'staff' || currentPage === 'objective')
+				$('#aboutBtnCollection').removeClass('current');
+			else if(currentPage === 'project' || currentPage === 'reward')
+				$('#projectBtnCollection').removeClass('current');
 			
-			$( '#objectiveWrapper').css("display", "none");
-			$( '#staffWrapper').css("display", "none");
-			$( '#rewardWrapper').css("display", "none");
-			$( '#staffWrapper').css("display", "none");
-			$( '#projectWrapper').css("display", "none");
-			$( '#certificateWrapper').css("display", "none");
-			$( '#contactWrapper').css("display", "none");
-			$( '#' +nextPage + 'Wrapper').css("display", "");
+	  	if(currentPage === "home"){
+			
+				$( '#objectiveWrapper').css("display", "none");
+				$( '#aboutWrapper').css("display", "none");
+				$( '#staffWrapper').css("display", "none");
+				$( '#rewardWrapper').css("display", "none");
+				$( '#staffWrapper').css("display", "none");
+				$( '#projectWrapper').css("display", "none");
+				$( '#certificateWrapper').css("display", "none");
+				$( '#contactWrapper').css("display", "none");
+				$( '#' +nextPage + 'Wrapper').css("display", "");
 			
 			
-      	  $(".logo").toggle("blind", options, 500, 
+      	$(".logo").toggle("blind", options, 500, 
 			  function() { $( ".content" ).toggle(  "blind", options, 500);});
 			  /*$( ".content" ).toggle(  "blind", options, 500);*/
 	    }
 	    else{
-		  if(nextPage === "home") {
-		    $(".content").toggle("blind", options, 500, 
-			  function() { $( ".logo" ).toggle(  "blind", options, 500);});
-			/*  $(".content").toggle("blind", options, 500);*/
-		  }
-		  else{
-			 $('#' + currentPage + 'Wrapper').toggle("drop", options, 500, 
-				function() {$('#' + nextPage + 'Wrapper').toggle("drop", options, 500);});
-		 }
-	   }
+				if(nextPage === "home") {
+					$(".content").toggle("blind", options, 500, 
+					function() { $( ".logo" ).toggle(  "blind", options, 500);});
+				/*  $(".content").toggle("blind", options, 500);*/
+				}
+				else{
+				 $('#' + currentPage + 'Wrapper').toggle("drop", options, 500, 
+					function() {$('#' + nextPage + 'Wrapper').toggle("drop", options, 500);});
+				}
+	    }
 
-	   currentPage = nextPage;
-	   $('#' + nextPage + 'Btn').addClass('current');
+	    currentPage = nextPage;
+	    $('#' + nextPage + 'Btn').addClass('current');
+			if(nextPage === 'about' || nextPage === 'staff' || nextPage === 'objective')
+				$('#aboutBtnCollection').addClass('current');
+			else if(nextPage === 'project' || nextPage === 'reward')
+				$('#projectBtnCollection').addClass('current');
+			//$(this).addClass('current');
 
     };
 	
@@ -73,6 +104,8 @@
 				$( '.logo').css("display", "none");
 			
 				$( '#objectiveWrapper').css("display", "none");
+				$( '#aboutWrapper').css("display", "none");
+				
 				$( '#staffWrapper').css("display", "none");
 				$( '#projectWrapper').css("display", "none");
 				$( '#rewardWrapper').css("display", "none");
@@ -98,8 +131,11 @@
 
 
 <body>
-
 <div id="wrapper">
+
+
+
+
   <div class="header"> 
     <img src="spring/images/background/header1b.jpg" name="bannerADrotator">
 		<SCRIPT language=JavaScript>nextBanner()</SCRIPT>
@@ -112,6 +148,7 @@
   
   
   <div class="content">
+  	<!--objective-->
     <div id="objectiveWrapper">
     
       <div class="title">
@@ -120,92 +157,140 @@
       </div>
       <!--<img class="bg_bird" src="spring/images/bird1.png">-->
       <div class="objective">
-      <p>一步一腳印，近26年來在公共工程的領域不斷的學習與堅持，不善於推銷自己的我們，近年也屢獲民間業主青睞，應邀參與多項工程的興建：如東發製藥、奇美實業、佛光山、法鼓山、天主教真福山…。期待您的賞識與提攜，我們相信一個有品牌的業主也會期待另一個有品牌的公司為它服務，以提高建築物的價值。</p>
+      
+      <h3>企業文化</h3>     <p>慈悲待人  智慧處事  精進成物</p>
+      <br>
+      <h3>營建方程式</h3>   <p>把複雜化做簡單  把簡單做到最好</p>
+      <br>
+      <h3>生存馬拉松</h3>   <p>只有累積 沒有奇蹟</p>
+      <br>
+      <h3>生活方向盤</h3>   <p>不要讓虛榮心成為必需品</p>
+      <br>
+      <h3>生命力美學</h3>   <p>讀萬卷書 行萬里路</p>
       </div>
     </div>
     
+    <!--about-->
+    <div id="aboutWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo green.svg">
+	    	<h1>緣起</h1>
+      </div>
+      <div class="about">  
+        <p>1987年，杜連印總經理以『華春營造』命名成立這家公司。除感念家人支持及前公司給予成長、成就，亦深感當時為人詬病之官商勾結、偷工減料、搓湯圓…等惡習籠罩業界，期待著自己與華春能成為改變並創造營造業春天的一員</p>
+        <br>
+        <p>『如果你知道去哪  全世界都會為你讓路』─</p>
+        <br>
+        <p>感謝
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;台灣 讓我們可以活著 讓我們逐夢 </p>
+      </div>
+    </div>
+    
+    <!--reward-->
     <div id="rewardWrapper">
       <div class="title">
   	    <img src="spring/images/logo green.svg">
-	    <h1>得獎紀錄</h1>
+	    	<h1>得獎紀錄</h1>
       </div>
       <div class="rewards">
         <ul>
-          <li class="rewards_item">莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地(公共設施)計畫後續工程
+          <li class="rewards_item">2014年-莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地(公共設施)計畫後續工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2014年獲高雄市新建建築物工程品質銀質獎</li>
+            <li><img src="spring/images/logo green.svg">獲高雄市新建建築物工程品質銀質獎</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">新開罹難者紀念公園
+          <li class="rewards_item">2013年-新開罹難者紀念公園
           <ul>
-            <li><img src="spring/images/logo green.svg">2013年獲國家卓越建設奬最佳管理維護類</li>
+            <li><img src="spring/images/logo green.svg">獲國家卓越建設奬最佳管理維護類</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">阿里山第一管制站區景觀改善工程
+          <li class="rewards_item">2012年-阿里山第一管制站區景觀改善工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2012年獲頒「優良農建工程奬」入圍奬</li>
+            <li><img src="spring/images/logo green.svg">獲頒<a class="fancybox" rel="gallery1" href="spring/images/rewards/阿里山優良農建獎.jpg">優良農建工程奬</a>入圍奬</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">嘉義市文化中心整建計畫工程
+          <li class="rewards_item">2011年-嘉義市文化中心整建計畫工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2011年獲選為嘉義市政府100年度公共工程觀摩研習</li>
+            <li><img src="spring/images/logo green.svg">獲選為嘉義市政府100年度公共工程觀摩研習</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">日月潭向山行政中心、遊客中心新建工程
+          <li class="rewards_item">2011年-日月潭向山行政中心、遊客中心新建工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2009年獲南投縣政府頒97年度營建工地污染防治評鑑優良環保工地第一名</li>
-            <li><img src="spring/images/logo green.svg">2009年獲交通部98年度施工品質查核優良工程奬</li>
-            <li><img src="spring/images/logo green.svg">2010年獲第十屆公共工程金質奬建築類工程品質優良奬</li>
-            <li><img src="spring/images/logo green.svg">2011年獲中國工程師學會工程優良奬</li>
-            <li><img src="spring/images/logo green.svg">2011年獲建築師雜誌台灣建築奬首奬</li>
+            <li><img src="spring/images/logo green.svg">獲中國工程師學會工程優良奬</li>
+            <li><img src="spring/images/logo green.svg">獲建築師雜誌台灣建築奬首奬</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">財團法人南投縣私立均頭國民中學圖書館暨行政大樓新建工程
+          <li class="rewards_item">2010年-日月潭向山行政中心、遊客中心新建工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2008年獲「WA中國建築獎」入圍</li>
+          	<li><img src="spring/images/logo green.svg">獲<a class="fancybox" rel="gallery2" href="spring/images/rewards/向山金質獎.jpg">第十屆公共工程金質奬建築類工程品質優良奬</a></li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">94年度愛河沿岸（中都橋至中華路）美綠化工程(溼地生態營造工程)
+          <li class="rewards_item">2009年-日月潭向山行政中心、遊客中心新建工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2007年獲高雄市政府推薦參加「第八屆公共工程金質獎」甄選</li>
+          	<li><img src="spring/images/logo green.svg">獲南投縣政府頒<a class="fancybox" rel="gallery3" href="spring/images/rewards/向山優良環保工地.jpg">97年度營建工地污染防治評鑑優良環保工地第一名</a></li>
+          	<li><img src="spring/images/logo green.svg">獲交通部98年度施工品質查核優良工程奬</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">高雄市3號船渠東岸及11.12號碼頭開發工程
+          <li class="rewards_item">2008年-財團法人南投縣私立均頭國民中學圖書館暨行政大樓新建工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2007年獲園冶奬</li>
+            <li><img src="spring/images/logo green.svg">獲「WA中國建築獎」入圍</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">高雄市海洋之星重要門戶環境改善工程（統包工程）
+          <li class="rewards_item">2007年-94年度愛河沿岸（中都橋至中華路）美綠化工程(溼地生態營造工程)
           <ul>
-            <li><img src="spring/images/logo green.svg">2006年獲國家卓越建設獎優質獎</li>
+            <li><img src="spring/images/logo green.svg">獲高雄市政府推薦參加「第八屆公共工程金質獎」甄選</li>
           </ul>
           </li>
           <br>
-          <li class="rewards_item">91年度高雄市凹仔底原生植物園整建工程(第一期)
+          <li class="rewards_item">2007年-高雄市3號船渠東岸及11.12號碼頭開發工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2004年獲園冶獎</li>
-            <li><img src="spring/images/logo green.svg">2007年獲行政院第1屆全國景觀風貌改造佳作獎</li>
+            <li><img src="spring/images/logo green.svg">獲高雄市建築經營協會頒發<a class="fancybox" rel="gallery4" href="spring/images/rewards/3號船渠園冶獎.jpg">第13屆園冶奬</a></li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2007年-高雄市凹仔底原生植物園整建工程(第一期)
+          <ul>
+            <li><img src="spring/images/logo green.svg">獲<a class="fancybox" rel="gallery5" href="spring/images/rewards/原生植物園全國景觀風貌改造大獎.jpg">行政院第1屆全國景觀風貌改造佳作獎</a></li>
           </ul> 
           </li>
           <br>
-          <li class="rewards_item">高雄市哨船頭公園開闢工程
+          <li class="rewards_item">2006年-高雄市海洋之星重要門戶環境改善工程（統包工程）
           <ul>
-            <li><img src="spring/images/logo green.svg">2003年獲第9屆園冶獎</li>
+            <li><img src="spring/images/logo green.svg">獲<a class="fancybox" rel="gallery6" href="spring/images/rewards/海洋之星國家卓越建設獎.jpg">國家卓越建設獎優質獎</a></li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2004年-高雄市凹仔底原生植物園整建工程(第一期)
+          <ul>
+            <li><img src="spring/images/logo green.svg">獲高雄市建築經營協會頒發第10屆園冶獎</li>
           </ul> 
           </li>
           <br>
-          <li class="rewards_item">嘉南農田水利會烏山頭親水公園工程
+          <li class="rewards_item">2003年-高雄市哨船頭公園開闢工程
           <ul>
-            <li><img src="spring/images/logo green.svg">2001年獲財團法人石材工業發展中心第11屆全國優良石材長城獎</li>
-            <li><img src="spring/images/logo green.svg">2003年獲行政院農委會頒發農田水利工程績優施工廠商</li>
+            <li><img src="spring/images/logo green.svg">獲高雄市建築經營協會頒發<a class="fancybox" rel="gallery7" href="spring/images/rewards/哨船頭園冶獎.jpg">第9屆園冶獎</a></li>
+          </ul> 
+          </li>
+          <br>
+          <li class="rewards_item">2003年-嘉南農田水利會烏山頭親水公園工程
+          <ul>
+            <li><img src="spring/images/logo green.svg">
+            	獲行政院農委會頒發<a class="fancybox" rel="gallery8" href="spring/images/rewards/烏山頭農田水利工程績優施工廠商.jpg">農田水利工程績優施工廠商</a>
+            </li>
+          </ul> 
+          </li>
+          <br>
+          <li class="rewards_item">2001年-嘉南農田水利會烏山頭親水公園工程
+          <ul>
+            <li><img src="spring/images/logo green.svg">獲財團法人石材工業發展中心<a class="fancybox" rel="gallery9" href="spring/images/rewards/烏山頭石材長城獎.jpg">第11屆全國優良石材長城獎</a></li>
           </ul> 
           </li>
           <br>
@@ -213,6 +298,7 @@
       </div>
     </div>
     
+    <!--staff-->
     <div id="staffWrapper">
       <div class="title">
   	    <img src="spring/images/logo green.svg">
@@ -222,6 +308,7 @@
       <p>待補充</p>
     </div>
     
+    <!--project-->
     <div id="projectWrapper">
       <div class="left">
         <div class="title">
@@ -230,7 +317,7 @@
   
         </div>
         <div class="region_select">
-        <table>
+<!--        <table>
         <tr>
           <td class="selectN" onClick="regionChange('selectN')">北部地區</td>
           <td class="selectM" onClick="regionChange('selectM')">中部地區</td>
@@ -238,7 +325,7 @@
           <td class="selectE" onClick="regionChange('selectE')">東部地區</td>
   
         </tr>
-        </table>
+        </table>-->
         </div>
       </div>
       <div class="right">
@@ -250,6 +337,7 @@
       </div>
     </div>
     
+    <!--certificate-->
     <div id="certificateWrapper">
       <div class="title">
   	    <img src="spring/images/logo green.svg">
@@ -259,47 +347,54 @@
       <p>待補充</p>
     </div>
     
+    <!--contact-->
     <div id="contactWrapper">
       <div class="title">
   	    <img src="spring/images/logo green.svg">
-	    <h1>聯絡我們</h1>
-
+	    	<h1>聯絡我們</h1>
       </div>
       <div class="info">
         <ul>
         <li>
-            <p>地址：高雄市三民區建國一路411號6樓之1</p>
+        	<p>地址：高雄市三民區建國一路411號6樓之1</p>
         </li>
         <li>
-            <p>電話：(07)224-0999</p>
+        	<p>電話：(07)224-0999</p>
         </li>
         <li>
-            <p>傳真：(07)224-0999</p>
+        	<p>傳真：(07)224-0999</p>
         </li>
-         <li>
-            <p>Email：<a href="mailto:building@spring1987.com?Subject=Hello" target="_top">building@spring1987.com</a></p>
+        <li>
+        	<p>Email：<a href="mailto:building@spring1987.com?Subject=Hello" target="_top">building@spring1987.com</a></p>
         </li>
         </ul>
       </div>
       <div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.525598439443!2d120.31759799999999!3d22.634184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04eb2a824329%3A0x7e30ee8855a35e54!2z6I-v5pil54ef6YCg5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1422935974872"></iframe></td>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.525598439443!2d120.31759799999999!3d22.634184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04eb2a824329%3A0x7e30ee8855a35e54!2z6I-v5pil54ef6YCg5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1422935974872"></iframe></td>
       </div>
     </div>
   </div>
   
-  <div class="index_btn">
-  	<table>
-  	  <tr>
-        <td id="homeBtn" class="current" onClick="selectPage('home')">首頁</td>
-        <td id="objectiveBtn" onClick="selectPage('objective')">經營理念</td>
-        <td id="staffBtn" onClick="selectPage('staff')">公司團隊</td>
-        <td id="projectBtn" onClick="selectPage('project')">作品集</td>
-        <td id="rewardBtn" onClick="selectPage('reward')">得獎紀錄</td>
-        <td id="certificateBtn" onClick="selectPage('certificate')">人員證照</td>
-        <td id="contactBtn" class="last" onClick="selectPage('contact')">聯絡我們</td>
-  	  </tr>
-	</table>
-  </div>
+  <nav>
+  <ul class="menu">
+    <li id="homeBtn" class="home current" onClick="selectPage('home')"></li>
+    <li id="aboutBtnCollection"><span>關於華春</span>
+      <ul class="sub-menu">
+        <li id="aboutBtn" onClick="selectPage('about')">緣起</li>
+        <li id="staffBtn" onClick="selectPage('staff')">公司團隊</li>
+        <li id="objectiveBtn" onClick="selectPage('objective')">經營理念</li>
+      </ul>
+    </li> 
+    <li id="projectBtnCollection"><span>作品集</span>
+      <ul class="sub-menu">
+        <li id="projectBtn" onClick="selectPage('project')">工程實績</li>
+        <li id="rewardBtn" onClick="selectPage('reward')">得獎紀錄</li>
+      </ul>
+    </li>
+    <li id="contactBtn" onClick="selectPage('contact')"><span>展望/聯絡我們</span></li>
+	</ul>
+	</nav>
+</div>
   
 
 
@@ -310,6 +405,5 @@
 <script>execute()</script>
   
 </div>
-
 </body>
 </html>

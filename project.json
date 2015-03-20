@@ -12,26 +12,27 @@
 			  "spring/images/background/header13b.jpg",
 			  "spring/images/background/header14b.jpg"
 			 ],
-	"North":[
-				{"linkPath":"projectN1", "name":"實踐大學",       "image":"spring/images/bird1.jpg"}
-			],
-	"Mid":[
-				{"linkPath":"projectM1", "name":"向山行政中心",     "image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectM2", "name":"日月潭教師會館",   "image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectM3", "name":"嘉義縣政府布袋港", "image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectM4", "name":"嘉南療養院", 		"image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectM5", "name":"烏山頭親水公園", 	"image":"spring/images/bird1.jpg"}
-			],
-	"South":[
-				{"linkPath":"projectS1", "name":"成功大學醫學院", 	"image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectS2", "name":"法鼓山永久屋", 	"image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectS3", "name":"高雄師範大學", 	"image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectS4", "name":"三聯科技本洲工業區", "image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectS5", "name":"奇美實業", 		"image":"spring/images/bird1.jpg"}
-			],
-	"East":[
-				{"linkPath":"projectE1", "name":"台東新興國小", 	"image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectE2", "name":"彰化銀行台東分行", "image":"spring/images/bird1.jpg"},
-				{"linkPath":"projectE3", "name":"台東金崙溫泉", 	"image":"spring/images/bird1.jpg"}
-			]
+	"ProjectList":[
+		{"linkPath":"s1",  "name":"墾丁國家公園-社頂公園涼亭平台第二期工程",        "image":"spring/images/project/77_墾丁國家公園_社頂公園涼亭平台第二期工程/title.jpg"},
+		{"linkPath":"s2",  "name":"墾丁國家公園-社頂公園公廁新建工程",     			"image":"spring/images/project/78_墾丁國家公園_社頂公園公廁新建工程/title.jpg"},
+		{"linkPath":"s3",  "name":"中華電信-嘉民機房新建工程",   					"image":"spring/images/project/79_中華電信_嘉民機房新建工程/title.jpg"},
+		{"linkPath":"s4",  "name":"宏法寺新建工程", 								"image":"spring/images/project/80_宏法寺新建工程/title.jpg"},
+		{"linkPath":"s5",  "name":"內政部營建署高雄都會公園日晷工程", 				"image":"spring/images/project/85_內政部營建署高雄都會公園日晷工程/title.jpg"},
+		{"linkPath":"s6",  "name":"高雄縣鳥松溼地公園工程", 						"image":"spring/images/project/89_高雄縣鳥松溼地公園工程/title.jpg"},
+		{"linkPath":"e1",  "name":"中華電信-台東電信服務中心", 						"image":"spring/images/project/90_中華電信_台東電信服務中心/title.jpg"},
+		{"linkPath":"s7",  "name":"烏山頭風景區入口區親水公園(第二期)工程", 		"image":"spring/images/project/90_烏山頭風景區入口區親水公園工程/title.jpg"},
+		{"linkPath":"s8",  "name":"高雄市凹仔底原生植物園整建工程", 				"image":"spring/images/project/92_高雄市凹仔底原生植物園整建工程/title.jpg"},
+		{"linkPath":"s9",  "name":"95 94年度愛河沿岸(中都橋至中華路)美綠化工程", 	"image":"spring/images/project/95_94_愛河沿岸美綠化工程/title.jpg"},
+		{"linkPath":"s10", "name":"高雄海洋之星重要交通門戶環境改善工程(統包案)", 	"image":"spring/images/project/95_高雄海洋之星重要交通門戶環境改善工程/title.jpg"},
+		{"linkPath":"m1",  "name":"佛光山均頭國中小行政中心新建工程", 				"image":"spring/images/project/96_佛光山均頭國中小行政中心新建工程/title.jpg"},
+		{"linkPath":"m2",  "name":"日月潭國家風景區管理處向山行政中心新建工程", 	"image":"spring/images/project/99_日月潭國家風景區管理處向山行政中心新建工程/title.jpg"},
+		{"linkPath":"s12", "name":"法鼓山雲集寺寺廟新建工程", 						"image":"spring/images/project/99_法鼓山雲集寺/title.jpg"},
+		{"linkPath":"s13", "name":"嘉義市文化中心整建計劃工程", 					"image":"spring/images/project/99_嘉義市文化中心整建計劃工程/title.jpg"},
+		{"linkPath":"s14", "name":"法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程", 	"image":"spring/images/project/100_法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程/title.jpg"},
+		{"linkPath":"s15", "name":"成大醫院急重症醫療區整建工程", 					"image":"spring/images/project/101_成大醫院急重症醫療區整建工程/title.jpg"},
+		{"linkPath":"m3",  "name":"阿里山第一管制站區景觀改善工程", 				"image":"spring/images/project/101_第一管制站區景觀改善工程/title.jpg"},
+		{"linkPath":"s16", "name":"三聯科技本洲工業區廠房及辦公室新建工程", 		"image":"spring/images/project/102_三聯科技本洲工業區廠房及辦公室新建工程/title.jpg"},
+		{"linkPath":"s17", "name":"第一商業銀行_三民分行行舍新建工程", 				"image":"spring/images/project/102_第一商業銀行_三民分行行舍新建工程/title.jpg"},
+		{"linkPath":"s18", "name":"莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地", "image":"spring/images/project/102_莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地/title.jpg"}
+	]
 }

@@ -23,8 +23,13 @@ body
 {
 	padding:0;
 	margin:0;
-	background-color:#DEDE9A;
+	background-color:#DEDE9A;/*DEDE9A*/
 	background-image: url(spring/images/bg.jpg);
+	background-image: -moz-linear-gradient(#FFF, #DEDE9A);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, form(#FFF), to(#DEDE9A));
+	background-image: -webkit-linear-gradient(#FFF, #DEDE9A);
+	background-image: -o-linear-gradient(#FFF, #DEDE9A);
+	
 	background-repeat:repeat-x;
 	background-position: top;
 	overflow-y:scroll;
@@ -39,6 +44,126 @@ body
 	font-family: "微軟正黑體", "Arial Unicode MS";
 	font-size: 18px;
 }
+
+.menu, .sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+	background-color: #070;
+  height: 60px;
+	width:700px;
+	padding:0px calc((100% - 700px) / 2);
+	margin:0px auto 0px auto;
+	-webkit-box-shadow: 5px 5px 5px #777777;
+	box-shadow: 5px 5px 5px #777777;
+}
+
+.menu li {
+	border:0px;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #222222;
+ /* background-color: #EAD6BF;/*#DDBD99*/
+  cursor: pointer;
+  position: relative;
+	
+	text-align: center;
+	
+  transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  /* IE lt 10, Chrome lt 1, Opera lt 11.6, Safari lt 3, FF lt 4, Android lt 2.1 и iOS lt 2.0 не поддерэивают transition. */
+}
+
+.menu li:hover {
+	color:#C90;/*3E454D*/
+  background-color: #3FA334 !important; /* 539B46.menu > li.home может иметь больше приоритета. Поэтому. */
+	
+}
+
+
+.menu > li {
+  float: left;
+  height: 100%;
+  width: 15%; 
+  width: calc((100% - 90px) / 3);
+  width: -moz-calc((100% - 90px) / 3);
+  width: -webkit-calc((100% - 90px) / 3);
+
+}
+
+.menu > li.home {
+  background: url(http://s26.postimg.org/qbf4q4j9h/home.png) center no-repeat;
+  width: 90px;
+}
+
+.menu > li.current {
+	/*color:#C90;*/
+  background-color: #3FA334 !important; /* !important VS .menu li:hover */
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.menu > li:not(:first-child) {
+  box-shadow: inset 1px 0 0 0 #900, inset 2px 0 0 0 #900;
+  -moz-box-shadow: inset 1px 0 0 0 #272B31, inset 2px 0 0 0 #434A52;
+  -webkit-box-shadow: inset 1px 0 0 0 #033, inset 1px 0 0 0 #033;
+}
+
+.menu > li > span {
+	position: absolute;
+  left: 0; 
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  /* IE lt 9, Chrome lt 5, Opera lt 10.5, Safari lt 3.1, FF lt 3.5, Android lt 2.1 и iOS lt 2.0 не поддерэивают transform. */
+}
+
+.sub-menu {
+	background-color: #070;
+  max-height: 0;
+  min-width: 100%;
+  overflow: hidden;
+  position:absolute;
+  bottom: 100%;
+  transition: max-height .5s .2s;
+  -moz-transition: max-height .5s .2s;
+  -o-transition: max-height .5s .2s;
+  -webkit-transition: max-height .5s .2s;
+	
+
+}
+
+li:hover > .sub-menu {
+  max-height: 600px;
+}
+
+.sub-menu li {
+  height: 60px;
+	line-height: 60px;
+  /*transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s;*/
+  white-space: nowrap;
+	
+	border-style:1px solid;
+}
+
+.sub-menu li.current {
+	/*color:#C90;/*3E454D*/
+  background-color: #3FA334 !important; 
+}
+
+
 #objectiveWrapper{
 	/*display:"";*/
 }
@@ -148,7 +273,7 @@ body
 }
 
 .content p{
-	padding:0px 15px;
+	padding: 0px 15px;
 }
 .content img{
 	height:1.8em;;
@@ -192,6 +317,10 @@ body
 
 }
 
+.title_ProjectInfo{
+	height:	340px;
+}
+
 .rewards {
 	height: 360px;
 	overflow-y: auto;
@@ -222,6 +351,7 @@ body
 	height:260px;
 	padding:50px 0px 50px 20px;
 	float:left;
+	
 }
 
 .info li{
@@ -260,11 +390,13 @@ body
 	height:260px;
 	padding:0px;
 	margin:0px 0px 5px 0px;	
+	overflow-y:auto;
 }
 
 .project_gallery{
-	position:static;
+
 	height:100px;
+	width:460px;
 	
 	padding:5px;
 	margin:0px;
@@ -273,11 +405,18 @@ body
 	-webkit-box-shadow: 1px 1px 15px #111111;
 
 	position: relative;
-	display: block
-	float: left;
+	display: block;
+
+	
 }
 
 .project_gallery img{
+
+	/*position: relative;
+			float: left;*/
+	margin-right: 5px;
+	padding: 0px;
+	
 	height:100px;
 	width:100px
 }
@@ -394,10 +533,10 @@ cursor:pointer;
 	padding: 20px;
 	vertical-align: 50%;
 	text-align: center;
-	background-color: #060;
+	/*background-color: #060;
 	
 	-webkit-box-shadow: 5px 5px 5px #777777;
-	box-shadow: 5px 5px 5px #777777;
+	box-shadow: 5px 5px 5px #777777;*/
 }
 
 
