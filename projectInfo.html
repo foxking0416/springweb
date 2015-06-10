@@ -10,7 +10,7 @@
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="spring/js/jquery.mousewheel-3.0.6.pack.js"></script>
 <!-- Add ui plugin -->
-<script type="text/javascript" src="spring/js/jquery-ui.js" ></script>
+<script type="text/javascript" src="spring/js/jquery-ui.min.js" ></script>
 <script type="text/javascript" src="spring/js/main.js"></script>
 
 <!-- Add fancyBox -->
@@ -35,11 +35,15 @@
 
 			project = data[savedSession];
 			
-			$("#projectName").html(project[0]);
-			$("#address").html(project[1]);
-			$("#map").attr("src", project[2]);
-			$("#finishYear").html(project[3]);
-			project[4].forEach(function(path){
+			$("#projectName").html(project.name);
+			$("#address").html(project.address);
+			$("#map").attr("src", project.map);
+			$("#startYear").html("開工年度 : 民國" + project.start+"年");
+			$("#finishYear").html("完工年度 : 民國" + project.finish+"年");
+			$("#designer").html("設計單位 : " + project.design);
+			$("#owner").html("業主 : " + project.owner);
+			$("#amount").html("金額 : " + project.amount + "萬");
+			project.pic.forEach(function(path){
 				$("#project_gallery").append('<a class='+"fancybox"+' rel='+"gallery"+' href='+path+'><img src='+path+'></a>');
 			});
 			
@@ -94,14 +98,16 @@
     <div class="left">
     	<div class="title_ProjectInfo">
         <div class="title">
-          <img src="spring/images/logo green.svg">
+          <img src="spring/images/logo_green.svg">
         <h1 id="projectName">&nbsp;</h1>
   
         </div>
         <div class="project_info">
-          <p id="finishYear">完工年份 : </p>
-          <p>設計單位 : </p>
-          <p>業主 : </p>
+		  <p id="startYear"></p>
+          <p id="finishYear"></p>
+          <p id="designer"></p>
+          <p id="owner"></p>
+		  <p id="amount"></p>
         </div>
       </div>
   	  <div id="project_gallery" class="project_gallery">

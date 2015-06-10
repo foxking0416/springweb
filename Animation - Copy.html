@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>華春營造有限公司</title>
+<link rel="stylesheet" href="spring/css/style.css"  type="text/css">
+<script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="spring/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="spring/css/jquery-ui.min.css" type="text/css">
+<script type="text/javascript" src="spring/js/main.js"></script>
+<style>
+			.labelfold {
+				
+				color:#AAAAAA;
+				background-color:#550000;
+				position:absolute;
+				z-index:0;
+				opacity:0.9;
+				width:200px;
+				height: 43px;
+				overflow-y:hidden;
+				-moz-user-select: none; 
+				-khtml-user-select: none; 
+				-webkit-user-select: none; 
+				-o-user-select: none;
+			}
+			.labelexpand{
+				color:#AAAAAA;
+				background-color:#550000;
+				position:absolute;
+				z-index:1;
+				width:200px;
+				opacity:0.9;
+				-moz-user-select: none; 
+				-khtml-user-select: none; 
+				-webkit-user-select: none; 
+				-o-user-select: none;
+			}
+
+</style>
+
+</head>
+
+
+<body>
+  <div class="Animationlogo">
+    <img src="spring/images/logo_green.svg" alt="Logo" >
+    <img src="spring/images/text.svg" alt="LogoName">
+  </div>
+  
+	<script type ="text/javascript" src="spring/js/three.min.js"></script>
+	<script type ="text/javascript" src="spring/js/THREEx.KeyboardState.js"></script>
+	<script type ="text/javascript" src="spring/js/OBJLoader.js"></script>
+  	<!--<script type ="text/javascript" src="spring/js/DDSLoader.js"></script>-->
+	<script type ="text/javascript" src="spring/js/MTLLoader.js"></script>
+	<script type ="text/javascript" src="spring/js/OBJMTLLoader.js"></script>
+	<script type ="text/javascript" src="spring/js/mouseKeyboard.js"></script>
+	<!--<script type ="text/javascript" src="spring/js/tween.min.js"></script>-->
+	<script type ="text/javascript" src="spring/js/Tween.js"></script>
+	<!--<script type ="text/javascript" src="spring/js/Projector.js"></script>
+	<script type ="text/javascript" src="spring/js/CanvasRenderer.js"></script>-->
+	<script type ="text/javascript" src="spring/js/taiwanpoints.js"></script>
+	<!--<script type ="text/javascript" src="spring/js/TrackballControls.js"></script>-->
+	<script type ="text/javascript" src="spring/js/OrbitControls.js"></script>
+  <script>
+		var webglAva = webglAvailable();
+		if(webglAva === false){
+			window.location.href='index.html';
+		}
+		
+  
+		var scene = new THREE.Scene();
+		var canvasWidth = window.innerWidth;
+		var canvasHeight = window.innerHeight -180;
+		var canvasHalfWidth = canvasWidth / 2;
+		var canvasHalfHeight = canvasHeight / 2;
+		
+		var cameraDistance = 23;
+		var cameraTheta = 90;//0~180
+		var cameraPhi = 0;//-90~90
+		var cameraUpAngle = 180;
+		var lookAtPosX = 0;
+		var lookAtPosZ = 2;
+		var mouseX = 0, mouseY = 0;
+		
+		var camera = new THREE.PerspectiveCamera( 75, canvasWidth / canvasHeight, 0.1, 1000 );	
+		camera.position.x = cameraDistance * Math.sin(cameraPhi / 180 * Math.PI) * Math.sin(cameraTheta / 180 * Math.PI) + lookAtPosX;
+		camera.position.y = cameraDistance * Math.cos(cameraPhi / 180 * Math.PI);
+		camera.position.z = -cameraDistance * Math.sin(cameraPhi / 180 * Math.PI) * Math.cos(cameraTheta / 180 * Math.PI) + lookAtPosZ;
+		camera.up = new THREE.Vector3(0, 0, -1);
+
+		
+		
+		var renderer = new THREE.WebGLRenderer({ alpha: true });
+		renderer.setSize( canvasWidth , canvasHeight);
+		document.body.appendChild( renderer.domElement );
+		
+
+		var taiwanModelScaleY = 0.01;
+		var logoScaleTarget = 0.1;
+		var logoScaleInit = 0.000001;
+		var indexLineGroup = new THREE.Group();
+
+		var taiwanObj;
+		var penObj;
+		var logoObjArray=[];
+		var logoObjPosition=[];//=logoPosition;
+		var loadFinished = false;
+		var loadLogoFinished = false;
+		var loadPenFinished = false;
+		var controls;
+
+		var cube, ball;
+		
+		loadModel();
+
+		
+		function loadModel(){
+			//OBJLoader manager
+			var manager = new THREE.LoadingManager();
+			manager.onProgress = function ( item, loaded, total ) {
+				console.log( item, loaded, total );
+			};
+			
+			var onProgress = function ( xhr ) {
+				if ( xhr.lengthComputable ) {
+					var percentComplete = xhr.loaded / xhr.total * 100;
+					console.log( Math.round(percentComplete, 2) + '% downloaded' );
+				}
+			};
+
+			var onError = function ( xhr ) {
+			};
+			
+			var texture = new THREE.Texture();
+			var imageLoader = new THREE.ImageLoader( manager );
+			var objLoader = new THREE.OBJLoader( manager );
+			var objMtlLoader = new THREE.OBJMTLLoader();
+			
+			$.getJSON('projectRegion.json', function(data) {
+				var region = data.ProjectListByCity;
+				for(var i = 0; i < region.length; i++){
+					$('body').append('<div id= "region'+i+'" class="labelfold"></div>');
+					$('#region'+i).append('<h3>' + region[i].city + '</h3>');
+					var position = {x:region[i].pos.x, y:region[i].pos.y, z:region[i].pos.z}
+					logoObjPosition.push(position);
+					for(var j = 0; j < region[i].projectList.length; j++){
+						$('#region'+i).append('<p>' + region[i].projectList[j] + '</p>');
+					}
+					$('#region'+i).css({display: 'none'});
+					//$('#region'+i).css('height', '200px');
+					$('#region'+i).mouseover(
+						
+						function(){
+							
+							//$(this).css('height', '');
+							//$(this).css('overflow-y', '');
+							$(this).addClass('labelexpand')
+							$(this).removeClass('labelfold')
+							
+						}
+					);
+					$('#region'+i).mouseleave(	
+						function(){					
+							//$(this).css('height', '50px');
+							//$(this).css('overflow-y', 'hidden');
+							$(this).addClass('labelfold')
+							$(this).removeClass('labelexpand')
+						}
+					);
+					
+				}
+				
+				
+				//Load the Taiwan texture image first
+				imageLoader.load( 'spring/model/taiwan.jpg', function ( image ) {
+
+					texture.image = image;
+					texture.needsUpdate = true;
+					
+					//After loading the Taiwan texture image, start to load the taiwan.obj file
+					objLoader.load( 'spring/model/taiwan.obj', function ( object ) {
+						loadFinished = true;
+						object.traverse( function ( child ) {
+							
+							if ( child instanceof THREE.Mesh ) {
+									child.material.map = texture;
+									child.material.opacity = 0.1;
+									child.material.transparent = false;
+									child.material.blending = THREE[ "AdditiveBlending" ];
+							}
+
+						} );
+
+						object.scale.y = taiwanModelScaleY;
+						taiwanObj = object;
+					
+						//After loaded taiwan obj, start to load logo
+						objLoader.load( 'spring/model/logo.obj', function ( object ) {
+							loadLogoFinished = true;
+							var material = new THREE.MeshPhongMaterial( { ambient: 0x000000, color: 0x007700, specular: 0x555555, shininess: 70} );
+							
+							object.traverse( function ( child ) {
+								if ( child instanceof THREE.Mesh ) {
+										child.material = material;
+								}
+							});
+							object.scale.x = logoScaleInit;
+							object.scale.y = logoScaleInit;
+							object.scale.z = logoScaleInit;
+							object.position.y = 1;
+									
+							for(var i = 0; i < logoObjPosition.length; i++){
+								var logoClone = object.clone();
+								
+								logoClone.position.x = logoObjPosition[i].x * 1.8 - 13.79;
+								logoClone.position.y = logoObjPosition[i].y;
+								logoClone.position.z = logoObjPosition[i].z * 1.79 - 15.56;
+								logoObjArray.push(logoClone);
+								
+							}
+						
+							//After loaded logo.obj, start to load pen obj
+							objMtlLoader.load( 'spring/model/lapiz.obj', 'spring/model/lapiz.mtl', function ( object ) {
+
+								object.rotation.x = Math.PI/2;
+								object.position.y = 2;
+								
+								penObj = object;
+								
+								var geometry = new THREE.BoxGeometry( 0.1, 10, 0.1 );
+								var ballgeo = new THREE.SphereGeometry( 0.5, 32, 32 );
+								var material = new THREE.MeshBasicMaterial( { color: 0xaa0000, overdraw: 0.5 } );
+								var ballmaterial = new THREE.MeshBasicMaterial( { color: 0x00aa00, overdraw: 0.5 } );
+								cube = new THREE.Mesh( geometry, material );
+								ball = new THREE.Mesh(ballgeo,ballmaterial);
+								scene.add( cube );
+								scene.add(ball);
+
+									
+								scene.add( object );
+								init();
+								animate();
+
+							}, onProgress, onError );
+						}, onProgress, onError );		
+					}, onProgress, onError );
+				} );
+			});
+			
+		}
+		
+		function init(){
+			updateCamera();
+		
+			//Add Ambient Light
+			var ambient = new THREE.AmbientLight( 0xffffff );
+			scene.add( ambient );
+
+			//Add Direction Light
+			var directionalLight = new THREE.DirectionalLight( 0x333333 );
+			directionalLight.position.set( 1, 1, 1 );
+			scene.add( directionalLight );
+			
+
+			var group = new THREE.Group();
+			scene.add( group );
+			
+
+			
+			var lineGeometry = new THREE.Geometry();
+			var positionCol = taiwanpoints;
+			var tar = {x:[], y:[], z:[]};
+		
+			for (var i=0; i < positionCol.length; i++){		
+				positionCol[i].x = positionCol[i].x * 2.1 - 9.8;
+				positionCol[i].y = positionCol[i].y * 1.5;
+				positionCol[i].z = positionCol[i].z * 1.9 - 16.9;
+				
+				tar.x.push(positionCol[i].x);
+				tar.y.push(positionCol[i].y);
+				tar.z.push(positionCol[i].z);
+						
+				lineGeometry.vertices.push(new THREE.Vector3(positionCol[0].x, positionCol[0].y, positionCol[0].z));
+			}
+			
+			
+			var lineMaterial = new THREE.LineBasicMaterial( { linewidth: 12, color: 0x111111, opacity: 1.0 } );
+			var silhouetteLine = new THREE.Line( lineGeometry, lineMaterial );
+			group.add( silhouetteLine );
+			
+			
+			
+			//scene.add(indexLineGroup);
+			for(var i = 0; i < logoObjArray.length; i++){
+				var indexLineGeometry = new THREE.Geometry();
+				indexLineGeometry.vertices.push(new THREE.Vector3(logoObjArray[i].position.x, logoObjArray[i].position.y, logoObjArray[i].position.z));
+				
+
+				var mouse3D = new THREE.Vector3( 1, 0, 0.5 );   
+				mouse3D.unproject(camera);
+				indexLineGeometry.vertices.push(new THREE.Vector3(mouse3D.x , mouse3D.y , mouse3D.z ));
+				
+				var indexLine = new THREE.Line( indexLineGeometry, lineMaterial );
+				indexLineGroup.add( indexLine );
+			}
+			
+			var pointIndex = 0;
+			
+			function twennAni(){
+				var target = positionCol[pointIndex+1];
+				var tween = new TWEEN.Tween(silhouetteLine.geometry.vertices[positionCol.length-1]).to(target, 1);
+				tween.easing(TWEEN.Easing.Linear.None);
+				tween.onUpdate(function() {
+					silhouetteLine.geometry.verticesNeedUpdate = true;	
+
+					penObj.position.x = silhouetteLine.geometry.vertices[positionCol.length-1].x;
+					penObj.position.y = silhouetteLine.geometry.vertices[positionCol.length-1].y+2.5;
+					penObj.position.z = silhouetteLine.geometry.vertices[positionCol.length-1].z;
+				});
+				tween.onComplete(function() {
+					pointIndex++;
+					if(pointIndex < positionCol.length-1)	{
+						silhouetteLine.geometry.vertices.push(silhouetteLine.geometry.vertices.shift()); //shift the array
+						lineGeometry.vertices[positionCol.length-1]= new THREE.Vector3( positionCol[pointIndex].x, positionCol[pointIndex].y, positionCol[pointIndex].z );
+						silhouetteLine.geometry.verticesNeedUpdate = true;
+						
+						//In order to draw silhouetteLine segment by segment, after drawing each segment complete, call the twennAnimation again
+						twennAni();
+					}
+					else{
+						scene.remove(group);
+						scene.remove(penObj)
+						scene.add(taiwanObj);
+						opacityTaiwanAnim();
+					}
+				});
+
+				tween.start();
+			}
+			
+			//Create animation of Taiwan texture opacity from 0 to 1
+			function opacityTaiwanAnim(){
+				var taiwanOpacityTarget = {opacity:1.0};
+				var tweenTaiwanOpacity = new TWEEN.Tween(taiwanObj.children[0].material).to(taiwanOpacityTarget, 1000);
+				tweenTaiwanOpacity.easing(TWEEN.Easing.Linear.None);
+				tweenTaiwanOpacity.onComplete( function(){
+					//scaleTaiwanAnim();
+					moveCameraAnim({x: -11.6132, y:7.4189, z:-0.4685}, {w:0.6049, x: -0.1735, y:-0.7470, z:-0.2142}, 0);
+				});
+				tweenTaiwanOpacity.start();
+			}
+			
+			
+			//Create animation of Taiwan height from 0 to 1
+			function scaleTaiwanAnim(){
+				var taiwanScaleTarget = {x:1, y:1, z:1};
+				var tweenTaiwanScale = new TWEEN.Tween(taiwanObj.scale).to(taiwanScaleTarget, 2000);
+				tweenTaiwanScale.easing(TWEEN.Easing.Linear.None);
+				tweenTaiwanScale.onComplete(function(){
+					addLogoToScene();
+					scaleLogoAnim();
+				});
+				tweenTaiwanScale.start();
+			}
+						
+			//Create animation of Logo scale
+			function scaleLogoAnim(){
+				var logoTarget = {x:logoScaleTarget, y:logoScaleTarget, z:logoScaleTarget};
+				var logoScale = {x:logoScaleInit, y:logoScaleInit, z:logoScaleInit};
+				var tweenLogoScale = new TWEEN.Tween(logoScale).to(logoTarget, 1000);
+				tweenLogoScale.easing(TWEEN.Easing.Linear.None);
+				tweenLogoScale.onUpdate(function(){
+					setLogoScale(logoScale.x, logoScale.y, logoScale.z);
+				});
+				tweenLogoScale.onComplete(function(){
+					moveCameraAnim({x:0.2158, y:3.7094, z:-15.3354},{w:0.5984, x:-0.1716, y:-0.7523, z:-0.2157}, 1);//move to 台北
+					rotateLogoAnim();
+					addLabel();
+				});
+				tweenLogoScale.start();
+			}
+			
+			//Create animation of Logo rotation
+			function rotateLogoAnim(){
+				var logoRotationAngleTarget = {x:0, y:2*Math.PI, z:0};
+				var logoRotationAngle = {x:0, y:0, z:0};
+				var tweenLogoRotation = new TWEEN.Tween(logoRotationAngle).to(logoRotationAngleTarget, 3000);
+				tweenLogoRotation.easing(TWEEN.Easing.Linear.None);
+				tweenLogoRotation.onUpdate(function(){
+					rotateLogo(logoRotationAngle.y);
+				});
+				tweenLogoRotation.repeat(Infinity);
+				tweenLogoRotation.start();
+			}
+
+			twennAni();
+			
+			function moveCameraAnim(p, q, step){
+			
+				var posStart = {x: camera.position.x, y:camera.position.y, z:camera.position.z};
+				var posTarget = {x: p.x, y:p.y, z:p.z};
+				var quaternionStart = new THREE.Quaternion().copy(camera.quaternion);
+				var quaternionTarget = new THREE.Quaternion(q.x, q.y, q.z, q.w);
+
+				var qm = new THREE.Quaternion();
+				
+				
+				var dEnd = {duration: 1};
+				var d = {duration: 0};
+				var tween = new TWEEN.Tween(d).to(dEnd, 1000);
+				tween.easing(TWEEN.Easing.Linear.None);
+				tween.onUpdate(function(){
+					
+					THREE.Quaternion.slerp(quaternionStart, quaternionTarget, qm, d.duration);
+					camera.quaternion.set(qm.x, qm.y, qm.z, qm.w);
+					
+					camera.position.x = posStart.x + d.duration*(posTarget.x-posStart.x); 
+					camera.position.y = posStart.y + d.duration*(posTarget.y-posStart.y);
+					camera.position.z = posStart.z + d.duration*(posTarget.z-posStart.z);
+				});
+				tween.onComplete(function(){
+					switch(step){
+						case 0:
+							scaleTaiwanAnim();
+							break;
+						case 1:
+							setTimeout(function(){ moveCameraAnim({x:-10.3752, y:4.2394, z:-3.3204},{w:0.5514, x:-0.1581, y:-0.7874, z:-0.2258}, 2); }, 1500);//move to 彰化
+							break;
+						case 2:
+							setTimeout(function(){ moveCameraAnim({x:-11.7338, y:4.2394, z:3.1732},{w:0.637, x:-0.1826, y:-0.72, z:-0.2064}, 3); }, 1500);//move to 嘉義
+							break;
+						case 3:
+							setTimeout(function(){ moveCameraAnim({x:-12.1978, y:4.2394, z:8.7595},{w:0.8062, x:-0.2317, y:-0.5235, z:-0.1501}, 4); }, 1500);//move to 台南
+							break;
+						case 4:
+							setTimeout(function(){ moveCameraAnim({x:-8.7128, y:4.2394, z:15.8803},{w:0.8881, x:-0.2547, y:-0.3679, z:-0.1055}, 5); }, 1500);//move to 高雄
+							break;
+						case 5:
+							setTimeout(function(){ moveCameraAnim({x:-6.9618, y:4.2394, z:19.627},{w:0.8815, x:-0.2528, y:-0.3833, z:-0.1099}, 6); }, 1500);//move to 屏東
+							break;
+						case 6:
+							setTimeout(function(){ moveCameraAnim({x:7.1202, y:4.2394, z:14.451},{w:0.8747, x:-0.2528, y:0.3986, z:0.1143}, 7); }, 1500);//move to 台東
+							break;
+						case 7:
+							setTimeout(function(){ moveCameraAnim({x:-5.8754, y:4.2394, z:-5.3922},{w:0.4879, x:-0.1399, y:-0.8283, z:-0.2375}, 8); }, 1500);//move to 南投
+							break;
+						case 8:
+							setTimeout(function(){ moveCameraAnim({x:-12.1738, y:3.7094, z:7.8786},{w:0.9589, x:-0.275, y:0.0671, z:0.0192}, 9); }, 1500);//move to 澎湖
+							break;
+						default:
+							
+					}
+				});
+				tween.start();
+			}
+			
+
+			//Add mouse listener
+			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+			document.addEventListener( 'mousedown', onDocumentMouseDown, true );	
+			document.addEventListener( 'mouseup', onDocumentMouseUp, false );	
+			document.addEventListener( 'mousewheel', onMouseWheel, false );	
+			//Add key down listener
+			document.addEventListener( 'keydown', onKeyDown, false);
+			
+			//Add window resize listener
+			window.addEventListener( 'resize', onWindowResize, false );
+				
+		}	
+
+		function trigger(){
+			/*cameraDistance = 23;
+			cameraTheta = 90;//0~180
+			cameraPhi = 0;//-90~90
+			cameraUpAngle = 180;
+			lookAtPosX = 0;
+			lookAtPosZ = 2;*/
+			
+			$( "#region0" ).effect( "scale", { percent: 0 }, 500 );
+		}
+
+		
+		function onWindowResize() {
+			canvasHalfWidth = window.innerWidth / 2;
+			canvasHalfHeight = (window.innerHeight-180) / 2;
+
+			camera.aspect = canvasWidth / canvasHeight;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize( canvasWidth, canvasHeight );
+		}
+
+		function addLogoToScene(){
+			for(var i = 0; i < logoObjArray.length; i++){
+				scene.add(logoObjArray[i]);
+			}
+		}
+		
+		function setLogoScale(scaleX, scaleY, scaleZ){
+			for(var i = 0; i < logoObjArray.length; i++){
+				logoObjArray[i].scale.x = scaleX;
+				logoObjArray[i].scale.y = scaleY;
+				logoObjArray[i].scale.z = scaleZ;
+			}
+		}
+		
+		function rotateLogo(angle){
+			for(var i = 0; i < logoObjArray.length; i++){
+				logoObjArray[i].rotation.y = angle;
+				//logoObjArray[i].rotation.z = angle;
+			}
+		}
+		
+		var labelHasAdded = false;
+		function addLabel(){
+
+			labelHasAdded = true;
+		}
+		var time = 0;
+		function updateLabelPos(){
+			for(var i = 0; i < logoObjArray.length; i++){
+				var vector = new THREE.Vector3(logoObjArray[i].position.x, logoObjArray[i].position.y, logoObjArray[i].position.z);
+				vector = vector.project(camera);
+				vector.x = ( vector.x * canvasHalfWidth ) + canvasHalfWidth;
+				vector.y = - ( vector.y * canvasHalfHeight ) + canvasHalfHeight;
+				
+				if(vector.x > canvasWidth || vector.x < 0 || vector.y > canvasHeight || vector.y < 0 || labelHasAdded !== true){
+					$('#region'+i).css({display: 'none'});
+				}
+				else{
+					$('#region'+i).css({display: 'initial', top: vector.y+100, left: vector.x, position:'absolute'});
+					
+				}
+			}
+			
+			
+			if(indexLineGroup.children.length !== 0){
+				for(var i = 0; i < indexLineGroup.children.length; i++){
+					var mouse3D = new THREE.Vector3( 1, 1, 0.5 );   	
+					mouse3D.unproject(camera);					
+					indexLineGroup.children[i].geometry.verticesNeedUpdate = true;	
+					indexLineGroup.children[i].geometry.vertices[1].x = mouse3D.x;
+					indexLineGroup.children[i].geometry.vertices[1].y = mouse3D.y;
+					indexLineGroup.children[i].geometry.vertices[1].z = mouse3D.z;
+					indexLineGroup.children[i].geometry.verticesNeedUpdate = true;	
+				}
+			}
+		}
+		
+		function updateCamera(){
+			camera.position.x = cameraDistance * Math.sin(cameraPhi / 180 * Math.PI) * Math.sin(cameraTheta / 180 * Math.PI) + lookAtPosX;
+			camera.position.y = cameraDistance * Math.cos(cameraPhi / 180 * Math.PI);
+			camera.position.z = -cameraDistance * Math.sin(cameraPhi / 180 * Math.PI) * Math.cos(cameraTheta / 180 * Math.PI) + lookAtPosZ;
+			if(cameraPhi === 0){
+				camera.up = new THREE.Vector3(0,0,-1);
+			}
+			else {
+				var frontVec = new THREE.Vector3(-Math.sin(cameraPhi / 180 * Math.PI) * Math.sin(cameraTheta / 180 * Math.PI), -Math.cos(cameraPhi / 180 * Math.PI), Math.sin(cameraPhi / 180 * Math.PI) * Math.cos(cameraTheta / 180 * Math.PI));
+
+				
+				var worldUp = new THREE.Vector3(0, 1, 0);
+				var rightVec = new THREE.Vector3();
+				rightVec.crossVectors(frontVec, worldUp);
+				var upVec = new THREE.Vector3();
+				upVec.crossVectors(rightVec, frontVec);
+				upVec.normalize();
+				camera.up = upVec;
+				console.log("theta = " + cameraTheta + "  phi = " + cameraPhi);
+				console.log("position: x = " + camera.position.x + "  y = " + camera.position.y + "  z = " + camera.position.z);
+				console.log("quaternion w = : " + camera.quaternion.w + "  x = " + camera.quaternion.x + "  y = " + camera.quaternion.y + "  z = " + camera.quaternion.z)
+				console.log("camera distance: " + cameraDistance)
+			}
+
+			
+			camera.lookAt( new THREE.Vector3(lookAtPosX,0,lookAtPosZ) );
+		}
+		
+		function animate(){
+			cube.position.x = lookAtPosX;
+			cube.position.z = lookAtPosZ;
+			ball.position.x = lookAtPosX;
+			ball.position.z = lookAtPosZ;
+		
+			requestAnimationFrame( animate );
+			TWEEN.update();
+					
+			updateLabelPos();
+			
+			renderer.render( scene, camera );
+		}
+		
+		function webglAvailable() {
+			try {
+				var canvas = document.createElement("canvas");
+				return !!
+					window.WebGLRenderingContext && 
+					(canvas.getContext("webgl") || 
+						canvas.getContext("experimental-webgl"));
+			} catch(e) { 
+				return false;
+			} 
+		}
+		
+	</script>
+
+
+<div id="footer" > 版權所有©2015 華春營造有限公司 所有權利保留</div>
+  
+</div>
+</body>
+</html>
