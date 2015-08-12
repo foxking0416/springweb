@@ -12,7 +12,7 @@
 	var adNum=0;  
 	var opacity = 1.0;
 	var fadeOut = false;
-	
+
 
 	var projectList = new Array();
 	var projectListPic = new Array();
@@ -22,6 +22,7 @@
 		banner = data.Banner;
 		preloadImages(banner);//preload banner image
 
+
 		projectList = data.ProjectList;
 		for(i = 0; i < projectList.length; i++){
 			if(projectList[i].detail === 'True'){
@@ -29,7 +30,17 @@
 				projectListPic[i].src = projectList[i].image;
 			}
 			
-			positionCollection[projectList[i].linkPath]=[projectList[i].posX, projectList[i].posY, projectList[i].scaleX, projectList[i].scaleY]; 
+			//Used longitude and latitude to locate the pointer
+			var shiftX = 39903-332.74*projectList[i].longitude;//40105 - 336.16*projectList[i].longitude;  
+			var shiftY = 343.48*projectList[i].latitude - 8456.9; //(projectList[i].latitude - 24.669) / 0.0029
+			var scaleX = projectList[i].scaleX;
+			var scaleY = projectList[i].scaleY;
+			
+			
+			
+			
+			//positionCollection[projectList[i].linkPath]=[projectList[i].posX, projectList[i].posY, projectList[i].scaleX, projectList[i].scaleY]; 
+			positionCollection[projectList[i].linkPath]=[shiftX, shiftY, projectList[i].scaleX, projectList[i].scaleY]; 
 		}
 		
 		for(i = 0; i < projectList.length; i++){
@@ -48,15 +59,19 @@
 				
 				$('#' + pageName).hover(function () {
 					var projectId = $(this).context.id;
-					$('.region_select').css('background-position', positionCollection[projectId][0] + 'px ' + positionCollection[projectId][1] + 'px');
+					$('.region_select').css('background-position', positionCollection[projectId][0] + 'px ' + positionCollection[projectId][1] + 'px');	
 					$('.region_select').css('background-size', positionCollection[projectId][2] + 'px ' + positionCollection[projectId][3] + 'px');
-					setTimeout(function(){ $(".region_select img").toggle("blind", {}, 100)}, 1000);
+					setTimeout(function(){ $(".region_select img").toggle("blind", {}, 50)}, 1500);
 					//$(".region_select img").toggle("blind", {}, 500);
 				}, function () {
 					$('.region_select').css('background-position', 0 + 'px ' + 0 + 'px');
-					$('.region_select').css('background-size', 460 + 'px ' + 100 + '%');
+					$('.region_select').css('background-size', 300 + 'px ' + 390 + 'px');
 					$(".region_select img").toggle("blind", {}, 10);
 				});
+				
+				
+
+				
 			}
 		}		
   });
@@ -138,6 +153,18 @@
  	function jumpFromProjectToOther(destination){
 		sessionStorage.setItem('session', destination);
 		window.location.href='index.html';
+	};
+	
+	function detectBrowser(){
+		var sAgent = navigator.userAgent.toLowerCase();
+		this.isIE = (sAgent.indexOf("msie")!=-1); //IE6.0-7
+		this.isFF = (sAgent.indexOf("firefox")!=-1);//firefox
+		this.isSa = (sAgent.indexOf("safari")!=-1);//safari
+		this.isOp = (sAgent.indexOf("opera")!=-1);//opera
+		this.isNN = (sAgent.indexOf("netscape")!=-1);//netscape
+		this.isCh = (sAgent.indexOf("chrome")!=-1);//chrome
+		this.isMa = this.isIE;//marthon
+		this.isOther = (!this.isIE && !this.isFF && !this.isSa && !this.isOp && !this.isNN && !this.isSa);//unknown Browser
 	};
 	
 	

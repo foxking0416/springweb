@@ -1,581 +1,609 @@
 {
-	"Banner":["spring/images/background/header1b.jpg",
-			  "spring/images/background/header2b.jpg",
-			  "spring/images/background/header3b.jpg",
-			  "spring/images/background/header4b.jpg",
-			  "spring/images/background/header5b.jpg",
-			  "spring/images/background/header7b.jpg",
-			  "spring/images/background/header8b.jpg",
-			  "spring/images/background/header9b.jpg",
-			  "spring/images/background/header11b.jpg",
-			  "spring/images/background/header12b.jpg",
-			  "spring/images/background/header13b.jpg",
-			  "spring/images/background/header14b.jpg"
+	"Banner":["spring/images/background/banner1.jpg",
+			  "spring/images/background/banner2.jpg",
+			  "spring/images/background/banner3.jpg",
+			  "spring/images/background/banner4.jpg",
+			  "spring/images/background/banner5.jpg",
+			  "spring/images/background/banner6.jpg",
+			  "spring/images/background/banner7.jpg",
+			  "spring/images/background/banner8.jpg",
+			  "spring/images/background/banner9.jpg",
+			  "spring/images/background/banner10.jpg",
+			  "spring/images/background/banner11.jpg",
+			  "spring/images/background/banner12.jpg",
+			  "spring/images/background/banner13.jpg",
+			  "spring/images/background/banner14.jpg",
+			  "spring/images/background/banner15.jpg",
+			  "spring/images/background/banner16.jpg",
+			  "spring/images/background/banner17.jpg",
+			  "spring/images/background/banner18.jpg",
+			  "spring/images/background/banner19.jpg",
+			  "spring/images/background/banner20.jpg",
+			  "spring/images/background/banner21.jpg",
+			  "spring/images/background/banner22.jpg",
+			  "spring/images/background/banner23.jpg",
+			  "spring/images/background/banner24.jpg",
+			  "spring/images/background/banner25.jpg",
+			  "spring/images/background/banner26.jpg",
+			  "spring/images/background/banner27.jpg",
+			  "spring/images/background/banner28.jpg"
 			 ],
 	"ProjectList":[
 	
-		{"linkPath":"p191", "display":"False", "detail":"False", "name":"奇美實業股份有限公司特化廠區研發大樓土建工程",        
-		"image":"",     "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"102"},
+		{"linkPath":"p195", "display":"True", "detail":"True", "name":"當得開發科技股份有限公司廠房新建工程",        
+		"image":"spring/images/project/195_當得開發科技廠房/title.jpg",     "posX":"-780", "posY":"230", "scaleX": "900", "scaleY":"1170", "startYear":"104", "latitude":"23.597291", "longitude":"120.409894"},	
+		
+		{"linkPath":"p194", "display":"True", "detail":"True", "name":"馬偕紀念醫院台東分院平安樓1-3樓整修工程",        
+		"image":"spring/images/project/194_馬偕紀念醫院台東分院/title.jpg",     "posX":"-600", "posY":"-935", "scaleX": "900", "scaleY":"1170", "startYear":"104", "latitude":"22.751044", "longitude":"121.200694"},	
+		
+		{"linkPath":"p193", "display":"True", "detail":"True", "name":"創世基金會苗栗社教中心新建工程",        
+		"image":"spring/images/project/193_創世基金會苗栗社教中心/title.jpg",     "posX":"-905", "posY":"140", "scaleX": "900", "scaleY":"1170", "startYear":"104", "latitude":"24.593415", "longitude":"120.885799"},
 	
-		{"linkPath":"p190", "display":"False", "detail":"False", "name":"日月潭教師會館迎賓樓重建暨周邊景觀改善工程",        
-		"image":"",     "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"102"},
+		{"linkPath":"p192", "display":"True", "detail":"True", "name":"實踐大學台北校區C、G棟整建工程案",        
+		"image":"spring/images/project/192_實踐大學台北校區CG棟/title.jpg",     "posX":"-130", "posY":"-375", "scaleX": "900", "scaleY":"1170", "startYear":"103", "latitude":"25.085222", "longitude":"121.545656"},
+		
+		{"linkPath":"p191", "display":"True", "detail":"True", "name":"奇美實業股份有限公司特化廠區研發大樓土建工程",        
+		"image":"spring/images/project/191_奇美實業特化廠區新建工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"102", "latitude":"23.101460", "longitude":"120.258861"},
+	
+		{"linkPath":"p190", "display":"True", "detail":"True", "name":"日月潭教師會館迎賓樓重建暨周邊景觀改善工程",        
+		"image":"spring/images/project/190_日月潭教師會館/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"102", "latitude":"23.864460", "longitude":"120.952105"},
 		
 		{"linkPath":"p189", "display":"False", "detail":"False", "name":"高雄市水利局鹽埕區南北大溝抽水站工程",        
-		"image":"",     "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"102"},
+		"image":"",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"102"},
 	
 		{"linkPath":"p188", "display":"False", "detail":"False", "name":"國立高雄師範大學校舍耐震及補強工程",        
-		"image":"",     "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"102"},
+		"image":"",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"102"},
 	
 		{"linkPath":"p187", "display":"True", "detail":"True", "name":"莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地", 
-		"image":"spring/images/project/187_莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地/title.jpg",     "posX":"-530", "posY":"-530", "scaleX": "1380", "scaleY":"1170", "startYear":"102"},
+		"image":"spring/images/project/187_莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地/title.jpg",     "posX":"-530", "posY":"-530", "scaleX": "900", "scaleY":"1170", "startYear":"102", "latitude":"23.113681", "longitude":"120.710177"},
 		
-		{"linkPath":"p186", "display":"False", "detail":"False", "name":"吉的堡幼兒園新建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"102"},
+		{"linkPath":"p186", "display":"True", "detail":"True", "name":"吉的堡幼兒園新建工程",        
+		"image":"spring/images/project/186_吉的堡幼兒園新建工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"102", "latitude":"22.637179", "longitude":"120.334610"},
 		
 		{"linkPath":"p185", "display":"False", "detail":"False", "name":"節奏(R&H)公司辦公室室內裝修工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"101"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"101"},
 		
-		{"linkPath":"p184", "display":"False", "detail":"False", "name":"李春錦自用農舍新建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"101"},
+		{"linkPath":"p184", "display":"True", "detail":"True", "name":"李春錦自用農舍新建工程",        
+		"image":"spring/images/project/184_李春錦自用農舍新建工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"101", "latitude":"23.489442", "longitude":"120.444205"},
 		
 		{"linkPath":"p183", "display":"False", "detail":"False", "name":"吳卓穎石螺潭段廠房增建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"101"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"101"},
 		
 		{"linkPath":"p182", "display":"True", "detail":"True", "name":"三聯科技本洲工業區廠房及辦公室新建工程", 		
-		"image":"spring/images/project/182_三聯科技本洲工業區廠房及辦公室新建工程/title.jpg",     "posX":"-365", "posY":"-640", "scaleX": "1380", "scaleY":"1170", "startYear":"101"},
+		"image":"spring/images/project/182_三聯科技本洲工業區廠房及辦公室新建工程/title.jpg",     "posX":"-365", "posY":"-640", "scaleX": "900", "scaleY":"1170", "startYear":"101", "latitude":"22.810686", "longitude":"120.266028"},
 		
 		{"linkPath":"p181", "display":"False", "detail":"False", "name":"國立高雄師範學院 101年和平校區結構補強工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"101"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"101"},
 		
 		{"linkPath":"p180", "display":"False", "detail":"False", "name":"吳松霖、吳卓穎等二人廠房新建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"101"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"101"},
 		
 		{"linkPath":"p179", "display":"False", "detail":"False", "name":"屏東科隆國際生物科技有限公司增建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"100"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"100"},
 		
 		{"linkPath":"p178", "display":"True", "detail":"True", "name":"第一商業銀行_三民分行行舍新建工程", 				
-		"image":"spring/images/project/178_第一商業銀行_三民分行行舍新建工程/title.jpg",       "posX":"-375", "posY":"-695", "scaleX": "1380", "scaleY":"1170", "startYear":"100"},
+		"image":"spring/images/project/178_第一商業銀行_三民分行行舍新建工程/title.jpg",       "posX":"-375", "posY":"-695", "scaleX": "900", "scaleY":"1170", "startYear":"100", "latitude":"22.637047", "longitude":"120.292820"},
 		
 		{"linkPath":"p177", "display":"False", "detail":"False", "name":"法鼓山_高雄市六龜區龍興段永久屋住宅新建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"100"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"100"},
 		
 		{"linkPath":"p176", "display":"True", "detail":"True", "name":"法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程", 	
-		"image":"spring/images/project/176_法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程/title.jpg",     "posX":"-530", "posY":"-530", "scaleX": "1380", "scaleY":"1170", "startYear":"100"},
+		"image":"spring/images/project/176_法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程/title.jpg",     "posX":"-530", "posY":"-530", "scaleX": "900", "scaleY":"1170", "startYear":"100", "latitude":"23.113483", "longitude":"120.710048"},
 		
 		{"linkPath":"p175", "display":"True", "detail":"True", "name":"成大醫院急重症醫療區整建工程", 					
-		"image":"spring/images/project/175_成大醫院急重症醫療區整建工程/title.jpg",            "posX":"-320", "posY":"-580", "scaleX": "1380", "scaleY":"1170", "startYear":"100"},
+		"image":"spring/images/project/175_成大醫院急重症醫療區整建工程/title.jpg",            "posX":"-320", "posY":"-580", "scaleX": "900", "scaleY":"1170", "startYear":"100", "latitude":"23.002110", "longitude":"120.219659"},
 		
 		{"linkPath":"p174", "display":"False", "detail":"False", "name":"高雄縣六龜鄉新開部落(新發村)罹難者紀念公園工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"100"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"100"},
 		
 		{"linkPath":"p173", "display":"True", "detail":"True", "name":"林務局阿里山第一管制站區景觀改善工程", 				
-		"image":"spring/images/project/173_第一管制站區景觀改善工程/title.jpg",                "posX":"-545", "posY":"-400", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		"image":"spring/images/project/173_第一管制站區景觀改善工程/title.jpg",                "posX":"-545", "posY":"-400", "scaleX": "900", "scaleY":"1170", "startYear":"99", "latitude":"23.520002", "longitude":"120.809028"},
 		
-		{"linkPath":"p172", "display":"False", "detail":"False", "name":"天主教真福山社福園區第一期環境改善工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		{"linkPath":"p172", "display":"True", "detail":"True", "name":"天主教真福山社福園區第一期環境改善工程",        
+		"image":"spring/images/project/172_天主教真福山/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"99", "latitude":"23.007419", "longitude":"120.562216"},
 		
 		{"linkPath":"p171", "display":"False", "detail":"False", "name":"中華電信阿里山服務中心三樓整建工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"99"},
 		
 		{"linkPath":"p170", "display":"False", "detail":"False", "name":"奇美實業 B變電所耐震提升補強工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"99"},
 		
 		{"linkPath":"p169", "display":"True", "detail":"True", "name":"奇美實業#25電氣機電室新建工程",        
-		"image":"spring/images/project/169_奇美實業電器機電室新建工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		"image":"spring/images/project/169_奇美實業電器機電室新建工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"99", "latitude":"22.927156", "longitude":"120.243678"},
 		
 		{"linkPath":"p168", "display":"True", "detail":"True", "name":"嘉義市文化中心整建計劃工程", 					
-		"image":"spring/images/project/168_嘉義市文化中心整建計劃工程/title.jpg",                "posX":"-410", "posY":"-405", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		"image":"spring/images/project/168_嘉義市文化中心整建計劃工程/title.jpg",                "posX":"-410", "posY":"-405", "scaleX": "900", "scaleY":"1170", "startYear":"99", "latitude":"23.478383", "longitude":"120.452681"},
 		
-		{"linkPath":"p167", "display":"True", "detail":"False", "name":"屏東縣文化中心設施整建工程",        
-		"image":"",     "posX":"-460", "posY":"-700", "scaleX": "1380", "scaleY":"1170", "startYear":"99"},
+		{"linkPath":"p167", "display":"False", "detail":"False", "name":"屏東縣文化中心設施整建工程",        
+		"image":"",     "posX":"-460", "posY":"-700", "scaleX": "900", "scaleY":"1170", "startYear":"99"},
 		
 		{"linkPath":"p166", "display":"False", "detail":"False", "name":"華南銀行東高雄分行大樓行舍外牆防水整修工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"98"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"98"},
 		
 		{"linkPath":"p165", "display":"True", "detail":"True", "name":"法鼓山雲集寺寺廟新建工程", 						
-		"image":"spring/images/project/165_法鼓山雲集寺/title.jpg",                             "posX":"-305", "posY":"-525", "scaleX": "1380", "scaleY":"1170", "startYear":"98"},
+		"image":"spring/images/project/165_法鼓山雲集寺/title.jpg",                             "posX":"-305", "posY":"-525", "scaleX": "900", "scaleY":"1170", "startYear":"98", "latitude":"23.170641", "longitude":"120.177902"},
 		
-		{"linkPath":"p164", "display":"False", "detail":"False", "name":"佛光山弘法廣場南側邊坡整治工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		{"linkPath":"p164", "display":"True", "detail":"True", "name":"佛光山弘法廣場南側邊坡整治工程",        
+		"image":"spring/images/project/164_佛光山佛陀紀念館邊坡加勁網工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"97", "latitude":"22.755606", "longitude":"120.447591"},
 		
 		{"linkPath":"p163", "display":"True", "detail":"True", "name":"日月潭國家風景區管理處向山行政中心新建工程", 	
-		"image":"spring/images/project/163_日月潭國家風景區管理處向山行政中心新建工程/title.jpg",     "posX":"-570", "posY":"-275", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		"image":"spring/images/project/163_日月潭國家風景區管理處向山行政中心新建工程/title.jpg",     "posX":"-570", "posY":"-275", "scaleX": "900", "scaleY":"1170", "startYear":"97", "latitude":"23.851714", "longitude":"120.902030"},
 		
 		{"linkPath":"p162", "display":"False", "detail":"False", "name":"佛光山普門中學校園景觀_其他土木工程及停車棚基礎工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"97"},
 		
-		{"linkPath":"p161", "display":"False", "detail":"False", "name":"高雄市政府2009世運場館陽明溜冰場整修工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		{"linkPath":"p161", "display":"True", "detail":"True", "name":"高雄市政府2009世運場館陽明溜冰場整修工程",        
+		"image":"spring/images/project/161_世運場館陽明溜冰場整修工程/title.jpg",     "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"97", "latitude":"22.643735", "longitude":"120.339108"},
 		
 		{"linkPath":"p160", "display":"False", "detail":"False", "name":"瓦錫蘭高雄廠房整修工程",        
-		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		"image":"",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"97"},
 		
 		{"linkPath":"p159", "display":"True", "detail":"True", "name":"屏東縣政府下淡水溪鐵橋-屏東端周邊整體開發工程",        
-		"image":"spring/images/project/159_屏東縣政府下淡水溪鐵橋_屏東端周邊整體開發工程/title.jpg",     "posX":"-430", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		"image":"spring/images/project/159_屏東縣政府下淡水溪鐵橋_屏東端周邊整體開發工程/title.jpg",     "posX":"-430", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"97", "latitude":"22.663393", "longitude":"120.489042"},
 		
 		{"linkPath":"p158", "display":"False", "detail":"False", "name":"佛光山普門中學校園景觀工程-球場工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"97"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"97"},
 		
 		{"linkPath":"p157", "display":"False", "detail":"False", "name":"雲嘉南風管處布袋多功能遊客中心整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"96"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"96"},
 		
 		{"linkPath":"p156", "display":"False", "detail":"False", "name":"台電台北中央調度中心裝修工程(第一期)及高雄中央調度中心裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"96"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"96"},
 		
 		{"linkPath":"p155", "display":"False", "detail":"False", "name":"高雄市富苑經典大飯店新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"96"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"96"},
 		
 		{"linkPath":"p153", "display":"True", "detail":"True", "name":"佛光山均頭國中小行政中心新建及全校景觀工程", 				
-		"image":"spring/images/project/153_佛光山均頭國中小行政中心新建工程/title.jpg",         "posX":"-600", "posY":"-235", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
+		"image":"spring/images/project/153_佛光山均頭國中小行政中心新建工程/title.jpg",         "posX":"-600", "posY":"-235", "scaleX": "900", "scaleY":"1170", "startYear":"95", "latitude":"23.950758", "longitude":"120.972873"},
 		
 		{"linkPath":"p152", "display":"False", "detail":"False", "name":"南部科學園區高雄園區第一期標準廠房增設中庭設施工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"95"},
 		
 		{"linkPath":"p151", "display":"False", "detail":"False", "name":"高雄都會公園(ㄧ期區)95年度現有部分建物.景觀及遊憩等相關設施更新改善工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"95"},
 		
-		{"linkPath":"p150", "display":"False", "detail":"False", "name":"高雄市旗津區海岸路及廟前路等造街工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
-		
-		{"linkPath":"p149", "display":"True", "detail":"True", "name":"慈香庭澄清湖意象區公園改善、服務中心新建工程",     			
-		"image":"spring/images/project/149_慈香庭澄清湖意象區公園改善服務中心新建工程/title.jpg",         "posX":"-400", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
-		
+		{"linkPath":"p150", "display":"False", "detail":"True", "name":"高雄市旗津區海岸路及廟前路等造街工程",     			
+		"image":"spring/images/project/150_高雄市旗津區海岸路及廟前路等造街工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"95"},
+
 		{"linkPath":"p148", "display":"True", "detail":"True", "name":"高雄市政府3號船渠東岸及11.12號碼頭開發工程",     			
-		"image":"spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/title.jpg",         "posX":"-380", "posY":"-705", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
+		"image":"spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/title.jpg",         "posX":"-380", "posY":"-705", "scaleX": "900", "scaleY":"1170", "startYear":"95", "latitude":"22.617740", "longitude":"120.288030"},
 		
 		{"linkPath":"p147", "display":"False", "detail":"False", "name":"高雄市政府95年度明誠博愛公園改造工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"95"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"95"},
 		
 		{"linkPath":"p146", "display":"True", "detail":"True", "name":"95 94年度愛河沿岸(中都橋至中華路)美綠化工程", 	
-		"image":"spring/images/project/146_愛河沿岸美綠化工程/title.jpg",                    "posX":"-375", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"94"},
+		"image":"spring/images/project/146_愛河沿岸美綠化工程/title.jpg",                    "posX":"-375", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"94", "latitude":"22.647755", "longitude":"120.323532"},
 		
 		{"linkPath":"p145", "display":"True", "detail":"True", "name":"高雄海洋之星重要交通門戶環境改善工程(統包案)", 	
-		"image":"spring/images/project/145_高雄海洋之星重要交通門戶環境改善工程/title.jpg",     "posX":"-380", "posY":"-705", "scaleX": "1380", "scaleY":"1170", "startYear":"94"},
+		"image":"spring/images/project/145_高雄海洋之星重要交通門戶環境改善工程/title.jpg",     "posX":"-380", "posY":"-705", "scaleX": "900", "scaleY":"1170", "startYear":"94", "latitude":"22.609869", "longitude":"120.297198"},
 		
 		{"linkPath":"p144", "display":"False", "detail":"False", "name":"高雄縣仁武鄉運動公園第一期興建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"93"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"93"},
 		
 		{"linkPath":"p143", "display":"False", "detail":"False", "name":"高雄縣政府旗山糖廠迎賓環境改善工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"93"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"93"},
 		
 		{"linkPath":"p142", "display":"False", "detail":"False", "name":"高雄立春建設風尚主人新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"93"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"93"},
 		
-		{"linkPath":"p141", "display":"False", "detail":"False", "name":"嘉義縣立文化中心演藝廳第三期戶外表演廣場工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		{"linkPath":"p141", "display":"True", "detail":"True", "name":"嘉義縣立文化中心演藝廳第三期戶外表演廣場工程",     			
+		"image":"spring/images/project/141_嘉義縣立文化中心戶外表演廣場工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92", "latitude":"23.544681", "longitude":"120.431802"},
 		
 		{"linkPath":"p140", "display":"False", "detail":"False", "name":"大鵬灣風管處琉球管理站整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
-		{"linkPath":"p139", "display":"False", "detail":"False", "name":"台東新興國小91年度綠校園改造工程統包案",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		{"linkPath":"p139", "display":"True", "detail":"True", "name":"台東新興國小91年度綠校園改造工程統包案",     			
+		"image":"spring/images/project/139_台東新興國小綠校園改造工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92", "latitude":"22.632060", "longitude":"121.113625"},
 		
 		{"linkPath":"p138", "display":"False", "detail":"False", "name":"中華電信屏東琉球機房三、四樓整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p137", "display":"False", "detail":"False", "name":"世華銀行東高雄分行無人銀行裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p136", "display":"False", "detail":"False", "name":"大鵬灣風管處琉球白沙港區整體景觀美化工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
-		{"linkPath":"p135", "display":"False", "detail":"False", "name":"澎湖技術學院體育館暨學生活動中心內部設施工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		{"linkPath":"p135", "display":"False", "detail":"True", "name":"澎湖技術學院體育館暨學生活動中心內部設施工程",     			
+		"image":"spring/images/project/135_澎湖技術學院體育館暨學生活動中心內部設施工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
-		{"linkPath":"p134", "display":"False", "detail":"False", "name":"衛生署嘉南療養院92年度綠色廳舍改善工程統包案",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		{"linkPath":"p134", "display":"True", "detail":"True", "name":"衛生署嘉南療養院92年度綠色廳舍改善工程統包案",     			
+		"image":"spring/images/project/134_行政院衛生署嘉南療養院綠色廳舍改善工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92", "latitude":"22.978195", "longitude":"120.242309"},
 		
 		{"linkPath":"p133", "display":"False", "detail":"False", "name":"台東金崙溫泉區公共設施景觀工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p132", "display":"False", "detail":"False", "name":"世華銀行高雄招待所室內裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p131", "display":"False", "detail":"False", "name":"高雄縣內門宋江陣多功能表演場新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p130", "display":"False", "detail":"False", "name":"台南縣政府關仔嶺溫泉社區改善工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p129", "display":"False", "detail":"False", "name":"嘉南農田水利會烏山頭風景區入口區親水公園(第三期)續辦工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p128", "display":"False", "detail":"False", "name":"衛生署嘉南療養院擋土牆及圍牆設施改善工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"91"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"91"},
 		
 		{"linkPath":"p127", "display":"True", "detail":"True", "name":"高雄市凹仔底原生植物園整建工程", 				
-		"image":"spring/images/project/127_高雄市凹仔底原生植物園整建工程/title.jpg",           "posX":"-380", "posY":"-670", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		"image":"spring/images/project/127_高雄市凹仔底原生植物園整建工程/title.jpg",           "posX":"-380", "posY":"-670", "scaleX": "900", "scaleY":"1170", "startYear":"92", "latitude":"22.681066", "longitude":"120.301205"},
 		
-		{"linkPath":"p126", "display":"False", "detail":"False", "name":"屏東東發製藥鋼骨廠房工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"91"},
+		{"linkPath":"p126", "display":"True", "detail":"True", "name":"屏東東發製藥鋼骨廠房工程",     			
+		"image":"spring/images/project/126_東發製藥鋼骨廠房工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"91", "latitude":"22.657306", "longitude":"120.496850"},
 		
 		{"linkPath":"p125", "display":"False", "detail":"False", "name":"嘉義縣治所在地廣四、兒四、停四等週邊景觀改造工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"91"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"91"},
 		
 		{"linkPath":"p124", "display":"False", "detail":"False", "name":"嘉南農田水利會烏山頭風景區入口區親水公園(第三期)工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"91"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"91"},
 		
-		{"linkPath":"p123", "display":"False", "detail":"False", "name":"海洋技術學院旗津校區教學大樓內部裝修及環境景觀工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"91"},
+		{"linkPath":"p123", "display":"False", "detail":"True", "name":"海洋技術學院旗津校區教學大樓內部裝修及環境景觀工程",     			
+		"image":"spring/images/project/123_高雄海洋學院教學大樓內部裝修及環境景觀工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"91"},
 		
 		{"linkPath":"p122", "display":"False", "detail":"False", "name":"國立高雄餐旅學院屋污水處理廠新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90"},
 		
 		{"linkPath":"p121", "display":"True", "detail":"True", "name":"高雄市政府鼓山哨船頭旁公園(第二期)開闢工程",     			
-		"image":"spring/images/project/121_鼓山哨船頭公園/title.jpg",         "posX":"-380", "posY":"-705", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		"image":"spring/images/project/121_鼓山哨船頭公園/title.jpg",         "posX":"-380", "posY":"-705", "scaleX": "900", "scaleY":"1170", "startYear":"90", "latitude":"22.618822", "longitude":"120.289403"},
 		
-		{"linkPath":"p120", "display":"False", "detail":"False", "name":"台電南部電廠第四號機T/G廠房建築裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		{"linkPath":"p120", "display":"True", "detail":"True", "name":"台電南部電廠第四號機T/G廠房建築裝修工程",     			
+		"image":"spring/images/project/120_台電南部電廠第四號機TG廠房建築裝修工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90", "latitude":"22.605045", "longitude":"120.299450"},
 		
-		{"linkPath":"p119", "display":"False", "detail":"False", "name":"高雄縣政府「廿一世紀大高雄花展」硬體工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		{"linkPath":"p119", "display":"False", "detail":"True", "name":"高雄縣政府「廿一世紀大高雄花展」硬體工程",     			
+		"image":"spring/images/project/119_二十一世紀大高雄花展硬體工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90"},
 		
 		{"linkPath":"p118", "display":"False", "detail":"False", "name":"彰化銀行沙鹿分行新租行舍裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90"},
 		
-		{"linkPath":"p117", "display":"True", "detail":"False", "name":"台電南部電廠第四號機廢水處理控制大樓新建工程",        
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		{"linkPath":"p117", "display":"True", "detail":"True", "name":"台電南部電廠第四號機廢水處理控制大樓新建工程",        
+		"image":"spring/images/project/117_台電南部電廠第四機廢水處理控制大樓新建工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90", "latitude":"22.605045", "longitude":"120.299450"},
 		
 		{"linkPath":"p116", "display":"True", "detail":"True", "name":"台南科學園區一期大洲排水景觀及行人橋工程",     			
-		"image":"spring/images/project/116_台南科學園區一期大洲排水景觀及行人橋工程/title.jpg",         "posX":"-350", "posY":"-540", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		"image":"spring/images/project/116_台南科學園區一期大洲排水景觀及行人橋工程/title.jpg",         "posX":"-350", "posY":"-540", "scaleX": "900", "scaleY":"1170", "startYear":"90", "latitude":"23.099699", "longitude":"120.287428"},
 		
-		{"linkPath":"p115", "display":"True", "detail":"True", "name":"嘉義縣政府布袋遊艇港二期陸域工程",     			
-		"image":"spring/images/project/115_嘉義縣政府布袋遊艇港二期陸域工程/title.jpg",         "posX":"-300", "posY":"-440", "scaleX": "1380", "scaleY":"1170", "startYear":"92"},
+		{"linkPath":"p115", "display":"False", "detail":"True", "name":"嘉義縣政府布袋遊艇港二期陸域工程",     			
+		"image":"spring/images/project/115_嘉義縣政府布袋遊艇港二期陸域工程/title.jpg",         "posX":"-300", "posY":"-440", "scaleX": "900", "scaleY":"1170", "startYear":"92"},
 		
 		{"linkPath":"p114", "display":"False", "detail":"False", "name":"嘉義縣稅捐大樓週邊景觀工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		"image":"spring/images/project/114_嘉義縣稅捐大樓週邊景觀工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90"},
 		
 		{"linkPath":"p113", "display":"False", "detail":"False", "name":"衛生署嘉南療養院機車棚及圍牆護欄整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"89"},
 		
 		{"linkPath":"p112", "display":"False", "detail":"False", "name":"彰化銀行嘉義分行行舍改修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"89"},
 		
-		{"linkPath":"p111", "display":"False", "detail":"False", "name":"高雄縣美濃客家文物館第三期工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		{"linkPath":"p111", "display":"True", "detail":"True", "name":"高雄縣美濃客家文物館第三期工程",     			
+		"image":"spring/images/project/111_高雄縣美濃客家文物館第三期工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"89", "latitude":"22.912379", "longitude":"120.557634"},
 		
 		{"linkPath":"p110", "display":"False", "detail":"False", "name":"彰化銀行集集倉庫拆除工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"90"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"90"},
 		
 		{"linkPath":"p109", "display":"True", "detail":"True", "name":"烏山頭風景區入口區親水公園(第二期)工程", 		
-		"image":"spring/images/project/109_烏山頭風景區入口區親水公園工程/title.jpg",           "posX":"-385", "posY":"-500", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		"image":"spring/images/project/109_烏山頭風景區入口區親水公園工程/title.jpg",           "posX":"-385", "posY":"-500", "scaleX": "900", "scaleY":"1170", "startYear":"89", "latitude":"23.197300", "longitude":"120.369992"},
 			
 		{"linkPath":"p108", "display":"False", "detail":"False", "name":"中油高廠宿舍及學校等建築物修繕工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"89"},
 			
 		{"linkPath":"p107", "display":"True", "detail":"True", "name":"高雄縣橋頭舊市區文化步道及辦公區公共景觀工程",     			
-		"image":"spring/images/project/107_高雄縣橋頭舊市區文化步道及辦公區公共景觀工程/title.jpg",         "posX":"-365", "posY":"-650", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		"image":"spring/images/project/107_高雄縣橋頭舊市區文化步道及辦公區公共景觀工程/title.jpg",         "posX":"-365", "posY":"-650", "scaleX": "900", "scaleY":"1170", "startYear":"89", "latitude":"22.757976", "longitude":"120.305675"},
 			
 		{"linkPath":"p106", "display":"False", "detail":"False", "name":"高雄縣桃源鄉原住民文物館新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"91"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"91"},
 			
 		{"linkPath":"p105", "display":"False", "detail":"False", "name":"高雄縣三民鄉公所大樓重建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"89"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"89"},
+			
+		{"linkPath":"p149", "display":"True", "detail":"True", "name":"澄清湖意象區公園改善、服務中心新建工程",     			
+		"image":"spring/images/project/149_澄清湖意象區公園改善服務中心新建工程/title.jpg",         "posX":"-400", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"88", "latitude":"22.652868", "longitude":"120.349656"},
 			
 		{"linkPath":"p104", "display":"False", "detail":"False", "name":"衛生署署立南投醫院加護病房重建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"88"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"88"},
 			
 		{"linkPath":"p103", "display":"False", "detail":"False", "name":"嘉義縣治所在地景觀改造工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"88"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"88"},
 			
 		{"linkPath":"p102", "display":"False", "detail":"False", "name":"衛生署嘉南療養院雜項工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"88"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"88"},
 			
 		{"linkPath":"p101", "display":"True", "detail":"True", "name":"高雄縣鳥松溼地公園工程", 						
-		"image":"spring/images/project/101_高雄縣鳥松溼地公園工程/title.jpg",                   "posX":"-400", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"88"},
+		"image":"spring/images/project/101_高雄縣鳥松溼地公園工程/title.jpg",                   "posX":"-400", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"88", "latitude":"22.654603", "longitude":"120.351117"},
 		
 		{"linkPath":"p100", "display":"False", "detail":"False", "name":"中華電信枋寮電信服務中心新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"88"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"88"},
 		
 		{"linkPath":"p99", "display":"False", "detail":"False", "name":"衛生署嘉南療養院後續工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"87"},
 		
 		{"linkPath":"p98", "display":"False", "detail":"False", "name":"高雄縣美濃客家文物館內裝工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"87"},
 		
 		{"linkPath":"p97", "display":"False", "detail":"False", "name":"高雄市地重劃區拆遷工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"87"},
 		
-		{"linkPath":"p96", "display":"False", "detail":"False", "name":"高雄縣第三級古蹟鳳山縣城殘蹟修復工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		{"linkPath":"p96", "display":"False", "detail":"True", "name":"高雄縣第三級古蹟鳳山縣城殘蹟修復工程",     			
+		"image":"spring/images/project/96_高雄縣第三級古蹟鳳山縣城殘跡修護工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"87"},
 		
 		{"linkPath":"p95", "display":"True", "detail":"True", "name":"中華電信台東電信服務中心", 						
-		"image":"spring/images/project/95_中華電信_台東電信服務中心/title.jpg",                "posX":"-665", "posY":"-640", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		"image":"spring/images/project/95_中華電信_台東電信服務中心/title.jpg",                "posX":"-665", "posY":"-640", "scaleX": "900", "scaleY":"1170", "startYear":"87", "latitude":"22.753517", "longitude":"121.153440"},
 
 		{"linkPath":"p94", "display":"False", "detail":"False", "name":"行政院衛生署嘉南療養院景觀工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"87"},
 		
 		{"linkPath":"p93", "display":"True", "detail":"True", "name":"行政院衛生署南投醫院醫療大樓擴建第二期建築裝修工程",        
-		"image":"spring/images/project/93_行政院衛生署南投醫院醫療大樓擴建第二期建築裝修工程/title.jpg",     "posX":"-500", "posY":"-245", "scaleX": "1380", "scaleY":"1170", "startYear":"87"},
+		"image":"spring/images/project/93_行政院衛生署南投醫院醫療大樓擴建第二期建築裝修工程/title.jpg",     "posX":"-500", "posY":"-245", "scaleX": "900", "scaleY":"1170", "startYear":"87", "latitude":"23.914542", "longitude":"120.684264"},
 		
 		{"linkPath":"p92", "display":"False", "detail":"False", "name":"世華銀行東高雄分行餐廳廚房裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
 		{"linkPath":"p91", "display":"False", "detail":"False", "name":"中華電信服務大樓室外地坪整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
 		{"linkPath":"p90", "display":"False", "detail":"False", "name":"彰化銀行潮州分行新租行舍改修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
-		{"linkPath":"p89", "display":"True", "detail":"True", "name":"行政院衛生署朴子醫院擴建醫療大樓裝修工程",        
-		"image":"spring/images/project/89_台灣省立朴子醫院擴建醫療大樓後裝修工程/title.jpg",     "posX":"-320", "posY":"-425", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		{"linkPath":"p89", "display":"False", "detail":"True", "name":"行政院衛生署朴子醫院擴建醫療大樓裝修工程",        
+		"image":"spring/images/project/89_台灣省立朴子醫院擴建醫療大樓後裝修工程/title.jpg",     "posX":"-320", "posY":"-425", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
 		{"linkPath":"p88", "display":"False", "detail":"False", "name":"屏東內埔首席建築工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
-		{"linkPath":"p87", "display":"False", "detail":"False", "name":"高雄市立小港醫院新建裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		{"linkPath":"p87", "display":"True", "detail":"True", "name":"高雄市立小港醫院新建裝修工程",     			
+		"image":"spring/images/project/87_高雄市立小港醫院新建裝修工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86", "latitude":"22.567874", "longitude":"120.363122"},
 		
 		{"linkPath":"p86", "display":"False", "detail":"False", "name":"高雄市第卅七期市地重劃區公園開闢(土木)工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
 		{"linkPath":"p85", "display":"False", "detail":"False", "name":"台電恒春服務所及倉庫新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
-		{"linkPath":"p84", "display":"False", "detail":"False", "name":"國立科學工藝博物館館圍牆大門人行道工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		{"linkPath":"p84", "display":"False", "detail":"True", "name":"國立科學工藝博物館館圍牆大門人行道工程",     			
+		"image":"spring/images/project/84_科工館人行道/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p83", "display":"False", "detail":"False", "name":"中華電信八樓帳務中心裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p82", "display":"False", "detail":"False", "name":"內政部營建署高雄都會公園東北側景觀工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"86"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"86"},
 		
 		{"linkPath":"p81", "display":"False", "detail":"False", "name":"世華銀行高雄分行BF建築消防工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
-		{"linkPath":"p80", "display":"False", "detail":"False", "name":"高雄銀行資訊大樓營建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		{"linkPath":"p80", "display":"True", "detail":"True", "name":"高雄銀行資訊大樓營建工程",     			
+		"image":"spring/images/project/80_高雄銀行資訊大樓營建工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85", "latitude":"22.639573", "longitude":"120.327110"},
 		
 		{"linkPath":"p79", "display":"False", "detail":"False", "name":"內政部營建署高雄都會公園餐飲中心傢俱工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p78", "display":"False", "detail":"False", "name":"中華電信公話中心三、五股整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p77", "display":"False", "detail":"False", "name":"中華電信公話中心數幣間整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p76", "display":"True", "detail":"True", "name":"世華銀行新興分行一樓裝修工程",     			
-		"image":"spring/images/project/76_世華銀行新興分行內部裝修/title.jpg",         "posX":"-380", "posY":"-682", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"spring/images/project/76_世華銀行新興分行內部裝修/title.jpg",         "posX":"-380", "posY":"-682", "scaleX": "900", "scaleY":"1170", "startYear":"85", "latitude":"22.631055", "longitude":"120.308359"},
 		
 		{"linkPath":"p75", "display":"False", "detail":"False", "name":"中華電信開標室整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p74", "display":"False", "detail":"False", "name":"內政部營建署高雄都會公園警勤宿舍改善裝潢工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p73", "display":"False", "detail":"False", "name":"華南銀行潮州分行行舍新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p72", "display":"False", "detail":"False", "name":"中華電信視訊會議室整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p71", "display":"True", "detail":"True", "name":"台南妙心寺文教大樓新建工程",        
-		"image":"spring/images/project/71_妙心寺文教大樓新建工程/title.jpg",     "posX":"-320", "posY":"-560", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"spring/images/project/71_妙心寺文教大樓新建工程/title.jpg",     "posX":"-320", "posY":"-560", "scaleX": "900", "scaleY":"1170", "startYear":"85", "latitude":"23.004071", "longitude":"120.230903"},
 		
 		{"linkPath":"p70", "display":"False", "detail":"False", "name":"中華電信屏東內埔機房整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p69", "display":"False", "detail":"False", "name":"白經理住宅新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"85"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"85"},
 		
 		{"linkPath":"p68", "display":"False", "detail":"False", "name":"鳳山市拷潭公墓納骨塔骨櫃工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
-		{"linkPath":"p67", "display":"False", "detail":"False", "name":"高雄縣縣立體育館整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		{"linkPath":"p67", "display":"True", "detail":"True", "name":"高雄縣縣立體育館整修工程",     			
+		"image":"spring/images/project/67_高雄縣縣立體育館裝修工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84", "latitude":"22.621992", "longitude":"120.353856"},
 		
 		{"linkPath":"p66", "display":"False", "detail":"False", "name":"彰化銀行博愛分行櫃檯及櫥櫃工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p65", "display":"False", "detail":"False", "name":"世華銀行屏東分行整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p64", "display":"False", "detail":"False", "name":"國立科學工藝博物館展示區牆面裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p63", "display":"False", "detail":"False", "name":"中華電信後庄機房整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p62", "display":"False", "detail":"False", "name":"高雄縣政府機要秘書室整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p61", "display":"False", "detail":"False", "name":"彰化銀行東高雄行舍改修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p60", "display":"False", "detail":"False", "name":"土地銀行大社分行營業廳裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p59", "display":"False", "detail":"False", "name":"土地銀行北台南分行一樓裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p58", "display":"False", "detail":"False", "name":"世華銀行新衙路倉儲整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
-		{"linkPath":"p57", "display":"True", "detail":"False", "name":"彰化銀行臺東分行行舍改修工程",        
-		"image":"",     "posX":"-665", "posY":"-640", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		{"linkPath":"p57", "display":"False", "detail":"False", "name":"彰化銀行臺東分行行舍改修工程",        
+		"image":"",     "posX":"-665", "posY":"-640", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p56", "display":"False", "detail":"False", "name":"彰化銀行建國分行櫃檯裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
-		{"linkPath":"p55", "display":"True", "detail":"False", "name":"彰化銀行南高雄分行裝修工程",        
-		"image":"",     "posX":"-385", "posY":"-705", "scaleX": "1380", "scaleY":"1170", "startYear":"84"},
+		{"linkPath":"p55", "display":"False", "detail":"False", "name":"彰化銀行南高雄分行裝修工程",        
+		"image":"",     "posX":"-385", "posY":"-705", "scaleX": "900", "scaleY":"1170", "startYear":"84"},
 		
 		{"linkPath":"p54", "display":"False", "detail":"False", "name":"世華銀行永康招待所裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p53", "display":"False", "detail":"False", "name":"朱英璋自宅興建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p52", "display":"True", "detail":"True", "name":"高雄縣勞工育樂中心(第三期)裝修工程",        
-		"image":"spring/images/project/52_高雄縣勞工育樂中心裝修工程/title.jpg",     "posX":"-400", "posY":"-680", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"spring/images/project/52_高雄縣勞工育樂中心裝修工程/title.jpg",     "posX":"-400", "posY":"-680", "scaleX": "900", "scaleY":"1170", "startYear":"83", "latitude":"22.653596", "longitude":"120.358208"},
 		
 		{"linkPath":"p51", "display":"False", "detail":"False", "name":"賴宅整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p50", "display":"False", "detail":"False", "name":"羅宅整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p49", "display":"False", "detail":"False", "name":"林永蒼住宅新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p48", "display":"False", "detail":"False", "name":"彰化銀行東港分行行舍改修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p47", "display":"True", "detail":"True", "name":"內政部營建署高雄都會公園日晷工程", 				
-		"image":"spring/images/project/47_內政部營建署高雄都會公園日晷工程/title.jpg",         "posX":"-365", "posY":"-650", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"spring/images/project/47_內政部營建署高雄都會公園日晷工程/title.jpg",         "posX":"-365", "posY":"-650", "scaleX": "900", "scaleY":"1170", "startYear":"83", "latitude":"22.733371", "longitude":"120.315803"},
 		
 		{"linkPath":"p46", "display":"False", "detail":"False", "name":"劉峰銘自宅興建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
 		{"linkPath":"p45", "display":"False", "detail":"False", "name":"張廷堅醫師宅整建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"83"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"83"},
 		
-		{"linkPath":"p44", "display":"True", "detail":"False", "name":"世華銀行永康分行行舍裝修工程",        
-		"image":"",     "posX":"-320", "posY":"-560", "scaleX": "1380", "scaleY":"1170", "startYear":"82"},
+		{"linkPath":"p44", "display":"False", "detail":"False", "name":"世華銀行永康分行行舍裝修工程",        
+		"image":"",     "posX":"-320", "posY":"-560", "scaleX": "900", "scaleY":"1170", "startYear":"82"},
 		
 		{"linkPath":"p43", "display":"False", "detail":"False", "name":"高雄市凱旋國小廁所整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"82"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"82"},
 		
 		{"linkPath":"p42", "display":"False", "detail":"False", "name":"彰化銀行大順路分行行舍內部裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"82"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"82"},
 		
 		{"linkPath":"p41", "display":"False", "detail":"False", "name":"高雄市度量衡檢定所庭園新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"82"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"82"},
 		
-		{"linkPath":"p40", "display":"True", "detail":"False", "name":"彰化銀行新興分行行舍改修工程",                           
-		"image":"",     "posX":"-380", "posY":"-685", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		{"linkPath":"p40", "display":"False", "detail":"False", "name":"彰化銀行新興分行行舍改修工程",                           
+		"image":"",     "posX":"-380", "posY":"-685", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
 		{"linkPath":"p39", "display":"False", "detail":"False", "name":"中華電信美濃服務中心新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"82"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"82"},
 		
 		{"linkPath":"p38", "display":"False", "detail":"False", "name":"台南學府新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
 		{"linkPath":"p37", "display":"False", "detail":"False", "name":"屏東縣東港鎮大潭國小教室增建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
-		{"linkPath":"p36", "display":"True", "detail":"True", "name":"彰化銀行九如路分行新購行舍內部裝修工程",                  
-		"image":"spring/images/project/36_彰化銀行九如分行內部裝修/title.jpg",     "posX":"-380", "posY":"-682", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		{"linkPath":"p36", "display":"False", "detail":"True", "name":"彰化銀行九如路分行新購行舍內部裝修工程",                  
+		"image":"spring/images/project/36_彰化銀行九如分行內部裝修/title.jpg",     "posX":"-380", "posY":"-682", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
 		{"linkPath":"p35", "display":"False", "detail":"False", "name":"高雄港警所旗后安檢站新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
-		{"linkPath":"p34", "display":"False", "detail":"False", "name":"和風建設和風居新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		{"linkPath":"p34", "display":"False", "detail":"True", "name":"和風建設和風居新建工程",     			
+		"image":"spring/images/project/34_和風建設和風居/title.jpg",         "posX":"-380", "posY":"-682", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
 		{"linkPath":"p33", "display":"False", "detail":"False", "name":"高雄市立民生醫院病房修繕工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
-		{"linkPath":"p32", "display":"True", "detail":"True", "name":"墾丁國家公園鵝鑾鼻涼亭新建工程",                 
-		"image":"spring/images/project/32_墾丁國家公園鵝鸞鼻迎賓亭/title.jpg",     "posX":"-600", "posY":"-930", "scaleX": "1380", "scaleY":"1170", "startYear":"80"},
+		{"linkPath":"p32", "display":"False", "detail":"True", "name":"墾丁國家公園鵝鑾鼻涼亭新建工程",                 
+		"image":"spring/images/project/32_墾丁國家公園鵝鸞鼻迎賓亭/title.jpg",     "posX":"-600", "posY":"-930", "scaleX": "900", "scaleY":"1170", "startYear":"80"},
 		
 		{"linkPath":"p30", "display":"True", "detail":"True", "name":"玉山國家公園管理處梅山服務中心一、二期工程",          
-		"image":"spring/images/project/30_玉山國家公園_梅山服務中心二期工程/title.jpg",     "posX":"-560", "posY":"-460", "scaleX": "1380", "scaleY":"1170", "startYear":"80"},
+		"image":"spring/images/project/30_玉山國家公園_梅山服務中心二期工程/title.jpg",     "posX":"-560", "posY":"-460", "scaleX": "900", "scaleY":"1170", "startYear":"80", "latitude":"23.268098", "longitude":"120.826185"},
 		
-		{"linkPath":"p29", "display":"False", "detail":"False", "name":"高雄市灣機二號里集會所新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"80"},
+		{"linkPath":"p29", "display":"False", "detail":"True", "name":"高雄市灣機二號里集會所新建工程",     			
+		"image":"spring/images/project/29_灣機二號里集會所/title.jpg",         "posX":"-380", "posY":"-682", "scaleX": "900", "scaleY":"1170", "startYear":"80"},
 		
 		{"linkPath":"p28", "display":"False", "detail":"False", "name":"彰化銀行中港分行新購行舍改修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"81"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"81"},
 		
 		{"linkPath":"p27", "display":"False", "detail":"False", "name":"高雄市陸軍外島服務處營舍工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"79"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"79"},
 		
-		{"linkPath":"p26", "display":"True", "detail":"True", "name":"中華電信嘉民機房新建工程",   					
-		"image":"spring/images/project/26_中華電信_嘉民機房新建工程/title.jpg",   "posX":"-400", "posY":"-440", "scaleX": "1380", "scaleY":"1170", "startYear":"79"},
+		{"linkPath":"p26", "display":"False", "detail":"True", "name":"中華電信嘉民機房新建工程",   					
+		"image":"spring/images/project/26_中華電信_嘉民機房新建工程/title.jpg",   "posX":"-400", "posY":"-440", "scaleX": "900", "scaleY":"1170", "startYear":"79"},
 		
 		{"linkPath":"p25", "display":"False", "detail":"False", "name":"屏東縣東港鎮大潭國小教室新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"79"},	
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"79"},	
 		
 		{"linkPath":"p24", "display":"False", "detail":"False", "name":"彰化銀行東港分行裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"79"},	
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"79"},	
 		
 		{"linkPath":"p23", "display":"False", "detail":"False", "name":"永駿豐混凝土廠,辦公室興建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},	
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78"},	
 		
 		{"linkPath":"p22", "display":"False", "detail":"False", "name":"民航局高雄國際機場東南側圍牆改善工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},	
+		"image":"",         "posX":"-380", "posY":"-705", "scaleX": "900", "scaleY":"1170", "startYear":"78"},	
 		
 		{"linkPath":"p21", "display":"True", "detail":"True", "name":"高雄宏法寺新建工程", 								
-		"image":"spring/images/project/21_宏法寺新建工程/title.jpg",      "posX":"-378", "posY":"-683", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		"image":"spring/images/project/21_宏法寺新建工程/title.jpg",      "posX":"-378", "posY":"-683", "scaleX": "900", "scaleY":"1170", "startYear":"78", "latitude":"22.635515", "longitude":"120.307797"},
 		
 		{"linkPath":"p20", "display":"False", "detail":"False", "name":"中華電信岡山後協機房增建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},		
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78"},		
 		
 		{"linkPath":"p19", "display":"False", "detail":"False", "name":"墾丁教師會館整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78"},
 		
-		{"linkPath":"p18", "display":"False", "detail":"False", "name":"墾丁國家公園管理處石牛溪遊客中心警衛室新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		{"linkPath":"p18", "display":"True", "detail":"True", "name":"墾丁國家公園管理處石牛溪遊客中心警衛室新建工程",     			
+		"image":"spring/images/project/18_墾丁國家公園管理處石牛溪遊客中心警衛室新建工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78", "latitude":"21.950694", "longitude":"120.950364"},
 		
 		{"linkPath":"p17", "display":"True", "detail":"True", "name":"墾丁國家公園管理處社頂停車場,賣店新建工程",     			
-		"image":"spring/images/project/17_社頂公園停車場_賣店/title.jpg",         "posX":"-590", "posY":"-910", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		"image":"spring/images/project/17_社頂公園停車場_賣店/title.jpg",         "posX":"-590", "posY":"-910", "scaleX": "900", "scaleY":"1170", "startYear":"78", "latitude":"21.957438", "longitude":"120.988057"},
 		
 		{"linkPath":"p16", "display":"False", "detail":"False", "name":"高雄市議會立面整修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78"},
 		
 		{"linkPath":"p15", "display":"False", "detail":"False", "name":"高雄市議會天花板裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78"},
 		
 		{"linkPath":"p14", "display":"False", "detail":"False", "name":"中華電信南州服務中心新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"78"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"78"},
 		
-		{"linkPath":"p12", "display":"False", "detail":"False", "name":"墾丁國家公園管理處小灣服務站第一,三期工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		{"linkPath":"p12", "display":"False", "detail":"True", "name":"墾丁國家公園管理處小灣服務站第一,三期工程",     			
+		"image":"spring/images/project/12_小灣服務站/title.jpg",         "posX":"-590", "posY":"-910", "scaleX": "900", "scaleY":"1170", "startYear":"77"},
 		
 		{"linkPath":"p11", "display":"False", "detail":"False", "name":"墾丁國家公園社頂梅花鹿復育區內圍籬及蓄水池工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"77"},
 		
 		{"linkPath":"p10", "display":"True", "detail":"True", "name":"墾丁國家公園-社頂公園涼亭平台第二期工程",        
-		"image":"spring/images/project/10_墾丁國家公園_社頂公園涼亭平台第二期工程/title.jpg",     "posX":"-590", "posY":"-910", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		"image":"spring/images/project/10_墾丁國家公園_社頂公園涼亭平台第二期工程/title.jpg",     "posX":"-590", "posY":"-910", "scaleX": "900", "scaleY":"1170", "startYear":"77", "latitude":"21.959112", "longitude":"120.989534"},
 		
 		{"linkPath":"p9", "display":"False", "detail":"False", "name":"屏東市15-6公園公廁新建工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"77"},
 		
 		{"linkPath":"p8", "display":"False", "detail":"False", "name":"土地銀行高雄分行證券營業廳裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"77"},
 		
-		{"linkPath":"p7", "display":"False", "detail":"False", "name":"墾丁國家公園管理處石牛溪公共設施工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		{"linkPath":"p7", "display":"True", "detail":"True", "name":"墾丁國家公園管理處石牛溪公共設施工程",     			
+		"image":"spring/images/project/7_墾丁國家公園管理處石牛溪公共設施工程/title.jpg",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"77", "latitude":"21.950694", "longitude":"120.950364"},
 		
 		{"linkPath":"p6", "display":"False", "detail":"False", "name":"中華電信國際局高雄通訊中心4.5.6樓隔間裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"77"},
 		
 		{"linkPath":"p5", "display":"False", "detail":"False", "name":"民航局高雄航空站資訊作業場建築裝修工程",     			
-		"image":"",         "posX":"0", "posY":"0", "scaleX": "1380", "scaleY":"1170", "startYear":"77"},
+		"image":"",         "posX":"0", "posY":"0", "scaleX": "900", "scaleY":"1170", "startYear":"77"},
 		
 		{"linkPath":"p4", "display":"True", "detail":"True", "name":"墾丁國家公園-社頂公園公廁新建工程",     			
-		"image":"spring/images/project/4_墾丁國家公園_社頂公園公廁新建工程/title.jpg",         "posX":"-590", "posY":"-910", "scaleX": "1380", "scaleY":"1170", "startYear":"76"},
+		"image":"spring/images/project/4_墾丁國家公園_社頂公園公廁新建工程/title.jpg",         "posX":"-590", "posY":"-910", "scaleX": "900", "scaleY":"1170", "startYear":"76", "latitude":"21.959112", "longitude":"120.989534"},
 		
 		{"linkPath":"p3", "display":"True", "detail":"True", "name":"墾丁國家公園梅花鹿復育計畫研究站新建工程",        
-		"image":"spring/images/project/3_梅花鹿復育計畫研究站/title.jpg",     "posX":"-590", "posY":"-910", "scaleX": "1380", "scaleY":"1170", "startYear":"76"},
+		"image":"spring/images/project/3_梅花鹿復育計畫研究站/title.jpg",     "posX":"-590", "posY":"-910", "scaleX": "900", "scaleY":"1170", "startYear":"76", "latitude":"21.965419", "longitude":"120.997083"},
 		
-		{"linkPath":"p2", "display":"True", "detail":"False", "name":"屏東縣枋寮公有零售市場新建工程",        
-		"image":"",     "posX":"-490", "posY":"-780", "scaleX": "1380", "scaleY":"1170", "startYear":"76"},
+		{"linkPath":"p2", "display":"False", "detail":"False", "name":"屏東縣枋寮公有零售市場新建工程",        
+		"image":"",     "posX":"-490", "posY":"-780", "scaleX": "900", "scaleY":"1170", "startYear":"76"},
 		
-		{"linkPath":"p1", "display":"True", "detail":"True", "name":"屏東縣獅子鄉楓林國小教室新建工程",                             
-		"image":"spring/images/project/1_屏東縣獅子鄉楓林國小新建工程/title.jpg",     "posX":"-530", "posY":"-820", "scaleX": "1380", "scaleY":"1170", "startYear":"76"}
+		{"linkPath":"p1", "display":"False", "detail":"True", "name":"屏東縣獅子鄉楓林國小教室新建工程",                             
+		"image":"spring/images/project/1_屏東縣獅子鄉楓林國小新建工程/title.jpg",     "posX":"-530", "posY":"-820", "scaleX": "900", "scaleY":"1170", "startYear":"76"}
 	]
 }

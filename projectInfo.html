@@ -40,9 +40,13 @@
 			$("#map").attr("src", project.map);
 			$("#startYear").html("開工年度 : 民國" + project.start+"年");
 			$("#finishYear").html("完工年度 : 民國" + project.finish+"年");
-			$("#designer").html("設計單位 : " + project.design);
-			$("#owner").html("業主 : " + project.owner);
-			$("#amount").html("金額 : " + project.amount + "萬");
+			if (project.owner){
+				$("#owner").html("業主 : " + project.owner);
+			}
+			if (project.design){
+				$("#designer").html("設計單位 : " + project.design);
+			}
+			<!--$("#amount").html("金額 : " + project.amount + "萬");-->
 			project.pic.forEach(function(path){
 				$("#project_gallery").append('<a class='+"fancybox"+' rel='+"gallery"+' href='+path+'><img src='+path+'></a>');
 			});
@@ -90,7 +94,7 @@
 
 <div id="wrapper">
   <div class="header"> 
-    <img src="spring/images/background/header1b.jpg" name="bannerADrotator">
+    <img src="spring/images/background/banner1.jpg" name="bannerADrotator">
 		<SCRIPT language=JavaScript>nextBanner()</SCRIPT>
   </div>
   <div class="project_content">
@@ -105,9 +109,9 @@
         <div class="project_info">
 		  <p id="startYear"></p>
           <p id="finishYear"></p>
+		  <p id="owner"></p>
           <p id="designer"></p>
-          <p id="owner"></p>
-		  <p id="amount"></p>
+          <p id="amount"></p>
         </div>
       </div>
   	  <div id="project_gallery" class="project_gallery">

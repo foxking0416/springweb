@@ -9,28 +9,24 @@
 <link rel="stylesheet" href="spring/css/jquery-ui.min.css" type="text/css">
 <script type="text/javascript" src="spring/js/main.js"></script>
 <style>
+			body {
+				overflow-x:hidden;
+				overflow-y:hidden;
+			}
+
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			
+			.element { 
+				overflow: -moz-scrollbars-none; 
+			}
+			
 			.labelfold {
-				/*background-color:#AA0000;
-				position:absolute;
-				height: 43px;
-				width:200px;
-				cursor: pointer;
-				opacity:0.8;
-				bottom:50px;
-				right:50px;
-				padding-left:10px;
-				padding-top:10px;
-				font-size:26px;
-				box-shadow: 5px 5px 5px #111111;
-				-webkit-box-shadow: 5px 5px 5px #111111;
-				z-index:100;
-				overflow-y:hidden;*/
-				
-				
+				border-radius: 5px;
 				color:#AAAAAA;
 				background-color:#550000;
-				position:absolute;
-				width:50px;
+				position:absolute;	
 				padding:5px;
 				-moz-user-select: none; 
 				-khtml-user-select: none; 
@@ -39,16 +35,29 @@
 				box-shadow: 1px 1px 15px #111111;
 				-webkit-box-shadow: 1px 1px 15px #111111;
 				
+				width:45px;
 				z-index:0;
 				opacity:1.0;
 				height: 20px;
 				overflow-y:hidden;
 			}
+			.labelfold:hover{
+
+				
+				width:430px;
+				z-index:1;
+				opacity:0.9;
+				height:auto;
+				max-height: 100px;
+				overflow-y:auto;
+			}
+			
 			.labelexpand{
+				border-radius: 5px;
 				color:#AAAAAA;
 				background-color:#550000;
 				position:absolute;
-				width:200px;
+				width:430px;
 				padding:5px;
 				-moz-user-select: none; 
 				-khtml-user-select: none; 
@@ -56,22 +65,22 @@
 				-o-user-select: none;
 				box-shadow: 5px 5px 5px #111111;
 				-webkit-box-shadow: 5px 5px 5px #111111;
-				
+				max-height: 250px;
+				overflow-y:auto;
 				z-index:1;
 				opacity:0.9;
-				
 			}
 			
 			
 			#skip{
-				
 				border-radius: 10px;
-				background-color:#AA0000;
+				background-color:#005500;
+				color: #ffffff;
 				position:absolute;
 				height: 43px;
-				width:200px;
+				width:180px;
 				cursor: pointer;
-				opacity:0.8;
+				opacity:0.8s;
 				bottom:50px;
 				right:50px;
 				padding-left:10px;
@@ -81,6 +90,26 @@
 				-webkit-box-shadow: 5px 5px 5px #111111;
 				z-index:100;
 				overflow-y:hidden;
+			}
+			
+			#skipDescription{
+				position:absolute;
+				bottom:110px;
+				right:60px;
+				font-size:14px;
+				overflow-y:hidden;
+				display:none;
+			}
+			
+			#skiplogo{
+				background: url(/spring/images/right2a.png) right no-repeat;
+				background-size: 40px 40px;
+				margin-right:20px;
+				right:20px;
+			}
+			
+			.phraseOfMajorProject:hover{
+
 			}
 
 </style>
@@ -94,8 +123,14 @@
     <img src="spring/images/text.svg" alt="LogoName">
   </div>
   
+  <div id="skipDescription">
+	<p>畫面將在25秒鐘後自動進入首頁</p>
+  </div>
+  
   <div id="skip" onClick="jumpToHomePage()" >
-	<p>跳過動畫</p>
+	<div id="skiplogo">
+	<p>進入首頁</p>
+	</div>
   </div>
   
 	<script type ="text/javascript" src="spring/js/three.min.js"></script>
@@ -113,7 +148,7 @@
 			window.location.href='index.html';
 		}
   
-		//Detect whether the browser support the WebGL
+		//Detect whether the browser support the WebGL, if not then jump to home page
 		var webglAva = webglAvailable();
 		if(webglAva === false){
 			jumpToHomePage();
@@ -183,41 +218,12 @@
 			var imageLoader = new THREE.ImageLoader( manager );
 			var objLoader = new THREE.OBJLoader( manager );
 			var objMtlLoader = new THREE.OBJMTLLoader();
-			
+
 			$.getJSON('projectRegion.json', function(data) {
 				region = data.ProjectListByCity;
 				for(var i = 0; i < region.length; i++){
-					//$('body').append('<div id= "region'+i+'" class="labelfold"></div>');
-					//$('#region'+i).append('<h3>' + region[i].city + '</h3>');
 					var position = {x:region[i].pos.x, y:region[i].pos.y, z:region[i].pos.z}
-					logoObjPosition.push(position);
-					//for(var j = 0; j < region[i].projectList.length; j++){
-					//	$('#region'+i).append('<p>' + region[i].projectList[j] + '</p>');
-					//}
-					//$('#region'+i).css({display: 'none'});
-					
-					
-					//$('#region'+i).css('height', '200px');
-					/*$('#region'+i).mouseover(
-						
-						function(){
-							
-							//$(this).css('height', '');
-							//$(this).css('overflow-y', '');
-							//$(this).addClass('labelexpand')
-							//$(this).removeClass('labelfold')
-							
-						}
-					);
-					$('#region'+i).mouseleave(	
-						function(){					
-							//$(this).css('height', '50px');
-							//$(this).css('overflow-y', 'hidden');
-							//$(this).addClass('labelfold')
-							//$(this).removeClass('labelexpand')
-						}
-					);*/
-					
+					logoObjPosition.push(position);				
 				}
 				
 				
@@ -309,7 +315,8 @@
 			var lineGeometry = new THREE.Geometry();
 			var positionCol = taiwanpoints;
 			var tar = {x:[], y:[], z:[]};
-		
+			
+			//Create Taiwan Silhouette Points positions
 			for (var i=0; i < positionCol.length; i++){		
 				positionCol[i].x = positionCol[i].x * 2.1 - 9.8;
 				positionCol[i].y = positionCol[i].y * 1.5;
@@ -322,7 +329,7 @@
 				lineGeometry.vertices.push(new THREE.Vector3(positionCol[0].x, positionCol[0].y, positionCol[0].z));
 			}
 			
-			
+			//Define silhouette line material
 			var lineMaterial = new THREE.LineBasicMaterial( { linewidth: 12, color: 0x111111, opacity: 1.0 } );
 			var silhouetteLine = new THREE.Line( lineGeometry, lineMaterial );
 			silhouetteGroup.add( silhouetteLine );
@@ -331,7 +338,9 @@
 			
 			var pointIndex = 0;
 			
+			//Animation 1:Create draw silhouette line animation
 			function drawSilhouetteAnim(){
+			
 				var target = positionCol[pointIndex+1];
 				var tween = new TWEEN.Tween(silhouetteLine.geometry.vertices[positionCol.length-1]).to(target, 1);
 				tween.easing(TWEEN.Easing.Linear.None);
@@ -353,17 +362,17 @@
 						drawSilhouetteAnim();
 					}
 					else{
+						//After finishing the silhouette drawing animation, remove the silhouette and add Taiwan obj model.
 						scene.remove(silhouetteGroup);
 						scene.remove(penObj)
 						scene.add(taiwanObj);
 						opacityTaiwanAnim();
 					}
 				});
-
 				tween.start();
 			}
 			
-			//Create animation of Taiwan texture opacity from 0 to 1
+			//Animation 2:Create animation of Taiwan texture opacity from 0 to 1
 			function opacityTaiwanAnim(){
 				var taiwanOpacityTarget = {opacity:1.0};
 				var tweenTaiwanOpacity = new TWEEN.Tween(taiwanObj.children[0].material).to(taiwanOpacityTarget, 1000);
@@ -392,10 +401,13 @@
 						moveCameraAnim({x:0.2158, y:3.7094, z:-15.3354},{w:0.5984, x:-0.1716, y:-0.7523, z:-0.2157}, city);//move to 台北
 						break;
 					case 1:
-						//moveCameraAnim({x:-0.8027, y:22.986, z:2},{w:0.5087, x:-0.4912, y:-0.5087, z:-0.4912}, -2);//move to whole island
-						moveCameraAnim({x:-10.3752, y:4.2394, z:-3.3204},{w:0.5514, x:-0.1581, y:-0.7874, z:-0.2258}, city);//move to 彰化
+						
+						moveCameraAnim({x:-3.2787, y:5.6639, z:-12.5887},{w:-0.3834, x:0.1358, y:0.8611, z:0.3049}, city);//move to 苗栗
+						//moveCameraAnim({x:-2.3693, y:4.8626, z:-11.7420},{w:-0.3323, x:0.1342, y:0.8656, z:0.3497}, city);//move to 苗栗
+						//moveCameraAnim({x:-4.7427, y:5.9528, z:-12.3701},{w:-0.4424, x:0.0582, y:0.8873, z:0.1168}, city);//move to 苗栗
 						break;
 					case 2:
+						//moveCameraAnim({x:-0.8027, y:22.986, z:2},{w:0.5087, x:-0.4912, y:-0.5087, z:-0.4912}, -2);//move to whole island
 						moveCameraAnim({x:-5.8754, y:4.2394, z:-5.3922},{w:0.4879, x:-0.1399, y:-0.8283, z:-0.2375}, city);//move to 南投
 						break;
 					case 3:
@@ -413,11 +425,11 @@
 					case 7:
 						moveCameraAnim({x:7.1202, y:4.2394, z:14.451},{w:0.8747, x:-0.2528, y:0.3986, z:0.1143}, city);//move to 台東
 						break;
-					case 8:
+					/*case 8:
 						moveCameraAnim({x:-12.1738, y:3.7094, z:7.8786},{w:0.9589, x:-0.275, y:0.0671, z:0.0192}, city);//move to 澎湖
-						break;
-					case 9:
-						moveCameraAnim({x:-0.8027, y:22.986, z:2},{w:0.5087, x:-0.4912, y:-0.5087, z:-0.4912}, -2);//move to whole island
+						break;*/
+					case 8:
+						moveCameraAnim({x:-0.8027, y:17.986, z:2},{w:0.5087, x:-0.4912, y:-0.5087, z:-0.4912}, -2);//move to whole island
 						break;
 				}
 			}
@@ -453,21 +465,36 @@
 					if(city === -1)
 						scaleTaiwanAnim();
 					else if(city === -2){
-					
-						/*for(var i = 0; i < logoObjArray.length; i++){
-							$('#region'+i).mouseover(
-								function(){
-									$(this).addClass('labelexpand')
-									$(this).removeClass('labelfold')
-								}
-							);
-							$('#region'+i).mouseleave(	
-								function(){					
-									$(this).addClass('labelfold')
-									$(this).removeClass('labelexpand')
-								}
-							);
+						//Display the "畫面將在X秒鐘後自動跳轉" after the animation finished.
+						$('#skipDescription').css("display", "block");
+						//Let the project be able to click after the animation
+						$('.phraseOfMajorProject').hover(function(e){
+							$(this).css("font-weight", e.type === "mouseenter"?"bold":"normal");
+							$(this).css("cursor", e.type === "mouseenter"?"pointer":"auto");
+						})
+						
+						//While adding the event listener through a for loop, we have to wrap it with a function call
+						//Below code is the incorrect example:
+						/*for(var i = 0; i < region.length; i++){
+							for(var j = 0; j < region[i].linkPathList.length; j++){
+								$('#region' + i + '_' + j).click(function(){ 
+									jumpToProjectPage(region[i].linkPathList[j]);
+								});
+							}
 						}*/
+						for(var i = 0; i < region.length; i++){
+							for(var j = 0; j < region[i].linkPathList.length; j++){
+								(function (i, j){
+									$('#region' + i + '_' + j).click(function(){ 
+										jumpToProjectPage(region[i].linkPathList[j]);
+									});
+								}(i, j));
+							}
+						}			
+						
+						setTimeout(function(){ 
+							//jumpToHomePage();
+						}, 25000);
 					}
 					else{
 						addLogoToScene(city);
@@ -493,40 +520,36 @@
 					$('#region'+logoIndex).append('<h3>' + region[logoIndex].city + '</h3>');
 					labelHasAdded[logoIndex] = true;
 					updateLabelPos();
-					/*for(var j = 0; j < region[logoIndex].projectList.length; j++){
-						$('#region'+logoIndex).append('<p id="region'+logoIndex+'_'+j+'">' + region[logoIndex].projectList[j] + '</p>');
-						$('#region'+logoIndex+'_'+j).css("display", "none");
-						$('#region'+logoIndex+'_'+j).toggle( "slide", {}, 500, function(){} );
-					}*/
+
+					
+					
 					appendP(0);
 					
 					function appendP(j){
 						if(j < region[logoIndex].projectList.length){
-							$('#region'+logoIndex).append('<p id="region'+logoIndex+'_'+j+'">' + region[logoIndex].projectList[j] + '</p>');
+							$('#region'+logoIndex).append('<p id="region'+logoIndex+'_'+j+'" class="phraseOfMajorProject">' + region[logoIndex].projectList[j] + '</p>');
+							
+							
 							$('#region'+logoIndex+'_'+j).css("display", "none");
 							$('#region'+logoIndex+'_'+j).toggle( "slide", {}, 500, function(){
+								$('#region'+logoIndex).scrollTop($('#region'+logoIndex).height());
 								appendP(j+1);
-							} );
+							});
 						}
 						else{
+							$('#region' + logoIndex).mouseleave(function(){ 
+								$('#region'+logoIndex).scrollTop(0);
+							});
 							setTimeout(function(){ 
+								$('#region'+logoIndex).scrollTop(0);
 								lookAtCity(logoIndex+1); 
 								$('#region'+logoIndex).addClass('labelfold');
 								$('#region'+logoIndex).removeClass('labelexpand');
+								
 							}, 1500);
 						}
 					}
 					
-					
-					
-					//$('#region'+logoIndex).css("display", "none");
-					//addLabel(logoIndex);
-
-					/*setTimeout(function(){ 
-						lookAtCity(logoIndex+1); 
-						$('#region'+logoIndex).addClass('labelfold');
-						$('#region'+logoIndex).removeClass('labelexpand');
-					}, 1500);*/
 				});
 				tweenLogoScale.start();
 			}
@@ -547,12 +570,12 @@
 			}
 
 			//Add mouse listener
-			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+			/*document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 			document.addEventListener( 'mousedown', onDocumentMouseDown, true );	
 			document.addEventListener( 'mouseup', onDocumentMouseUp, false );	
 			document.addEventListener( 'mousewheel', onMouseWheel, false );	
 			//Add key down listener
-			document.addEventListener( 'keydown', onKeyDown, false);	
+			document.addEventListener( 'keydown', onKeyDown, false);	*/
 			//Add window resize listener
 			window.addEventListener( 'resize', onWindowResize, false );		
 		}	
@@ -607,11 +630,9 @@
 			var quaternion = new THREE.Quaternion();
 			quaternion.set(x,y,z,w);
 			return quaternion;
-		}
-		
+		}		
 		
 		function addLabel(index){
-
 			labelHasAdded[index] = true;
 			$('#region'+index).addClass('labelexpand');
 			$('#region'+index).removeClass('labelfold');
@@ -628,6 +649,7 @@
 					$('#region'+i).css({display: 'none'});
 				}
 				else{
+					$('#region'+i).css({display: 'block'});
 					$('#region'+i).css({top: vector.y+100, left: vector.x, position:'absolute'});//display: 'block', 
 				}
 			}

@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+
+<!--<meta name="msvalidate.01" content="7309E3E7458C83A8F7D040B99BF46B05" /> -->
 <meta charset="utf-8">
 <title>華春營造有限公司</title>
 <link rel="stylesheet" href="spring/css/style.css"  type="text/css">
@@ -9,7 +11,7 @@
 <link rel="stylesheet" href="spring/css/jquery-ui.min.css" type="text/css">
 <script type="text/javascript" src="spring/js/main.js"></script>
 
-<!-- Add fancyBox -->
+<!-- Add fancyBox    -->
 <link rel="stylesheet" href="spring/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 <script type="text/javascript" src="spring/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
@@ -47,6 +49,8 @@
 			$('#aboutBtnCollection').removeClass('current');
 		else if(currentPage === 'project' || currentPage === 'reward')
 			$('#projectBtnCollection').removeClass('current');
+		else if(currentPage === 'bikeShelf')
+			$('#shareBtnCollection').removeClass('current');
 		
 		if(currentPage === "home"){
 			$( '#aboutWrapper').css("display", "none");
@@ -55,6 +59,7 @@
 			$( '#projectWrapper').css("display", "none");
 			$( '#rewardWrapper').css("display", "none");
 			$( '#certificateWrapper').css("display", "none");
+			$( '#bikeShelfWrapper').css("display", "none");
 			$( '#contactWrapper').css("display", "none");
 			$( '#' +nextPage + 'Wrapper').css("display", "");
 		
@@ -78,6 +83,8 @@
 			$('#aboutBtnCollection').addClass('current');
 		else if(nextPage === 'project' || nextPage === 'reward')
 			$('#projectBtnCollection').addClass('current');
+		else if(nextPage === 'bikeShelf')
+			$('#shareBtnCollection').addClass('current');
 		$('#wrapper').click();
 	};
 	
@@ -92,7 +99,8 @@
 			 savedSession === 'objective' ||
 			 savedSession === 'project' || 
 		   savedSession === 'reward' ||
-		   savedSession === 'contact'
+		   savedSession === 'contact' ||
+		   savedSession === 'bikeShelf'
 		   ){
 			
 			if(savedSession === 'home'){
@@ -107,6 +115,7 @@
 				$( '#projectWrapper').css("display", "none");
 				$( '#rewardWrapper').css("display", "none");
 				$( '#certificateWrapper').css("display", "none");
+				$( '#bikeShelfWrapper').css("display", "none");
 				$( '#contactWrapper').css("display", "none");
 
 				
@@ -119,6 +128,8 @@
 					$('#aboutBtnCollection').addClass('current');
 				else if(savedSession === 'project' || savedSession === 'reward')
 					$('#projectBtnCollection').addClass('current');
+				else if(savedSession === 'bikeShelf')
+					$('#shareBtnCollection').addClass('current');
 			}
 			currentPage = savedSession;
 		}
@@ -133,7 +144,7 @@
 <body>
 <div id="wrapper">
   <div class="header"> 
-    <img src="spring/images/background/header1b.jpg" name="bannerADrotator">
+    <img src="spring/images/background/banner1.jpg" name="bannerADrotator">
 		<SCRIPT language=JavaScript>nextBanner()</SCRIPT>
     
   </div>
@@ -152,16 +163,14 @@
 	    	<h1>緣起</h1>
       </div>
       <div class="about" onClick="">  
-        <p>1987年，杜連印總經理以『華春營造』命名成立這家公司。除感念家人支持及前公司給予成長、成就，亦深感當時為人詬病之官商勾結、偷工減料、搓湯圓…等惡習籠罩業界，期待著自己與華春能成為改變並創造營造業春天的一員。</p>
+        <p>1987年，杜連印總經理成立這家公司。除感念家人支持及前公司給予成長、成就，亦深感當時為人詬病之官商勾結、偷工減料、搓湯圓…等惡習籠罩業界，期待著同仁夥伴能成為改變並創造營造業春天的一員，故以華春營造命名。</p>
         <br>
-        <p>『如果你知道去哪  全世界都會為你讓路』─</p>
-        <br>
-        <p>感謝</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;台灣 讓我們可以活著 讓我們逐夢 </p>
-        <br>
+        <p class="centerSideP">『如果你知道去哪  全世界都會為你讓路』─</p>
+        <p class="centerSideP">感謝</p>
+		<p class="centerSideP">台灣 讓我們活著 讓我們築夢 </p>
         <br>
         <br>
-        <p class="rightSideP">華春創立升等：甲級  民國83年05月</p>
+        <p class="rightSideP">甲級  民國83年05月</p>
         <p class="rightSideP">乙級  民國80年01月</p>
         <p class="rightSideP">丙級  民國76年04月</p>
       </div>
@@ -205,24 +214,23 @@
     <div id="projectWrapper">
       <div class="left">
         <div class="title">
-          <img src="spring/images/logo_green.svg">
-          <h1>工程實績 </h1>
-  
+          
+		  <div class="title_left">
+			<img src="spring/images/logo_green.svg">
+			<h1>工程實績 </h1> 
+		  </div>
+		  <div class="title_right">
+			<p>本公司自1987~業已完成近200件工程</p>
+		  </div>
         </div>
         <div class="region_select" onClick="">
+		
         <img src="spring/images/location.png">
-<!--        <table>
-        <tr>
-          <td class="selectN" onClick="regionChange('selectN')">北部地區</td>
-          <td class="selectM" onClick="regionChange('selectM')">中部地區</td>
-          <td class="selectS" onClick="regionChange('selectS')">南部地區</td>
-          <td class="selectE" onClick="regionChange('selectE')">東部地區</td>
-  
-        </tr>
-        </table>-->
+		
         </div>
       </div>
       <div class="right">
+		
         <div class="project_list">
         </div>
       </div>
@@ -351,6 +359,18 @@
       <p>待補充</p>
 	  </div>
     </div>
+	
+	<!--bikeShelf-->
+    <div id="bikeShelfWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    <h1>腳踏車架</h1>
+
+  	  </div>
+	  <div class="bikeShelf" onClick=""> 
+      <p>待補充</p>
+	  </div>
+    </div>
     
     <!--contact-->
     <div id="contactWrapper">
@@ -381,7 +401,7 @@
         </ul>
       </div>
       <div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.525598439443!2d120.31759799999999!3d22.634184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04eb2a824329%3A0x7e30ee8855a35e54!2z6I-v5pil54ef6YCg5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1422935974872"></iframe></td>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.525598439443!2d120.31759799999999!3d22.634184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04eb2a824329%3A0x7e30ee8855a35e54!2z6I-v5pil54ef6YCg5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1422935974872"></iframe>
       </div>
     </div>
   </div>
@@ -392,7 +412,7 @@
     <li id="aboutBtnCollection"><span>關於華春</span>
       <ul class="sub-menu">
         <li id="aboutBtn" onClick="selectPage('about')">緣起</li>
-        <!--<li id="staffBtn" onClick="selectPage('staff')">公司團隊</li>-->
+        <!--<li id="staffBtn" onClick="selectPage('staff')">公司團隊</li> 暫時拿掉公司團隊頁面-->
         <li id="objectiveBtn" onClick="selectPage('objective')">經營理念</li>
       </ul>
     </li> 
@@ -400,6 +420,11 @@
       <ul class="sub-menu">
         <li id="projectBtn" onClick="selectPage('project')">工程實績</li>
         <li id="rewardBtn" onClick="selectPage('reward')">得獎紀錄</li>
+      </ul>
+    </li>
+	<li id="shareBtnCollection"><span>經驗分享</span>
+      <ul class="sub-menu">
+        <li id="bikeShelfBtn" onClick="selectPage('bikeShelf')">腳踏車架</li>
       </ul>
     </li>
     <li id="contactBtn" onClick="selectPage('contact')"><span>展望/聯絡我們</span></li>
@@ -415,6 +440,6 @@
 
 <script>execute()</script>
   
-</div>
+
 </body>
 </html>

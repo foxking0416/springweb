@@ -95,9 +95,9 @@ body
   float: left;
   height: 100%;
   width: 15%; 
-  width: calc((100% - 90px) / 3);
-  width: -moz-calc((100% - 90px) / 3);
-  width: -webkit-calc((100% - 90px) / 3);
+  width: calc((100% - 90px) / 4);
+  width: -moz-calc((100% - 90px) / 4);
+  width: -webkit-calc((100% - 90px) / 4);
 
 }
 
@@ -234,6 +234,17 @@ li:hover > .sub-menu {
 .content .title{
 	margin-bottom:10px;
 	border-bottom:1px solid;
+}
+
+.content .title .title_left{
+	width:200px;
+	display: inline-block;
+}
+
+.content .title .title_right{
+	width:250px;
+	display: inline-block;
+	font-size: 15px;
 }
 
 .content h1{
@@ -439,18 +450,23 @@ li:hover > .sub-menu {
 	height:390px;
 	width:460px;
 	background-image:url(../images/VectorTaiwanMapNew.svg);
-	background-size:460px 390px;
+	background-size:300px 390px;
 	background-repeat:no-repeat;
 	-webkit-transition: all 1.0s ease;
 	-moz-transition: all 1.0s ease;
-  -ms-transition: all 1.0s ease;
-  -o-transition: all 1.0s ease;
+    -ms-transition: all 1.0s ease;
+    -o-transition: all 1.0s ease;
 }
 
 .region_select img{
 	display:none;
 	margin-left:200px;
 	margin-top:200px;
+}
+
+.region_select p{
+	position:absolute;
+	bottom: -110px;
 }
 
 .project_list {
@@ -521,7 +537,10 @@ li:hover > .sub-menu {
 
 .rightSideP{
 		text-align: right;
+}
 
+.centerSideP{
+		text-align: center;
 }
 
 
