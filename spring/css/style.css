@@ -304,6 +304,13 @@ li:hover > .sub-menu {
 
 }
 
+.objective_center{
+	height: 390px;
+	width:300px;
+	margin: 0px 0px 0px 300px;
+	overflow-y: hidden;
+}
+
 .title_ProjectInfo{
 	height:	340px;
 }
@@ -471,8 +478,8 @@ li:hover > .sub-menu {
 
 .project_list {
 	width: 360px;
-	height:390px;
-	margin: 0px auto;
+	height:380px;
+	margin: 10px auto 0px auto;
 	padding: 30px;
 	
 	overflow-y:auto;
@@ -527,12 +534,17 @@ li:hover > .sub-menu {
 	height: 1.5em;
 	padding: 20px;
 	vertical-align: 50%;
-	text-align: center;
+	padding:15px 30px 0px calc((100% - 250px) / 2);
+	/*text-align: center;*/
+	
 	-moz-user-select: none; 
 	-khtml-user-select: none; 
 	-webkit-user-select: none; 
 	-o-user-select: none;
-
+	display: inline-block;
+}
+#counter{
+	display: inline-block;
 }
 
 .rightSideP{
@@ -570,3 +582,47 @@ li:hover > .sub-menu {
 .smallIcon.appear{
 	width:50px;
 }
+
+.bikeShelf {
+	height: 360px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	
+	}
+
+.bikeShelf img{
+	
+	margin-right: 5px;
+	padding: 0px;
+	
+	height:100px;
+	width:100px
+}
+
+.selectmenu{
+	width: 380px;
+	padding:0px;
+	margin:0px 10px 0px 30px;
+	display:inline-block;
+}
+
+.selectmenu label{
+	display:inline-block;
+	margin:0px 10px 0px 0px;
+	width:100px;
+	font-size:14px;
+}
+
+.selectmenu .classify{
+	display:inline-block;
+	margin:0px 10px 0px 0px;
+	width: 90px;
+}
+
+.selectmenu .subclassify{
+	display:inline-block;
+	margin:0px 10px 0px 0px;
+	width: 90px;
+}
+
+

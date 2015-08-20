@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+<head>
+
+<!--<meta name="msvalidate.01" content="7309E3E7458C83A8F7D040B99BF46B05" /> -->
+<meta charset="utf-8">
+<title>華春營造有限公司</title>
+<link rel="stylesheet" href="spring/css/style.css"  type="text/css">
+<script type="text/javascript" src="spring/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="spring/js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="spring/css/jquery-ui.min.css" type="text/css">
+<script type="text/javascript" src="spring/js/main.js"></script>
+
+<!-- Add fancyBox    -->
+<link rel="stylesheet" href="spring/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="spring/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		//Setup the fancybox attributes
+		$(".fancybox").fancybox({
+			prevEffect:"fade",
+			nextEffect:"fade",
+			cyclic:false,
+			helpers:{overlay:{locked:true},
+			thumbs:{width:50,height:50,source:function(b){return b.href}}}
+		});
+		
+
+	});
+
+</script>
+
+<script>
+
+
+
+	var currentPage = "home";
+	var currentPageByTouch = "home";
+	function selectPage(nextPage) {
+
+		if(nextPage === currentPage)
+			return;
+
+		var options = {};
+
+		$('#' + currentPage + 'Btn').removeClass('current');
+		if(currentPage === 'about' || currentPage === 'staff' || currentPage === 'objective')
+			$('#aboutBtnCollection').removeClass('current');
+		else if(currentPage === 'project' || currentPage === 'reward')
+			$('#projectBtnCollection').removeClass('current');
+		else if(currentPage === 'bikeShelf')
+			$('#shareBtnCollection').removeClass('current');
+		
+		if(currentPage === "home"){
+			$( '#aboutWrapper').css("display", "none");
+			$( '#staffWrapper').css("display", "none");			
+			$( '#objectiveWrapper').css("display", "none");
+			$( '#projectWrapper').css("display", "none");
+			$( '#rewardWrapper').css("display", "none");
+			$( '#certificateWrapper').css("display", "none");
+			$( '#bikeShelfWrapper').css("display", "none");
+			$( '#contactWrapper').css("display", "none");
+			$( '#' +nextPage + 'Wrapper').css("display", "");
+		
+			$(".logo").toggle("blind", options, 500, 
+			function() { $( ".content" ).toggle(  "blind", options, 500);});
+		}
+		else{
+			if(nextPage === "home") {
+				$(".content").toggle("blind", options, 500, 
+				function() { $( ".logo" ).toggle(  "blind", options, 500);});
+			}
+			else{
+			 $('#' + currentPage + 'Wrapper').toggle("drop", options, 500, 
+				function() {$('#' + nextPage + 'Wrapper').toggle("drop", options, 500);});
+			}
+		}
+
+		currentPage = nextPage;
+		$('#' + nextPage + 'Btn').addClass('current');
+		if(nextPage === 'about' || nextPage === 'staff' || nextPage === 'objective')
+			$('#aboutBtnCollection').addClass('current');
+		else if(nextPage === 'project' || nextPage === 'reward')
+			$('#projectBtnCollection').addClass('current');
+		else if(nextPage === 'bikeShelf')
+			$('#shareBtnCollection').addClass('current');
+		$('#wrapper').click();
+	};
+	
+	
+ 	function execute() {
+		
+		var savedSession = window.sessionStorage["session"];
+
+		if(savedSession === 'home' || 
+			 savedSession === 'about' || 
+		   savedSession === 'staff' ||
+			 savedSession === 'objective' ||
+			 savedSession === 'project' || 
+		   savedSession === 'reward' ||
+		   savedSession === 'contact' ||
+		   savedSession === 'bikeShelf'
+		   ){
+			
+			if(savedSession === 'home'){
+				$( '.logo').css("display", "none");
+				$( '.logo' ).toggle(  "blind", {}, 500);
+			}
+			else{
+				$( '.logo').css("display", "none");
+				$( '#aboutWrapper').css("display", "none");
+				$( '#staffWrapper').css("display", "none");
+				$( '#objectiveWrapper').css("display", "none");
+				$( '#projectWrapper').css("display", "none");
+				$( '#rewardWrapper').css("display", "none");
+				$( '#certificateWrapper').css("display", "none");
+				$( '#bikeShelfWrapper').css("display", "none");
+				$( '#contactWrapper').css("display", "none");
+
+				
+				$( '#'+savedSession+'Wrapper').css("display", "");
+				$( ".content" ).toggle(  "blind", {}, 500);
+			
+				$('#homeBtn').removeClass('current');
+		    $('#'+savedSession+'Btn').addClass('current');
+				if(savedSession === 'about' || savedSession === 'staff' || savedSession === 'objective')
+					$('#aboutBtnCollection').addClass('current');
+				else if(savedSession === 'project' || savedSession === 'reward')
+					$('#projectBtnCollection').addClass('current');
+				else if(savedSession === 'bikeShelf')
+					$('#shareBtnCollection').addClass('current');
+			}
+			currentPage = savedSession;
+		}
+
+		window.sessionStorage["session"] = undefined;
+	}
+
+  </script>
+</head>
+
+
+<body>
+<div id="wrapper">
+  <div class="header"> 
+    <img src="spring/images/background/banner1.jpg" name="bannerADrotator">
+		<SCRIPT language=JavaScript>nextBanner()</SCRIPT>
+    
+  </div>
+  
+  <div class="logo">
+    <img src="spring/images/logo_green.svg" alt="Logo" >
+    <img src="spring/images/text.svg" alt="LogoName">
+  </div>
+  
+  
+  <div class="content">
+    <!--about-->
+    <div id="aboutWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    	<h1>緣起</h1>
+      </div>
+      <div class="about" onClick="">  
+        <p>1987年，杜連印總經理成立這家公司。除感念家人支持及前公司給予成長、成就，亦深感當時為人詬病之官商勾結、偷工減料、搓湯圓…等惡習籠罩業界，期待著同仁夥伴能成為改變並創造營造業春天的一員，故以華春營造命名。</p>
+        <br>
+        <p class="centerSideP">『如果你知道去哪  全世界都會為你讓路』─</p>
+        <p class="centerSideP">感謝</p>
+		<p class="centerSideP">台灣 讓我們活著 讓我們築夢 </p>
+        <br>
+        <br>
+        <p class="rightSideP">甲級  民國83年05月</p>
+        <p class="rightSideP">乙級  民國80年01月</p>
+        <p class="rightSideP">丙級  民國76年04月</p>
+      </div>
+    </div>
+  
+    <!--staff-->
+    <div id="staffWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    <h1>公司團隊</h1>
+
+      </div>
+	  <div class="staff" onClick=""> 
+      <p>待補充</p>
+	  </div>
+    </div>
+  
+  	<!--objective-->
+    <div id="objectiveWrapper">
+    
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    <h1>經營理念</h1>
+      </div>
+
+      <div class="objective" onClick="">
+		  
+		  <h3 class="centerSideP">企業文化</h3>     <p class="centerSideP">慈悲待人  智慧處事  精進成物</p>
+		  <br>
+		  <h3 class="centerSideP">營建方程式</h3>   <p class="centerSideP">把複雜化做簡單  把簡單做到最好</p>
+		  <br>
+		  <h3 class="centerSideP">生存馬拉松</h3>   <p class="centerSideP">只有累積 沒有奇蹟</p>
+		  <br>
+		  <h3 class="centerSideP">生活方向盤</h3>   <p class="centerSideP">不要讓虛榮心成為必需品</p>
+		  <br>
+		  <h3 class="centerSideP">生命力美學</h3>   <p class="centerSideP">讀萬卷書 行萬里路</p>
+		  
+      </div>
+    </div>
+    
+    <!--project-->
+    <div id="projectWrapper">
+      <div class="left">
+        <div class="title">
+          
+		  <div class="title_left">
+			<img src="spring/images/logo_green.svg">
+			<h1>工程實績 </h1> 
+		  </div>
+		  <div class="title_right">
+			<p>本公司自1987~業已完成近200件工程</p>
+		  </div>
+        </div>
+        <div class="region_select" onClick="">
+		
+        <img src="spring/images/location.png">
+		
+        </div>
+      </div>
+      <div class="right">
+		
+			<div class="selectmenu">
+		 
+				<label for="classify">請選擇分類方式</label>
+				<select name="classify" id="classify">
+				  <option value="1" selected="selected">依時間</option>
+				  <option value="2">依金額</option>
+				  <option value="3">依工程類型</option>
+				  <option value="4">依地區</option>
+				  <option value="5">重點工程</option>
+				</select>
+				<select name="subclassify" id="subclassify">
+				  <option value="101" selected="selected">由近往前</option>
+				  <option value="102" >由前往近</option>
+				</select>
+				
+				
+			</div>
+		  
+		 
+		
+
+        <div id= "project_list" class="project_list">
+        </div>
+      </div>
+    </div>
+    
+    <!--reward-->
+    <div id="rewardWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    	<h1>得獎紀錄</h1>
+      </div>
+      <div class="rewards" onClick="">
+        <ul>
+          <li class="rewards_item">2014年-莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地(公共設施)計畫後續工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲高雄市新建建築物工程品質銀質獎</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2013年-新開罹難者紀念公園
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲國家卓越建設奬最佳管理維護類</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2012年-阿里山第一管制站區景觀改善工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲頒<a class="fancybox" rel="gallery1" href="spring/images/rewards/阿里山優良農建獎.jpg">優良農建工程奬</a>入圍奬</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2011年-嘉義市文化中心整建計畫工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲選為嘉義市政府100年度公共工程觀摩研習</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2011年-日月潭向山行政中心、遊客中心新建工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲中國工程師學會工程優良奬</li>
+            <li><img src="spring/images/logo_green.svg">獲建築師雜誌台灣建築奬首奬</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2010年-日月潭向山行政中心、遊客中心新建工程
+          <ul>
+          	<li><img src="spring/images/logo_green.svg">獲<a class="fancybox" rel="gallery2" href="spring/images/rewards/向山金質獎.jpg">第十屆公共工程金質奬建築類工程品質優良奬</a></li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2009年-日月潭向山行政中心、遊客中心新建工程
+          <ul>
+          	<li><img src="spring/images/logo_green.svg">獲南投縣政府頒<a class="fancybox" rel="gallery3" href="spring/images/rewards/向山優良環保工地.jpg">97年度營建工地污染防治評鑑優良環保工地第一名</a></li>
+          	<li><img src="spring/images/logo_green.svg">獲交通部98年度施工品質查核優良工程奬</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2008年-財團法人南投縣私立均頭國民中學圖書館暨行政大樓新建工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲「WA中國建築獎」入圍</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2007年-94年度愛河沿岸（中都橋至中華路）美綠化工程(溼地生態營造工程)
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲高雄市政府推薦參加「第八屆公共工程金質獎」甄選</li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2007年-高雄市3號船渠東岸及11.12號碼頭開發工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲高雄市建築經營協會頒發<a class="fancybox" rel="gallery4" href="spring/images/rewards/3號船渠園冶獎.jpg">第13屆園冶奬</a></li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2007年-高雄市凹仔底原生植物園整建工程(第一期)
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲<a class="fancybox" rel="gallery5" href="spring/images/rewards/原生植物園全國景觀風貌改造大獎.jpg">行政院第1屆全國景觀風貌改造佳作獎</a></li>
+          </ul> 
+          </li>
+          <br>
+          <li class="rewards_item">2006年-高雄市海洋之星重要門戶環境改善工程（統包工程）
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲<a class="fancybox" rel="gallery6" href="spring/images/rewards/海洋之星國家卓越建設獎.jpg">國家卓越建設獎優質獎</a></li>
+          </ul>
+          </li>
+          <br>
+          <li class="rewards_item">2004年-高雄市凹仔底原生植物園整建工程(第一期)
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲高雄市建築經營協會頒發第10屆園冶獎</li>
+          </ul> 
+          </li>
+          <br>
+          <li class="rewards_item">2003年-高雄市哨船頭公園開闢工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲高雄市建築經營協會頒發<a class="fancybox" rel="gallery7" href="spring/images/rewards/哨船頭園冶獎.jpg">第9屆園冶獎</a></li>
+          </ul> 
+          </li>
+          <br>
+          <li class="rewards_item">2003年-嘉南農田水利會烏山頭親水公園工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">
+            	獲行政院農委會頒發<a class="fancybox" rel="gallery8" href="spring/images/rewards/烏山頭農田水利工程績優施工廠商.jpg">農田水利工程績優施工廠商</a>
+            </li>
+          </ul> 
+          </li>
+          <br>
+          <li class="rewards_item">2001年-嘉南農田水利會烏山頭親水公園工程
+          <ul>
+            <li><img src="spring/images/logo_green.svg">獲財團法人石材工業發展中心<a class="fancybox" rel="gallery9" href="spring/images/rewards/烏山頭石材長城獎.jpg">第11屆全國優良石材長城獎</a></li>
+          </ul> 
+          </li>
+          <br>
+        </ul>
+      </div>
+    </div>
+    
+    <!--certificate-->
+    <div id="certificateWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    <h1>人員證照</h1>
+
+  	  </div>
+	  <div class="certificate" onClick=""> 
+      <p>待補充</p>
+	  </div>
+    </div>
+	
+	<!--bikeShelf-->
+    <div id="bikeShelfWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    <h1>腳踏車架</h1>
+
+  	  </div>
+	  <div class="bikeShelf" > 
+	  
+	  <p>隨著全球吹起的綠生活節能風，腳踏車從平民的代步工具搖身變成健康生活的運動器材。為了能夠推廣腳踏車的使用，除了腳踏車專用道的規劃以外，腳踏車架的設計也須同時兼顧美觀及實用的面向。以下提供了許多收集自各個城市的腳踏車架來跟大家分享：</p>
+	  <br>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf1.jpg"><img src="spring/images/share/bikeshelf/bikeshelf1.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf2.jpg"><img src="spring/images/share/bikeshelf/bikeshelf2.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf3.jpg"><img src="spring/images/share/bikeshelf/bikeshelf3.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf4.jpg"><img src="spring/images/share/bikeshelf/bikeshelf4.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf5.jpg"><img src="spring/images/share/bikeshelf/bikeshelf5.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf6.jpg"><img src="spring/images/share/bikeshelf/bikeshelf6.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf7.jpg"><img src="spring/images/share/bikeshelf/bikeshelf7.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf8.jpg"><img src="spring/images/share/bikeshelf/bikeshelf8.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf9.jpg"><img src="spring/images/share/bikeshelf/bikeshelf9.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf10.jpg"><img src="spring/images/share/bikeshelf/bikeshelf10.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf11.jpg"><img src="spring/images/share/bikeshelf/bikeshelf11.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf12.jpg"><img src="spring/images/share/bikeshelf/bikeshelf12.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf13.jpg"><img src="spring/images/share/bikeshelf/bikeshelf13.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf14.jpg"><img src="spring/images/share/bikeshelf/bikeshelf14.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf15.jpg"><img src="spring/images/share/bikeshelf/bikeshelf15.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf16.jpg"><img src="spring/images/share/bikeshelf/bikeshelf16.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf17.jpg"><img src="spring/images/share/bikeshelf/bikeshelf17.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf18.jpg"><img src="spring/images/share/bikeshelf/bikeshelf18.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf19.jpg"><img src="spring/images/share/bikeshelf/bikeshelf19.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf20.jpg"><img src="spring/images/share/bikeshelf/bikeshelf20.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf21.jpg"><img src="spring/images/share/bikeshelf/bikeshelf21.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf22.jpg"><img src="spring/images/share/bikeshelf/bikeshelf22.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf23.jpg"><img src="spring/images/share/bikeshelf/bikeshelf23.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf24.jpg"><img src="spring/images/share/bikeshelf/bikeshelf24.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf25.jpg"><img src="spring/images/share/bikeshelf/bikeshelf25.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf26.jpg"><img src="spring/images/share/bikeshelf/bikeshelf26.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf27.jpg"><img src="spring/images/share/bikeshelf/bikeshelf27.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf28.jpg"><img src="spring/images/share/bikeshelf/bikeshelf28.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf29.jpg"><img src="spring/images/share/bikeshelf/bikeshelf29.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf30.jpg"><img src="spring/images/share/bikeshelf/bikeshelf30.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf31.jpg"><img src="spring/images/share/bikeshelf/bikeshelf31.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf32.jpg"><img src="spring/images/share/bikeshelf/bikeshelf32.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf33.jpg"><img src="spring/images/share/bikeshelf/bikeshelf33.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf34.jpg"><img src="spring/images/share/bikeshelf/bikeshelf34.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf35.jpg"><img src="spring/images/share/bikeshelf/bikeshelf35.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf36.jpg"><img src="spring/images/share/bikeshelf/bikeshelf36.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf37.jpg"><img src="spring/images/share/bikeshelf/bikeshelf37.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf38.jpg"><img src="spring/images/share/bikeshelf/bikeshelf38.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf39.jpg"><img src="spring/images/share/bikeshelf/bikeshelf39.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf40.jpg"><img src="spring/images/share/bikeshelf/bikeshelf40.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf41.jpg"><img src="spring/images/share/bikeshelf/bikeshelf41.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf42.jpg"><img src="spring/images/share/bikeshelf/bikeshelf42.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf43.jpg"><img src="spring/images/share/bikeshelf/bikeshelf43.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf44.jpg"><img src="spring/images/share/bikeshelf/bikeshelf44.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf45.jpg"><img src="spring/images/share/bikeshelf/bikeshelf45.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf46.jpg"><img src="spring/images/share/bikeshelf/bikeshelf46.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf47.jpg"><img src="spring/images/share/bikeshelf/bikeshelf47.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf48.jpg"><img src="spring/images/share/bikeshelf/bikeshelf48.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf49.jpg"><img src="spring/images/share/bikeshelf/bikeshelf49.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf50.jpg"><img src="spring/images/share/bikeshelf/bikeshelf50.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf51.jpg"><img src="spring/images/share/bikeshelf/bikeshelf51.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf52.jpg"><img src="spring/images/share/bikeshelf/bikeshelf52.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf53.jpg"><img src="spring/images/share/bikeshelf/bikeshelf53.jpg"></a>	  
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf54.jpg"><img src="spring/images/share/bikeshelf/bikeshelf54.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf55.jpg"><img src="spring/images/share/bikeshelf/bikeshelf55.jpg"></a>
+	  <a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf56.jpg"><img src="spring/images/share/bikeshelf/bikeshelf56.jpg"></a>
+	  </div>
+    </div>
+    
+    <!--contact-->
+    <div id="contactWrapper">
+      <div class="title">
+  	    <img src="spring/images/logo_green.svg">
+	    	<h1>展望/聯絡我們</h1>
+      </div>
+      <div class="info" onClick="">
+           	<br>
+        <br>
+      	<p class="vision">建立甲、乙、丙夥伴關係的營建環境，提升勞動力美學。</p>
+        <p class="vision">給業主的一句話：『貴的不一定好 俗的不容易好』</p>
+      	<br>
+        <br>
+        <ul>
+        <li>
+        	<p>地址：高雄市三民區建國一路411號6樓之1</p>
+        </li>
+        <li>
+        	<p>電話：(07)224-0999</p>
+        </li>
+        <li>
+        	<p>傳真：(07)224-6607</p>
+        </li>
+        <li>
+        	<p>Email：<a href="mailto:building@spring1987.com?Subject=Hello" target="_top">building@spring1987.com</a></p>
+        </li>
+        </ul>
+      </div>
+      <div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.525598439443!2d120.31759799999999!3d22.634184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04eb2a824329%3A0x7e30ee8855a35e54!2z6I-v5pil54ef6YCg5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1422935974872"></iframe>
+      </div>
+    </div>
+  </div>
+  
+  <nav>
+  <ul class="menu">
+    <li id="homeBtn" class="home current" onClick="selectPage('home')"></li>
+    <li id="aboutBtnCollection"><span>關於華春</span>
+      <ul class="sub-menu">
+        <li id="aboutBtn" onClick="selectPage('about')">緣起</li>
+        <!--<li id="staffBtn" onClick="selectPage('staff')">公司團隊</li> 暫時拿掉公司團隊頁面-->
+        <li id="objectiveBtn" onClick="selectPage('objective')">經營理念</li>
+      </ul>
+    </li> 
+    <li id="projectBtnCollection"><span>作品集</span>
+      <ul class="sub-menu">
+        <li id="projectBtn" onClick="selectPage('project')">工程實績</li>
+        <li id="rewardBtn" onClick="selectPage('reward')">得獎紀錄</li>
+      </ul>
+    </li>
+	<li id="shareBtnCollection"><span>經驗分享</span>
+      <ul class="sub-menu">
+        <li id="bikeShelfBtn" onClick="selectPage('bikeShelf')">腳踏車架</li>
+      </ul>
+    </li>
+    <li id="contactBtn" onClick="selectPage('contact')"><span>展望/聯絡我們</span></li>
+	</ul>
+	</nav>
+</div>
+  
+
+
+
+
+<div id="footer" > 版權所有©2015 華春營造有限公司 所有權利保留</div>
+
+<div id="counter">
+	<script type="text/javascript" src="http://counter9.freecounterstat.ovh/private/counter.js?c=3c0b2deba48cbbfbcfe743693c4e2a9c"></script>
+</div>
+
+<script>execute()</script>
+<script>
+
+	$("#classify").change(function() {
+		var selectedValue = $('#classify').val();
+		
+		if(selectedValue === "1"){//依年份
+			$( "#subclassify" ).find('optgroup')
+							   .remove();
+			$( "#subclassify" ).find('option')
+							   .remove()
+							   .end()
+							   .append('<option value="101" selected="selected">由近往前</option><option value="102" >由前往近</option>');
+			$('#project_list').html('');
+			resortProjects("101");
+		}
+		else if(selectedValue === "2"){//依金額
+			$( "#subclassify" ).find('optgroup')
+							   .remove();
+			$( "#subclassify" ).find('option')
+							   .remove()
+							   .end()
+							   .append('<option value="201" selected="selected">全部</option><option value="202" >5000</option><option value="203" >10000</option>');
+	
+			$('#project_list').html('');
+			resortProjects("201");
+		}
+		else if(selectedValue === "3"){//依類型
+			$( "#subclassify" ).find('optgroup')
+							   .remove();
+			$( "#subclassify" ).find('option')
+							   .remove()
+							   .end()
+							   .append('<option value="301" selected="selected">全部</option><option value="302" >建築</option><option value="303" >景觀</option><option value="304" >裝修</option><option value="305" >廠房</option><option value="306" >土木</option><option value="307" >運動設施</option><option value="308" >木造</option><option value="309" >廟宇建築</option><option value="310" >古蹟修復</option><option value="311" >綠建築</option>');
+			$('#project_list').html('');
+			resortProjects("301");
+		}
+		else if(selectedValue === "4"){//依地區
+			$( "#subclassify" ).find('optgroup')
+							   .remove();
+			$( "#subclassify" ).find('option')
+							   .remove()
+							   .end()
+							   .append('<option value="401" selected="selected">全部</option><optgroup label="北部地區"><option value="402" >台北</option><optgroup label="中部地區"><option value="403" >苗栗</option><option value="404" >南投</option><optgroup label="南部地區"><option value="405" >嘉義</option><option value="406" >台南</option><option value="407" >高雄</option><option value="408" >屏東</option><optgroup label="東部地區"><option value="409" >台東</option><optgroup label="外島地區"><option value="410" >澎湖</option>');
+			$('#project_list').html('');
+			resortProjects("401");
+		}
+		else if(selectedValue === "5"){//重點工程
+			$( "#subclassify" ).find('optgroup')
+							   .remove();
+			$( "#subclassify" ).find('option')
+							   .remove()
+							   .end()
+							   .append('<option value="501" selected="selected">--</option>');
+			$('#project_list').html('');
+			resortProjects("501");
+		}
+	});
+	
+	$("#subclassify").change(function() {
+		$('#project_list').html('');
+		var subClassSelectedValue = $('#subclassify').val();
+		resortProjects(subClassSelectedValue);
+
+	});
+	
+</script>
+
+</body>
+</html>
