@@ -120,6 +120,65 @@
 
 			}
 
+			.bar1 {
+			  -moz-transform:rotate(0deg) translate(0, -40px);
+			  -webkit-transform:rotate(0deg) translate(0, -40px);opacity:0.12;
+			}
+			.bar2 {
+			  -moz-transform:rotate(45deg) translate(0, -40px);
+			  -webkit-transform:rotate(45deg) translate(0, -40px);opacity:0.25;
+			}
+			.bar3 {
+			  -moz-transform:rotate(90deg) translate(0, -40px);
+			  -webkit-transform:rotate(90deg) translate(0, -40px);opacity:0.37;
+			}
+			.bar4 {
+			  -moz-transform:rotate(135deg) translate(0, -40px);
+			  -webkit-transform:rotate(135deg) translate(0, -40px);opacity:0.50;
+			}
+			.bar5 {
+			  -moz-transform:rotate(180deg) translate(0, -40px);
+			  -webkit-transform:rotate(180deg) translate(0, -40px);opacity:0.62;
+			}
+			.bar6 {
+			  -moz-transform:rotate(225deg) translate(0, -40px);
+			  -webkit-transform:rotate(225deg) translate(0, -40px);opacity:0.75;
+			}
+			.bar7 {
+			  -moz-transform:rotate(270deg) translate(0, -40px);
+			  -webkit-transform:rotate(270deg) translate(0, -40px);opacity:0.87;
+			}
+			.bar8 {
+			  -moz-transform:rotate(315deg) translate(0, -40px);
+			  -webkit-transform:rotate(315deg) translate(0, -40px);opacity:1;
+			}
+
+			
+			/* set up the bar spinners */
+			#spinner{
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+				margin-top: 200px;
+				width:100px;
+				height:100px;
+			 
+				-moz-border-radius:100px;
+				-moz-transform:scale(0.5);
+				-webkit-transform:scale(0.5);
+			}
+			
+			#spinner div{
+				width:10px;
+				height:30px;
+				background:#000;
+				position:absolute;
+				top:35px;
+				left:45px;
+			}
+			
 </style>
 
 </head>
@@ -131,8 +190,19 @@
     <img src="spring/images/text.svg" alt="LogoName">
   </div>
   
+  <div id="spinner">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+  <div class="bar4"></div>
+  <div class="bar5"></div>
+  <div class="bar6"></div>
+  <div class="bar7"></div>
+  <div class="bar8"></div>
+</div>
+
   <div id="skipDescription">
-	<p>畫面將在25秒鐘後自動進入首頁</p>
+	
   </div>
   
   <div id="skip" onClick="jumpToHomePage()" >
@@ -147,8 +217,8 @@
 	<script type ="text/javascript" src="spring/js/MTLLoader.js"></script>
 	<script type ="text/javascript" src="spring/js/OBJMTLLoader.js"></script>
 	<script type ="text/javascript" src="spring/js/mouseKeyboard.js"></script>
-	<!--<script type ="text/javascript" src="spring/js/tween.min.js"></script>-->
-	<script type ="text/javascript" src="spring/js/Tween.js"></script>
+	<script type ="text/javascript" src="spring/js/tween.min.js"></script>
+	<!--<script type ="text/javascript" src="spring/js/Tween.js"></script>-->
 	<script type ="text/javascript" src="spring/js/taiwanpoints.js"></script>
   <script>
 		//Jump to Home page
@@ -162,6 +232,26 @@
 		if(webglAva === false){
 			jumpToHomePage();
 		}
+		
+		
+		var count = 0;
+		var isRotate = true;
+		rotate();
+		function rotate() {
+			
+			var elem = document.getElementById('spinner');
+			elem.style.MozTransform = 'scale(0.5) rotate('+count+'deg)';
+			elem.style.WebkitTransform = 'scale(0.5) rotate('+count+'deg)';
+			
+			if (count==360) { count = 0 }
+			count+=45;
+			if(isRotate)
+				window.setTimeout(function(){rotate()}, 100);
+			else{
+				$('#spinner').html('');
+			}
+		}
+	    
 		
   
 		var scene = new THREE.Scene();
@@ -284,17 +374,8 @@
 								
 								penObj = object;
 								
-								/*var geometry = new THREE.BoxGeometry( 0.1, 10, 0.1 );
-								var ballgeo = new THREE.SphereGeometry( 0.5, 32, 32 );
-								var material = new THREE.MeshBasicMaterial( { color: 0xaa0000, overdraw: 0.5 } );
-								var ballmaterial = new THREE.MeshBasicMaterial( { color: 0x00aa00, overdraw: 0.5 } );
-								cube = new THREE.Mesh( geometry, material );
-								ball = new THREE.Mesh(ballgeo,ballmaterial);
-								scene.add( cube );
-								scene.add(ball);*/
-
-									
 								scene.add( penObj );
+								isRotate = false;
 								init();
 								animate();
 
@@ -410,10 +491,8 @@
 						moveCameraAnim({x:0.2158, y:3.7094, z:-15.3354},{w:0.5984, x:-0.1716, y:-0.7523, z:-0.2157}, city);//move to 台北
 						break;
 					case 1:
-						
+						//moveCameraAnim({x:-0.8027, y:22.986, z:2},{w:0.5087, x:-0.4912, y:-0.5087, z:-0.4912}, -2);//move to whole island
 						moveCameraAnim({x:-3.2787, y:5.6639, z:-12.5887},{w:-0.3834, x:0.1358, y:0.8611, z:0.3049}, city);//move to 苗栗
-						//moveCameraAnim({x:-2.3693, y:4.8626, z:-11.7420},{w:-0.3323, x:0.1342, y:0.8656, z:0.3497}, city);//move to 苗栗
-						//moveCameraAnim({x:-4.7427, y:5.9528, z:-12.3701},{w:-0.4424, x:0.0582, y:0.8873, z:0.1168}, city);//move to 苗栗
 						break;
 					case 2:
 						//moveCameraAnim({x:-0.8027, y:22.986, z:2},{w:0.5087, x:-0.4912, y:-0.5087, z:-0.4912}, -2);//move to whole island
@@ -476,6 +555,24 @@
 					else if(city === -2){
 						//Display the "畫面將在X秒鐘後自動跳轉" after the animation finished.
 						$('#skipDescription').css("display", "block");
+						var time = 25;
+						showLeftTime();
+						function showLeftTime(){
+							$('#skipDescription').find('p')
+												 .remove();
+							$('#skipDescription').append('<p>畫面將在'+time+'秒鐘後自動跳轉</p>')
+							time--;
+							if(time < 0)
+								jumpToHomePage();
+								
+							setTimeout(function(){
+								showLeftTime()
+							}, 1000);
+						}
+						
+						
+						
+						
 						//Let the project be able to click after the animation
 						$('.phraseOfMajorProject').hover(function(e){
 							$(this).css("font-weight", e.type === "mouseenter"?"bold":"normal");
@@ -500,10 +597,6 @@
 								}(i, j));
 							}
 						}			
-						
-						setTimeout(function(){ 
-							jumpToHomePage();
-						}, 25000);
 					}
 					else{
 						addLogoToScene(city);

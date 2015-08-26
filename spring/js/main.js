@@ -22,8 +22,13 @@
 		banner = data.Banner;
 		preloadImages(banner);//preload banner image
 
+		//Sort all the projects from start year
+		var nonSortedProjectList = data.ProjectList;
+		nonSortedProjectList.sort(function(a, b) {
+			return parseFloat(b.startYear) - parseFloat(a.startYear);
+		});
 
-		projectList = data.ProjectList;
+		projectList = nonSortedProjectList;//data.ProjectList;
 		for(i = 0; i < projectList.length; i++){
 			if(projectList[i].detail === 'True'){
 				projectListPic[i] = new Image();
@@ -78,29 +83,7 @@
 		});
 	}
 	
-	
-	/*var init = true;
-	function nextBanner(){
-		if(init === true){
-			init = false;
-			LoadImages();
-			setTimeout("nextBanner()", 3000);
-		}
-	  else
-		{
-			$(".header img").fadeTo(1000,0.01,"swing", function(){
-			
-				$('.header img').load(function() {
-    			$(".header img").fadeTo(1000,1,"swing");
-				}).attr("src", banner[adNum]);
-			
-				
-			});
-		
-			
-			//setTimeout("nextBanner()", 4000);
-		}
-	}*/
+
 	
 	function LoadImages() {
 		if(adNum<banner.length-1)
@@ -186,20 +169,41 @@
 					}
 				}
 			break;
-			case "202"://依金額_
+			case "202"://依金額_1000萬以下
 				for(i = 0; i < projectList.length; i++){
-					if(projectList[i].display === 'True' && projectList[i].amount < 5000){
+					if(projectList[i].display === 'True' && projectList[i].amount < 1000){
 						createAutoDiv(i);
 					}
 				}
 			break;
-			case "203"://依金額_
+			case "203"://依金額_1000萬~2500萬
 				for(i = 0; i < projectList.length; i++){
-					if(projectList[i].display === 'True' && projectList[i].amount > 5000){
+					if(projectList[i].display === 'True' && projectList[i].amount >= 1000 && projectList[i].amount < 2500){
 						createAutoDiv(i);
 					}
 				}
 			break;
+			case "204"://依金額_2500萬~5000萬
+				for(i = 0; i < projectList.length; i++){
+					if(projectList[i].display === 'True' && projectList[i].amount >= 2500 && projectList[i].amount < 5000){
+						createAutoDiv(i);
+					}
+				}
+			break;
+			case "205"://依金額_5000萬~1億
+				for(i = 0; i < projectList.length; i++){
+					if(projectList[i].display === 'True' && projectList[i].amount >= 5000 && projectList[i].amount < 10000){
+						createAutoDiv(i);
+					}
+				}
+			break;		
+			case "206"://依金額_1億以上
+				for(i = 0; i < projectList.length; i++){
+					if(projectList[i].display === 'True' && projectList[i].amount >= 10000){
+						createAutoDiv(i);
+					}
+				}
+			break;					
 			case "301"://依類型_全部
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' ){
@@ -377,5 +381,25 @@
 		});
 	};
 	
+	function loadBikeShelfImage(){
+		for(var i = 1; i <= 56; i++){
+			$('#bikeShelf').append('<a class="fancybox" rel="galleryBikeShelf" href="spring/images/share/bikeshelf/bikeshelf'+i+'.jpg"><img src="spring/images/share/bikeshelf/bikeshelf'+i+'.jpg"></a>');
+		}
+		bikeShelfImageLoaded = true;
+	};
+	
+	function loadUrinalImage(){
+		for(var i = 1; i <= 6; i++){
+			$('#urinal').append('<a class="fancybox" rel="galleryUrinal" href="spring/images/share/urinal/urinal'+i+'.jpg"><img src="spring/images/share/urinal/urinal'+i+'.jpg"></a>');
+		}
+		urinalImageLoaded = true;
+	};
+	
+	function loadSinkImage(){
+		for(var i = 1; i <= 17; i++){
+			$('#sink').append('<a class="fancybox" rel="gallerySink" href="spring/images/share/sink/sink'+i+'.jpg"><img src="spring/images/share/sink/sink'+i+'.jpg"></a>');
+		}
+		sinkImageLoaded = true;
+	};
 	
 	

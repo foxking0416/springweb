@@ -26,7 +26,8 @@
 			  "spring/images/background/banner25.jpg",
 			  "spring/images/background/banner26.jpg",
 			  "spring/images/background/banner27.jpg",
-			  "spring/images/background/banner28.jpg"
+			  "spring/images/background/banner28.jpg",
+			  "spring/images/background/banner29.jpg"
 			 ],
 	"ProjectList":[
 	
@@ -44,7 +45,7 @@
 	
 		{"linkPath":"p192", "display":"True", "detail":"True", "name":"實踐大學台北校區C、G棟整建工程案",        
 		"image":"spring/images/project/192_實踐大學台北校區CG棟/title.jpg", 
-		"startYear":"103", "latitude":"25.085222", "longitude":"121.545656", "type":[1,3], "amount":9200, "important":"high", "region":"台北"},
+		"startYear":"103", "latitude":"25.085222", "longitude":"121.545656", "type":[1,3], "amount":9200, "important":"", "region":"台北"},
 		
 		{"linkPath":"p191", "display":"True", "detail":"True", "name":"奇美實業股份有限公司特化廠區研發大樓土建工程",        
 		"image":"spring/images/project/191_奇美實業特化廠區新建工程/title.jpg", 
@@ -52,7 +53,7 @@
 	
 		{"linkPath":"p190", "display":"True", "detail":"True", "name":"日月潭教師會館迎賓樓重建暨周邊景觀改善工程",        
 		"image":"spring/images/project/190_日月潭教師會館/title.jpg", 
-		"startYear":"102", "latitude":"23.864460", "longitude":"120.952105", "type":[1], "amount":15735, "important":"", "region":"南投"},
+		"startYear":"102", "latitude":"23.864460", "longitude":"120.952105", "type":[1], "amount":15735, "important":"high", "region":"南投"},
 		
 		{"linkPath":"p189", "display":"False", "detail":"False", "name":"高雄市水利局鹽埕區南北大溝抽水站工程",        
 		"image":"",
@@ -108,11 +109,11 @@
 		
 		{"linkPath":"p176", "display":"True", "detail":"True", "name":"法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程", 	
 		"image":"spring/images/project/176_法鼓山_高雄市桃源區樂樂段永久屋住宅新建工程/title.jpg",
-		"startYear":"100", "latitude":"23.113483", "longitude":"120.710048", "type":[1], "amount":4616, "important":"", "region":"高雄"},
+		"startYear":"100", "latitude":"23.113483", "longitude":"120.710048", "type":[1], "amount":4616, "important":"high", "region":"高雄"},
 		
 		{"linkPath":"p175", "display":"True", "detail":"True", "name":"成大醫院急重症醫療區整建工程", 					
 		"image":"spring/images/project/175_成大醫院急重症醫療區整建工程/title.jpg", "startYear":"100",
-		"latitude":"23.002110", "longitude":"120.219659", "type":[1,3], "amount":14514, "important":"", "region":"台南"},
+		"latitude":"23.002110", "longitude":"120.219659", "type":[1,3], "amount":14514, "important":"high", "region":"台南"},
 		
 		{"linkPath":"p174", "display":"True", "detail":"True", "name":"高雄縣六龜鄉新開部落(新發村)罹難者紀念公園工程",        
 		"image":"spring/images/project/174_新開部落罹難者紀念公園工程/title.jpg",
@@ -152,7 +153,7 @@
 		
 		{"linkPath":"p165", "display":"True", "detail":"True", "name":"法鼓山雲集寺寺廟新建工程", 						
 		"image":"spring/images/project/165_法鼓山雲集寺/title.jpg",
-		"startYear":"98", "latitude":"23.170641", "longitude":"120.177902", "type":[8], "amount":5985, "important":"", "region":"台南"},
+		"startYear":"98", "latitude":"23.170641", "longitude":"120.177902", "type":[8], "amount":5985, "important":"high", "region":"台南"},
 		
 		{"linkPath":"p164", "display":"True", "detail":"True", "name":"佛光山弘法廣場南側邊坡整治工程",        
 		"image":"spring/images/project/164_佛光山佛陀紀念館邊坡加勁網工程/title.jpg",
@@ -195,7 +196,7 @@
 		
 		{"linkPath":"p153", "display":"True", "detail":"True", "name":"佛光山均頭國中小行政中心新建及全校景觀工程", 				
 		"image":"spring/images/project/153_佛光山均頭國中小行政中心新建工程/title.jpg",
-		"startYear":"95", "latitude":"23.950758", "longitude":"120.972873", "type":[1,2], "amount":10677, "important":"", "region":"南投"},
+		"startYear":"95", "latitude":"23.950758", "longitude":"120.972873", "type":[1,2], "amount":10677, "important":"high", "region":"南投"},
 		
 		{"linkPath":"p152", "display":"False", "detail":"False", "name":"南部科學園區高雄園區第一期標準廠房增設中庭設施工程",     			
 		"image":"",
@@ -223,7 +224,7 @@
 		
 		{"linkPath":"p145", "display":"True", "detail":"True", "name":"高雄海洋之星重要交通門戶環境改善工程(統包案)", 	
 		"image":"spring/images/project/145_高雄海洋之星重要交通門戶環境改善工程/title.jpg",
-		"startYear":"94", "latitude":"22.609869", "longitude":"120.297198", "type":[2], "amount":8300, "important":"", "region":"高雄"},
+		"startYear":"94", "latitude":"22.609869", "longitude":"120.297198", "type":[2], "amount":8300, "important":"high", "region":"高雄"},
 		
 		{"linkPath":"p144", "display":"True", "detail":"True", "name":"高雄縣仁武鄉運動公園第一期興建工程",     			
 		"image":"spring/images/project/144_仁武鄉運動公園第一期興建工程/title.jpg",
@@ -295,7 +296,7 @@
 		
 		{"linkPath":"p127", "display":"True", "detail":"True", "name":"高雄市凹仔底原生植物園整建工程", 				
 		"image":"spring/images/project/127_高雄市凹仔底原生植物園整建工程/title.jpg",
-		"startYear":"92", "latitude":"22.681066", "longitude":"120.301205", "type":[2], "amount":4122, "important":"", "region":"高雄"},
+		"startYear":"92", "latitude":"22.681066", "longitude":"120.301205", "type":[2], "amount":4122, "important":"high", "region":"高雄"},
 		
 		{"linkPath":"p126", "display":"True", "detail":"True", "name":"屏東東發製藥鋼骨廠房工程",     			
 		"image":"spring/images/project/126_東發製藥鋼骨廠房工程/title.jpg",
@@ -403,7 +404,7 @@
 			
 		{"linkPath":"p101", "display":"True", "detail":"True", "name":"高雄縣鳥松溼地公園工程", 						
 		"image":"spring/images/project/101_高雄縣鳥松溼地公園工程/title.jpg",
-		"startYear":"88", "latitude":"22.654603", "longitude":"120.351117", "type":[2,7], "amount":4516, "important":"", "region":"高雄"},
+		"startYear":"88", "latitude":"22.654603", "longitude":"120.351117", "type":[2,7], "amount":4516, "important":"high", "region":"高雄"},
 		
 		{"linkPath":"p100", "display":"False", "detail":"False", "name":"中華電信枋寮電信服務中心新建工程",     			
 		"image":"",
@@ -435,7 +436,7 @@
 		
 		{"linkPath":"p93", "display":"True", "detail":"True", "name":"行政院衛生署南投醫院醫療大樓擴建第二期建築裝修工程",        
 		"image":"spring/images/project/93_行政院衛生署南投醫院醫療大樓擴建第二期建築裝修工程/title.jpg",
-		"startYear":"87", "latitude":"23.914542", "longitude":"120.684264", "type":[1], "amount":20249, "important":"", "region":"南投"},
+		"startYear":"87", "latitude":"23.914542", "longitude":"120.684264", "type":[1], "amount":20249, "important":"high", "region":"南投"},
 		
 		{"linkPath":"p92", "display":"False", "detail":"False", "name":"世華銀行東高雄分行餐廳廚房裝修工程",     			
 		"image":"",
@@ -619,7 +620,7 @@
 		
 		{"linkPath":"p47", "display":"True", "detail":"True", "name":"內政部營建署高雄都會公園日晷工程", 				
 		"image":"spring/images/project/47_內政部營建署高雄都會公園日晷工程/title.jpg",
-		"startYear":"83", "latitude":"22.733371", "longitude":"120.315803", "type":[2], "amount":1089, "important":"", "region":"高雄"},
+		"startYear":"83", "latitude":"22.733371", "longitude":"120.315803", "type":[2], "amount":1089, "important":"high", "region":"高雄"},
 		
 		{"linkPath":"p46", "display":"False", "detail":"False", "name":"劉峰銘自宅興建工程",     			
 		"image":"",
