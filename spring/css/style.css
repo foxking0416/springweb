@@ -102,7 +102,8 @@ body
 }
 
 .menu > li.home {
-  background: url(http://s26.postimg.org/qbf4q4j9h/home.png) center no-repeat;
+
+  background:url(../images/home.png) center no-repeat;
   width: 90px;
 }
 

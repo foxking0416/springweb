@@ -283,7 +283,9 @@
 			break;
 			case "401"://依地區_全部
 				for(i = 0; i < projectList.length; i++){
-					createAutoDiv(i);
+					if(projectList[i].display === 'True'){
+						createAutoDiv(i);
+					}
 				}
 			break;
 			case "402"://依地區_台北

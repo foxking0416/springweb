@@ -3,20 +3,34 @@
 		    "address":"嘉義縣大林鎮大工一段41-1地號土地",
 		    "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1899974726352!2d120.50973700000004!3d23.59751799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDM1JzUxLjEiTiAxMjDCsDMwJzM1LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1438153794132",
 		    "start":"104",
-		    "finish":"工程階段",
+		    "finish":"106",
 		    "design":"許英毅建築師事務所",
 		    "owner":"當得開發科技股份有限公司",
 			"amount":"8,750",
 		    "pic":[		
 				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房1.jpg",
-				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房2.jpg"			
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房2.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房3.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房4.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房5.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房6.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房7.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房8.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房9.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房10.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房11.jpg",	
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房12.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房13.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房14.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房15.jpg",
+				"spring/images/project/195_當得開發科技廠房/195_當得開發科技廠房16.jpg"				
 		    ]
 		},
 	"p194":{"name":"馬偕紀念醫院台東分院平安樓1-3樓整修工程",
 		    "address":"台東縣台東市長沙街303巷1號",
 		    "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.39026778753!2d121.14075809999999!3d22.750893599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fb910f923afbf%3A0x72de50aa4d5fccd0!2z6aas5YGV57SA5b-16Yar6Zmi5Y-w5p2x5YiG6Zmi!5e0!3m2!1szh-TW!2stw!4v1438152335258",
 		    "start":"104",
-		    "finish":"工程階段",
+		    "finish":"105",
 		    "design":"譚俊彥建築師事務所",
 		    "owner":"馬偕醫院",
 			"amount":"8,536",
@@ -24,7 +38,17 @@
 				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院1.jpg",
 				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院2.jpg",
 				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院3.jpg",
-				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院4.jpg"
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院4.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院5.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院6.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院7.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院8.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院9.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院10.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院11.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院12.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院13.jpg",
+				"spring/images/project/194_馬偕紀念醫院台東分院/194_馬偕紀念醫院台東分院14.jpg"			
 		    ]
 		},
 	"p193":{"name":"創世基金會苗栗社教中心新建工程",
@@ -38,14 +62,16 @@
 		    "pic":[			  
 				"spring/images/project/193_創世基金會苗栗社教中心/193_創世基金會苗栗社教中心1.jpg",
 				"spring/images/project/193_創世基金會苗栗社教中心/193_創世基金會苗栗社教中心2.jpg",
-				"spring/images/project/193_創世基金會苗栗社教中心/193_創世基金會苗栗社教中心3.jpg"
+				"spring/images/project/193_創世基金會苗栗社教中心/193_創世基金會苗栗社教中心3.jpg",
+				"spring/images/project/193_創世基金會苗栗社教中心/193_創世基金會苗栗社教中心4.jpg",
+				"spring/images/project/193_創世基金會苗栗社教中心/193_創世基金會苗栗社教中心5.jpg"
 		    ]
 		},
 	"p192":{"name":"實踐大學台北校區C、G棟整建工程案",
 		    "address":"台北市中山區大直街70號",
 		    "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.5091781188353!2d121.5457421!3d25.0846197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac1ada67cf1d%3A0x1ffa34c8d22ab4e7!2z5a-m6LiQ5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1438152283307",
 		    "start":"103",
-		    "finish":"工程階段",
+		    "finish":"105",
 		    "design":"蘇富源建築師事務所",
 		    "owner":"實踐大學",
 			"amount":"9,200",
@@ -70,7 +96,10 @@
 			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟18.jpg",
 			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟19.jpg",
 			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟20.jpg",
-			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟21.jpg"	  
+			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟21.jpg",
+			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟22.jpg",
+			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟23.jpg",
+			  "spring/images/project/192_實踐大學台北校區CG棟/192_實踐大學台北校區CG棟24.jpg"				  
 		    ]
 		},
 	"p191":{"name":"奇美實業股份有限公司特化廠區研發大樓土建工程",
@@ -89,14 +118,16 @@
 			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程5.jpg",
 			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程6.jpg",
 			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程7.jpg",
-			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程8.jpg"			  
+			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程8.jpg",
+			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程9.jpg",
+			  "spring/images/project/191_奇美實業特化廠區新建工程/191_奇美實業特化廠區新建工程10.jpg"				  
 		    ]
 		},
 	"p190":{"name":"日月潭教師會館迎賓樓重建暨周邊景觀改善工程",
 		    "address":"南投縣魚池鄉中興路136號",
 		    "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7251735651607!2d120.90687700000001!3d23.863890899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468d6058f3c83a1%3A0xa56136b90c7a0aaa!2z5pel5pyI5r2t5pWZ5bir5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1438150793808",
 		    "start":"102",
-		    "finish":"工程階段",
+		    "finish":"105",
 		    "design":"游道生建築師事務所",
 		    "owner":"日月潭教師會館",
 			"amount":"15,735",
@@ -106,7 +137,14 @@
 			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館3.jpg",
 			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館4.jpg",
 			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館5.jpg",
-			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館6.jpg"
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館6.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館7.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館8.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館9.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館10.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館11.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館12.jpg",
+			  "spring/images/project/190_日月潭教師會館/190_日月潭教師會館13.jpg"
 		    ]
 		},
 	"p187":{"name":"莫拉克颱風災後長期安置住宅重建桃源區樂樂段基地",
@@ -744,7 +782,9 @@
 			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠13.jpg",
 			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠14.jpg",
 			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠15.jpg",
-			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠16.jpg"
+			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠16.jpg",
+			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠17.jpg",
+			  "spring/images/project/148_3號船渠東岸及11_12號碼頭開發工程/148_3號船渠18.jpg"
 		    ]
 		},	
 	"p146":{"name":"95 94年度愛河沿岸(中都橋至中華路)美綠化工程",
@@ -1475,7 +1515,10 @@
 		   "pic":[
 			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程1.jpg",
 			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程2.jpg",
-			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程3.jpg"
+			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程3.jpg",
+			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程4.jpg",
+			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程5.jpg",
+			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程6.jpg",			  "spring/images/project/52_高雄縣勞工育樂中心裝修工程/52_高雄縣勞工育樂中心裝修工程7.jpg"
 		  ]
 		},
 	"p47":{"name":"內政部營建署高雄都會公園日晷工程",
@@ -1494,7 +1537,11 @@
 			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷5.jpg",
 			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷6.jpg",
 			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷7.jpg",
-			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷8.jpg"
+			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷8.jpg",
+			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷9.jpg",
+			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷10.jpg",
+			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷11.jpg",
+			  "spring/images/project/47_內政部營建署高雄都會公園日晷工程/47_都會公園日晷12.jpg"
 		  ]
 		},
 	"p36":{"name":"彰化銀行九如路分行新購行舍內部裝修工程",

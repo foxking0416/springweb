@@ -470,7 +470,7 @@
 		"image":"",
 		"startYear":"86", "latitude":"", "longitude":"", "type":[], "amount":0, "important":"", "region":""},
 		
-		{"linkPath":"p84", "display":"True", "detail":"True", "name":"國立科學工藝博物館館圍牆大門人行道工程",     			
+		{"linkPath":"p84", "display":"False", "detail":"False", "name":"國立科學工藝博物館館圍牆大門人行道工程",     			
 		"image":"spring/images/project/84_科工館人行道/title.jpg",
 		"startYear":"85", "latitude":"22.639573", "longitude":"120.327110", "type":[2], "amount":810, "important":"", "region":"高雄"},
 		
