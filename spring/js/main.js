@@ -309,42 +309,49 @@
 					}
 				}
 			break;
-			case "405"://依地區_嘉義
+			case "405"://依地區_雲林
+				for(i = 0; i < projectList.length; i++){
+					if(projectList[i].display === 'True' && projectList[i].region === '雲林'){
+						createAutoDiv(i);
+					}
+				}
+			break;
+			case "406"://依地區_嘉義
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' && projectList[i].region === '嘉義'){
 						createAutoDiv(i);
 					}
 				}
 			break;
-			case "406"://依地區_台南
+			case "407"://依地區_台南
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' && projectList[i].region === '台南'){
 						createAutoDiv(i);
 					}
 				}
 			break;
-			case "407"://依地區_高雄
+			case "408"://依地區_高雄
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' && projectList[i].region === '高雄'){
 						createAutoDiv(i);
 					}
 				}
 			break;
-			case "408"://依地區_屏東
+			case "409"://依地區_屏東
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' && projectList[i].region === '屏東'){
 						createAutoDiv(i);
 					}
 				}
 			break;
-			case "409"://依地區_台東
+			case "410"://依地區_台東
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' && projectList[i].region === '台東'){
 						createAutoDiv(i);
 					}
 				}
 			break;
-			case "410"://依地區_澎湖
+			case "411"://依地區_澎湖
 				for(i = 0; i < projectList.length; i++){
 					if(projectList[i].display === 'True' && projectList[i].region === '澎湖'){
 						createAutoDiv(i);

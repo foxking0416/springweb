@@ -30,6 +30,21 @@
 			  "spring/images/background/banner29.jpg"
 			 ],
 	"ProjectList":[
+		{"linkPath":"p199", "display":"True", "detail":"True", "name":"華南銀行左營分行行舍裝修工程",        
+		"image":"spring/images/project/199_華南銀行左營分行行舍裝修工程/title.jpg", 
+		"startYear":"105", "latitude":"22.637179", "longitude":"120.334610", "type":[3], "amount":3000, "important":"", "region":"高雄"},
+		
+		{"linkPath":"p198", "display":"True", "detail":"True", "name":"古坑鄉崁腳段同心苑住宅新建工程",        
+		"image":"spring/images/project/198_古坑鄉崁腳段同心苑住宅新建工程/title.jpg", 
+		"startYear":"106", "latitude":"22.637179", "longitude":"120.334610", "type":[1], "amount":33000, "important":"", "region":"雲林"},	
+	
+		{"linkPath":"p197", "display":"True", "detail":"True", "name":"高雄市81氣爆紀念裝置藝術計畫",        
+		"image":"spring/images/project/197_高雄市81氣爆紀念裝置藝術計畫/title.jpg", 
+		"startYear":"106", "latitude":"22.637179", "longitude":"120.334610", "type":[2], "amount":2500, "important":"", "region":"高雄"},	
+		
+		{"linkPath":"p196", "display":"True", "detail":"True", "name":"輔大利瑪竇外牆整建",        
+		"image":"spring/images/project/196_輔大利瑪竇外牆整建/title.jpg", 
+		"startYear":"106", "latitude":"25.085222", "longitude":"121.545656", "type":[3], "amount":2300, "important":"", "region":"台北"},	
 	
 		{"linkPath":"p195", "display":"True", "detail":"True", "name":"當得開發科技股份有限公司廠房新建工程",        
 		"image":"spring/images/project/195_當得開發科技廠房/title.jpg", 
@@ -182,9 +197,9 @@
 		{"linkPath":"p158", "display":"False", "detail":"False", "name":"佛光山普門中學校園景觀工程-球場工程",     			
 		"image":"", "startYear":"97"},
 		
-		{"linkPath":"p157", "display":"False", "detail":"False", "name":"雲嘉南風管處布袋多功能遊客中心整建工程",     			
-		"image":"",
-		"startYear":"96", "latitude":"", "longitude":"", "type":[], "amount":0, "important":"", "region":""},
+		{"linkPath":"p157", "display":"True", "detail":"True", "name":"雲嘉南風管處布袋多功能遊客中心整建工程",     			
+		"image":"spring/images/project/157_雲嘉南風管處布袋多功能遊客中心整建工程/title.jpg",
+		"startYear":"96", "latitude":"23.478383", "longitude":"120.452681", "type":[1], "amount":4756, "important":"", "region":"嘉義"},
 		
 		{"linkPath":"p156", "display":"True", "detail":"True", "name":"台電台北、高雄中央調度中心裝修工程",     			
 		"image":"spring/images/project/156_台北中央調度中心及高雄中央調度中心/title.jpg",
